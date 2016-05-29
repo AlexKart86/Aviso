@@ -80,6 +80,7 @@
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button2.Location = new System.Drawing.Point(24, 482);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
@@ -90,6 +91,7 @@
             // 
             // button3
             // 
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Location = new System.Drawing.Point(143, 482);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 28);
@@ -108,6 +110,7 @@
             // 
             // cbItemType
             // 
+            this.cbItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbItemType.FormattingEnabled = true;
             this.cbItemType.Items.AddRange(new object[] {
             "Почтой",

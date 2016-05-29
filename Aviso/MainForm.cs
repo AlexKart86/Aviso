@@ -14,10 +14,13 @@ namespace Aviso
 {
     public partial class MainForm : Form
     {
+        //Компоненты для данных подстановки
         public OleDbDataAdapter lookupAdapter;
         public DataSet lookupDataSet;
         public BindingSource lookupBs;
 
+
+        //Заполнить компоненты для данных подстановки
         private void InitLookupDataSet()
         {
             string constr = ConfigurationManager.ConnectionStrings["Dictionary"].ConnectionString;
@@ -33,6 +36,18 @@ namespace Aviso
             lookupAdapter.Fill(lookupDataSet);
             con.Close();
             lookupBs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);      
+        }
+
+        private void EditPostAviso()
+        {
+            AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource, this.lookupBs);
+            if (frm.ShowDialog() == DialogResult.OK)
+                postavisoBindingSource.EndEdit();
+            else
+                postavisoBindingSource.CancelEdit();  
+            this.post_avisoTableAdapter.Update(this.avisoDataSet);
+                        
+            dgvAvisoPost.Refresh();
         }
 
         public MainForm()
@@ -57,34 +72,11 @@ namespace Aviso
             this.post_avisoTableAdapter.Fill(this.avisoDataSet.post_aviso);            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEditAviso_Click(object sender, EventArgs e)
         {
-            AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource, this.lookupBs);
-            frm.ShowDialog();
-            postavisoBindingSource.EndEdit();
-            this.post_avisoTableAdapter.Update(this.avisoDataSet);
-            dgvAvisoPost.Refresh();            
+            EditPostAviso();            
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            postavisoBindingSource.AddNew();
-            AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource, this.lookupBs);
-            frm.ShowDialog();           
-            postavisoBindingSource.EndEdit();            
-            this.post_avisoTableAdapter.Update(this.avisoDataSet);
-            dgvAvisoPost.Refresh();
-        }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -95,6 +87,12 @@ namespace Aviso
         private void button4_Click(object sender, EventArgs e)
         {
             postavisoBindingSource.AddNew();
-        }        
+        }
+
+        private void btnAddAviso_Click(object sender, EventArgs e)
+        {
+            postavisoBindingSource.AddNew();
+            EditPostAviso();
+        }
     }
 }

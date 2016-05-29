@@ -14,17 +14,24 @@ namespace Aviso
     {
         private BindingSource bs_main;
         private BindingSource bs_lookup;
-        
-        public AvisoPostEdit(BindingSource bs_main, BindingSource bs_lookup)
+
+        //Настройка биндингов 
+        private void InitBindList()
         {
-            this.bs_lookup = bs_lookup;
-            this.bs_main = bs_main;
-            InitializeComponent();
             txtNum.DataBindings.Add("Text", bs_main, "NUM", false);
             Binding b = new Binding("Value", bs_main, "CREATE_DATE", true);
             dtpCreatedDate.DataBindings.Add(b);
             b.Format += new ConvertEventHandler(dtBirthdayNullable_Format);
             b.Parse += new ConvertEventHandler(dtBirthdayNullable_Parse);
+            cbItemType.DataBindings.Add("SelectedValue", bs_main, "PAYMENT_TYPE");
+        }
+
+        public AvisoPostEdit(BindingSource bs_main, BindingSource bs_lookup)
+        {
+            this.bs_lookup = bs_lookup;
+            this.bs_main = bs_main;
+            InitializeComponent();
+            InitBindList();
         }
 
         private void AvisoPostEdit_Load(object sender, EventArgs e)
