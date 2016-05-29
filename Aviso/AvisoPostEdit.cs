@@ -23,7 +23,7 @@ namespace Aviso
             dtpCreatedDate.DataBindings.Add(b);
             b.Format += new ConvertEventHandler(dtBirthdayNullable_Format);
             b.Parse += new ConvertEventHandler(dtBirthdayNullable_Parse);
-            cbItemType.DataBindings.Add("SelectedValue", bs_main, "PAYMENT_TYPE");
+            cbItemType.DataBindings.Add("Text", bs_main, "PAYMENT_TYPE");
         }
 
         public AvisoPostEdit(BindingSource bs_main, BindingSource bs_lookup)

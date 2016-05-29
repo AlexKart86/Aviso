@@ -79,6 +79,8 @@
             this.rECEIVERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
@@ -495,11 +497,36 @@
             this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
             this.kPDDATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postavisoBindingSource, "PAYMENT_TYPE", true));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Почтой",
+            "Телеграфом"});
+            this.comboBox1.Location = new System.Drawing.Point(57, 459);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 607);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnDeleteAviso);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
@@ -574,6 +601,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

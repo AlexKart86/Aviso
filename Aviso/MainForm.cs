@@ -80,8 +80,7 @@ namespace Aviso
 
         private void button3_Click(object sender, EventArgs e)
         {
-            postavisoBindingSource.EndEdit();
-            this.post_avisoTableAdapter.Update(this.avisoDataSet);
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -93,6 +92,12 @@ namespace Aviso
         {
             postavisoBindingSource.AddNew();
             EditPostAviso();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            postavisoBindingSource.EndEdit();
+            this.post_avisoTableAdapter.Update(this.avisoDataSet);
         }
     }
 }
