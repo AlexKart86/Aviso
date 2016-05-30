@@ -24,6 +24,7 @@ namespace Aviso
             b.Format += new ConvertEventHandler(dtBirthdayNullable_Format);
             b.Parse += new ConvertEventHandler(dtBirthdayNullable_Parse);
             cbItemType.DataBindings.Add("Text", bs_main, "PAYMENT_TYPE");
+            cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");
         }
 
         public AvisoPostEdit(BindingSource bs_main, BindingSource bs_lookup)
@@ -119,7 +120,22 @@ void dtBirthdayNullable_Parse( object sender, ConvertEventArgs e)
 
         private void AvisoPostEdit_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //ValidateChildren();
+            
+        }
+
+        private void cbOperationType_Validating(object sender, CancelEventArgs e)
+        {            
+            if (String.IsNullOrEmpty(((ComboBox)sender).Text))
+            {
+                errOperType.SetError((Control)sender, "Данное поле должно быть заполненным");
+                e.Cancel = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren())
+                DialogResult = DialogResult.OK;
         }
     }
 }
