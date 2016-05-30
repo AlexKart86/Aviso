@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.errPaymentType = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
@@ -216,12 +217,20 @@
             this.errorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider2.ContainerControl = this;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(143, 232);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(156, 23);
+            this.maskedTextBox1.TabIndex = 16;
+            // 
             // AvisoPostEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(961, 522);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpRDDate);
             this.Controls.Add(this.label5);
@@ -270,5 +279,6 @@
         private System.Windows.Forms.DateTimePicker dtpRDDate;
         private System.Windows.Forms.ErrorProvider errPaymentType;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

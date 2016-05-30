@@ -7,9 +7,12 @@
     }
 }
 
-namespace Aviso.AvisoDataSetTableAdapters {
-    
-    
+namespace Aviso.AvisoDataSetTableAdapters
+{
+    partial class post_avisoTableAdapter
+    {
+    }
+
     public partial class telegraph_avisoTableAdapter {
     }
 }

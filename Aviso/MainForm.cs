@@ -35,13 +35,12 @@ namespace Aviso
             lookupAdapter = new OleDbDataAdapter(cmd);
             lookupAdapter.Fill(lookupDataSet);
             con.Close();
-            lookupBs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);      
+            lookupBs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);                             
         }
 
         //Вычислить следующий номер авизо
-        public int CalcPostAvisoNextNum()
-        {
-            DataTable tbl = avisoDataSet.Tables["post_aviso"];
+        public int CalcPostAvisoNextNum(DataTable tbl)
+        {            
             int max = 0;
             foreach (DataRow row in tbl.Rows)
             {
@@ -98,13 +97,13 @@ namespace Aviso
 
         private void button4_Click(object sender, EventArgs e)
         {
-            postavisoBindingSource.AddNew();
+            postavisoBindingSource.AddNew(); 
         }
 
         private void btnAddAviso_Click(object sender, EventArgs e)
         {
             DataRowView row = (DataRowView)postavisoBindingSource.AddNew();
-            row["NUM"] = CalcPostAvisoNextNum();
+            row["NUM"] = CalcPostAvisoNextNum(avisoDataSet.Tables["post_aviso"]);
             row["CREATE_DATE"] = DateTime.Today;            
             EditPostAviso();
         }
@@ -112,7 +111,14 @@ namespace Aviso
         private void button1_Click(object sender, EventArgs e)
         {
             postavisoBindingSource.EndEdit();
-            this.post_avisoTableAdapter.Update(this.avisoDataSet);
+            post_avisoTableAdapter.Update(avisoDataSet);
+        }
+
+        private void btnDeleteAviso_Click(object sender, EventArgs e)
+        {
+            postavisoBindingSource.RemoveCurrent();
+            postavisoBindingSource.EndEdit();
+            post_avisoTableAdapter.Update(avisoDataSet);
         }
     }
 }
