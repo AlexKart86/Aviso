@@ -65,22 +65,6 @@
             this.RECEIVER_BILL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pAYMENTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oPERATIONTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDSUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sENDERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sENDERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sENDERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEIVERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEIVERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEIVERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).BeginInit();
@@ -115,23 +99,7 @@
             this.RECEIVER_KO,
             this.RECEIVER_BILL,
             this.KPD,
-            this.KPD_DATE,
-            this.iDDataGridViewTextBoxColumn,
-            this.nUMDataGridViewTextBoxColumn,
-            this.cREATEDATEDataGridViewTextBoxColumn,
-            this.pAYMENTTYPEDataGridViewTextBoxColumn,
-            this.oPERATIONTYPEDataGridViewTextBoxColumn,
-            this.rDNUMDataGridViewTextBoxColumn,
-            this.rDDATEDataGridViewTextBoxColumn,
-            this.rDSUMDataGridViewTextBoxColumn,
-            this.sENDERBIKDataGridViewTextBoxColumn,
-            this.sENDERKODataGridViewTextBoxColumn,
-            this.sENDERBILLDataGridViewTextBoxColumn,
-            this.rECEIVERBIKDataGridViewTextBoxColumn,
-            this.rECEIVERKODataGridViewTextBoxColumn,
-            this.rECEIVERBILLDataGridViewTextBoxColumn,
-            this.kPDDataGridViewTextBoxColumn,
-            this.kPDDATEDataGridViewTextBoxColumn});
+            this.KPD_DATE});
             this.dgvAvisoPost.DataSource = this.postavisoBindingSource;
             this.dgvAvisoPost.Location = new System.Drawing.Point(15, 5);
             this.dgvAvisoPost.Margin = new System.Windows.Forms.Padding(4);
@@ -140,7 +108,7 @@
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 291);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 289);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.btnEditAviso_Click);
             // 
@@ -302,6 +270,7 @@
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // NUM
             // 
@@ -408,118 +377,6 @@
             this.KPD_DATE.Name = "KPD_DATE";
             this.KPD_DATE.ReadOnly = true;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nUMDataGridViewTextBoxColumn
-            // 
-            this.nUMDataGridViewTextBoxColumn.DataPropertyName = "NUM";
-            this.nUMDataGridViewTextBoxColumn.HeaderText = "NUM";
-            this.nUMDataGridViewTextBoxColumn.Name = "nUMDataGridViewTextBoxColumn";
-            this.nUMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cREATEDATEDataGridViewTextBoxColumn
-            // 
-            this.cREATEDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATE_DATE";
-            this.cREATEDATEDataGridViewTextBoxColumn.HeaderText = "CREATE_DATE";
-            this.cREATEDATEDataGridViewTextBoxColumn.Name = "cREATEDATEDataGridViewTextBoxColumn";
-            this.cREATEDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pAYMENTTYPEDataGridViewTextBoxColumn
-            // 
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_TYPE";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.HeaderText = "PAYMENT_TYPE";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.Name = "pAYMENTTYPEDataGridViewTextBoxColumn";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // oPERATIONTYPEDataGridViewTextBoxColumn
-            // 
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.DataPropertyName = "OPERATION_TYPE";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.HeaderText = "OPERATION_TYPE";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.Name = "oPERATIONTYPEDataGridViewTextBoxColumn";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rDNUMDataGridViewTextBoxColumn
-            // 
-            this.rDNUMDataGridViewTextBoxColumn.DataPropertyName = "RD_NUM";
-            this.rDNUMDataGridViewTextBoxColumn.HeaderText = "RD_NUM";
-            this.rDNUMDataGridViewTextBoxColumn.Name = "rDNUMDataGridViewTextBoxColumn";
-            this.rDNUMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rDDATEDataGridViewTextBoxColumn
-            // 
-            this.rDDATEDataGridViewTextBoxColumn.DataPropertyName = "RD_DATE";
-            this.rDDATEDataGridViewTextBoxColumn.HeaderText = "RD_DATE";
-            this.rDDATEDataGridViewTextBoxColumn.Name = "rDDATEDataGridViewTextBoxColumn";
-            this.rDDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rDSUMDataGridViewTextBoxColumn
-            // 
-            this.rDSUMDataGridViewTextBoxColumn.DataPropertyName = "RD_SUM";
-            this.rDSUMDataGridViewTextBoxColumn.HeaderText = "RD_SUM";
-            this.rDSUMDataGridViewTextBoxColumn.Name = "rDSUMDataGridViewTextBoxColumn";
-            this.rDSUMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sENDERBIKDataGridViewTextBoxColumn
-            // 
-            this.sENDERBIKDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BIK";
-            this.sENDERBIKDataGridViewTextBoxColumn.HeaderText = "SENDER_BIK";
-            this.sENDERBIKDataGridViewTextBoxColumn.Name = "sENDERBIKDataGridViewTextBoxColumn";
-            this.sENDERBIKDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sENDERKODataGridViewTextBoxColumn
-            // 
-            this.sENDERKODataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO";
-            this.sENDERKODataGridViewTextBoxColumn.HeaderText = "SENDER_KO";
-            this.sENDERKODataGridViewTextBoxColumn.Name = "sENDERKODataGridViewTextBoxColumn";
-            this.sENDERKODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sENDERBILLDataGridViewTextBoxColumn
-            // 
-            this.sENDERBILLDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BILL";
-            this.sENDERBILLDataGridViewTextBoxColumn.HeaderText = "SENDER_BILL";
-            this.sENDERBILLDataGridViewTextBoxColumn.Name = "sENDERBILLDataGridViewTextBoxColumn";
-            this.sENDERBILLDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rECEIVERBIKDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERBIKDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BIK";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.HeaderText = "RECEIVER_BIK";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.Name = "rECEIVERBIKDataGridViewTextBoxColumn";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rECEIVERKODataGridViewTextBoxColumn
-            // 
-            this.rECEIVERKODataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KO";
-            this.rECEIVERKODataGridViewTextBoxColumn.HeaderText = "RECEIVER_KO";
-            this.rECEIVERKODataGridViewTextBoxColumn.Name = "rECEIVERKODataGridViewTextBoxColumn";
-            this.rECEIVERKODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rECEIVERBILLDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERBILLDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BILL";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.HeaderText = "RECEIVER_BILL";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.Name = "rECEIVERBILLDataGridViewTextBoxColumn";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kPDDataGridViewTextBoxColumn
-            // 
-            this.kPDDataGridViewTextBoxColumn.DataPropertyName = "KPD";
-            this.kPDDataGridViewTextBoxColumn.HeaderText = "KPD";
-            this.kPDDataGridViewTextBoxColumn.Name = "kPDDataGridViewTextBoxColumn";
-            this.kPDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kPDDATEDataGridViewTextBoxColumn
-            // 
-            this.kPDDATEDataGridViewTextBoxColumn.DataPropertyName = "KPD_DATE";
-            this.kPDDATEDataGridViewTextBoxColumn.HeaderText = "KPD_DATE";
-            this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
-            this.kPDDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -587,22 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RECEIVER_BILL;
         private System.Windows.Forms.DataGridViewTextBoxColumn KPD;
         private System.Windows.Forms.DataGridViewTextBoxColumn KPD_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pAYMENTTYPEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oPERATIONTYPEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rDNUMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rDDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rDSUMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sENDERBIKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sENDERKODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sENDERBILLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rECEIVERBIKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rECEIVERKODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn;
     }
 }
 

@@ -34,7 +34,25 @@ namespace Aviso
             b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
             b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
 
+            txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
+            txtKPD.DataBindings.Add("Text", bs_main, "KPD");
 
+            Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);
+            dtpKPDDate.DataBindings.Add(b_KPDDate);
+            b_KPDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
+            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
+
+            cbSenderBIK.DataBindings.Add("Text", bs_main, "SENDER_BIK");
+            cbSenderKO.DataBindings.Add("Text", bs_main, "SENDER_KO");
+            txtSenderBill.DataBindings.Add("Text", bs_main, "SENDER_BILL");
+
+            cbReceiverBIK.DataBindings.Add("Text", bs_main, "RECEIVER_BIK");
+            cbReceiverKO.DataBindings.Add("Text", bs_main, "RECEIVER_KO");
+            txtReceiverBill.DataBindings.Add("Text", bs_main, "RECEIVER_BILL");
+
+            cbReceiverBIK.DataSource = bs_lookup;
+            cbReceiverBIK.ValueMember = "NEWNUM";
+            cbReceiverBIK.DisplayMember = "NEWNUM";
 
         }
 
