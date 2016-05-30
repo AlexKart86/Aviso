@@ -38,6 +38,19 @@ namespace Aviso
             lookupBs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);      
         }
 
+        //Вычислить следующий номер авизо
+        public int CalcPostAvisoNextNum()
+        {
+            DataTable tbl = avisoDataSet.Tables["post_aviso"];
+            int max = 0;
+            foreach (DataRow row in tbl.Rows)
+            {
+                if (max < Convert.ToInt32(row["NUM"]))
+                    max = Convert.ToInt32(row["NUM"]);
+            }
+            return max + 1;
+        }
+
         private void EditPostAviso()
         {
             AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource, this.lookupBs);
@@ -90,7 +103,9 @@ namespace Aviso
 
         private void btnAddAviso_Click(object sender, EventArgs e)
         {
-            postavisoBindingSource.AddNew();
+            DataRowView row = (DataRowView)postavisoBindingSource.AddNew();
+            row["NUM"] = CalcPostAvisoNextNum();
+            row["CREATE_DATE"] = DateTime.Today;            
             EditPostAviso();
         }
 
