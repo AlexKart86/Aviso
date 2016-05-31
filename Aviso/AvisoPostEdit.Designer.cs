@@ -113,11 +113,13 @@ namespace Aviso
             // 
             // dtpCreatedDate
             // 
+            this.dtpCreatedDate.Checked = false;
             this.dtpCreatedDate.CustomFormat = "dd/MM/yyyy";
             this.dtpCreatedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCreatedDate.Location = new System.Drawing.Point(143, 50);
             this.dtpCreatedDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpCreatedDate.Name = "dtpCreatedDate";
+            this.dtpCreatedDate.ShowCheckBox = true;
             this.dtpCreatedDate.Size = new System.Drawing.Size(156, 23);
             this.dtpCreatedDate.TabIndex = 1;
             // 
@@ -231,6 +233,7 @@ namespace Aviso
             this.dtpRDDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpRDDate.Location = new System.Drawing.Point(143, 192);
             this.dtpRDDate.Name = "dtpRDDate";
+            this.dtpRDDate.ShowCheckBox = true;
             this.dtpRDDate.Size = new System.Drawing.Size(156, 23);
             this.dtpRDDate.TabIndex = 5;
             // 
@@ -459,10 +462,12 @@ namespace Aviso
             // 
             // dtpKPDDate
             // 
+            this.dtpKPDDate.Checked = false;
             this.dtpKPDDate.CustomFormat = "dd/MM/yyyy";
             this.dtpKPDDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpKPDDate.Location = new System.Drawing.Point(143, 297);
             this.dtpKPDDate.Name = "dtpKPDDate";
+            this.dtpKPDDate.ShowCheckBox = true;
             this.dtpKPDDate.Size = new System.Drawing.Size(156, 23);
             this.dtpKPDDate.TabIndex = 8;
             // 

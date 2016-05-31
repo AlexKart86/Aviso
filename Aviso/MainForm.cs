@@ -14,29 +14,7 @@ namespace Aviso
 {
     public partial class MainForm : Form
     {
-        //Компоненты для данных подстановки
-        public OleDbDataAdapter lookupAdapter;
-        public DataSet lookupDataSet;
-        public BindingSource lookupBs;
-
-
-        //Заполнить компоненты для данных подстановки
-        private void InitLookupDataSet()
-        {
-            string constr = ConfigurationManager.ConnectionStrings["Dictionary"].ConnectionString;
-            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string path = (System.IO.Path.GetDirectoryName(executable));
-            constr =  constr.Replace("|DataDirectory|",path);
-            OleDbConnection con = new OleDbConnection(constr);
-            string sql = "select * from BNKSEEK.DBF";
-            OleDbCommand cmd = new OleDbCommand(sql, con);
-            con.Open();
-            lookupDataSet = new DataSet();
-            lookupAdapter = new OleDbDataAdapter(cmd);
-            lookupAdapter.Fill(lookupDataSet);
-            con.Close();
-            lookupBs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);                             
-        }
+              
 
         //Вычислить следующий номер авизо
         public int CalcPostAvisoNextNum(DataTable tbl)
@@ -52,7 +30,7 @@ namespace Aviso
 
         private void EditPostAviso()
         {
-            AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource, this.lookupBs);
+            AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource);
             if (frm.ShowDialog() == DialogResult.OK)
                 postavisoBindingSource.EndEdit();
             else
@@ -63,13 +41,11 @@ namespace Aviso
         }
 
         public MainForm()
-        {
-
-            InitLookupDataSet();
+        {            
             InitializeComponent();
             //this.dgvLookup.DataSource = lookupDataSet;
             //this.dgvLookup.DataMember = lookupDataSet.Tables[0].TableName;
-            dgvLookup.DataSource = lookupBs;
+            dgvLookup.DataSource = LookupList.lookupBs;
 
         }
 

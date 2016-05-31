@@ -12,8 +12,7 @@ namespace Aviso
 {
     public partial class AvisoPostEdit : Form
     {
-        private BindingSource bs_main;
-        private BindingSource bs_lookup;
+        private BindingSource bs_main;        
 
         //Настройка биндингов 
         private void InitBindList()
@@ -29,10 +28,10 @@ namespace Aviso
             cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");
             txtRDNum.DataBindings.Add("Text", bs_main, "RD_NUM");
 
-            Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);
-            dtpRDDate.DataBindings.Add(b_RDDate);
+            Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);            
             b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
             b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
+            dtpRDDate.DataBindings.Add(b_RDDate);
 
             txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
             txtKPD.DataBindings.Add("Text", bs_main, "KPD");
@@ -50,26 +49,25 @@ namespace Aviso
             cbReceiverKO.DataBindings.Add("Text", bs_main, "RECEIVER_KO");
             txtReceiverBill.DataBindings.Add("Text", bs_main, "RECEIVER_BILL");
 
-            cbReceiverBIK.DataSource = bs_lookup;
+            cbReceiverBIK.DataSource = LookupList.lookupBs;
             cbReceiverBIK.ValueMember = "NEWNUM";
             cbReceiverBIK.DisplayMember = "NEWNUM";
 
-            cbReceiverKO.DataSource = bs_lookup;
+            cbReceiverKO.DataSource = LookupList.lookupBs;
             cbReceiverKO.ValueMember = "KSNP";
             cbReceiverKO.DisplayMember = "KSNP";
 
-            cbSenderBIK.DataSource = bs_lookup;
+            cbSenderBIK.DataSource = LookupList.lookupBs;
             cbSenderBIK.ValueMember = "NEWNUM";
             cbSenderBIK.DisplayMember = "NEWNUM";
 
-            cbReceiverKO.DataSource = bs_lookup;
+            cbReceiverKO.DataSource = LookupList.lookupBs;
             cbReceiverKO.ValueMember = "KSNP";
             cbReceiverKO.DisplayMember = "KSNP";
         }
 
-        public AvisoPostEdit(BindingSource bs_main, BindingSource bs_lookup)
-        {
-            this.bs_lookup = bs_lookup;
+        public AvisoPostEdit(BindingSource bs_main)
+        {            
             this.bs_main = bs_main;
             InitializeComponent();
             InitBindList();
@@ -99,7 +97,7 @@ namespace Aviso
 
         private void AvisoPostEdit_Load(object sender, EventArgs e)
         {
-
+            //dtpRDDate.Checked = false;
         }
 
         private void cbItemType_Validating(object sender, CancelEventArgs e)
@@ -119,8 +117,16 @@ namespace Aviso
 
         private void cbReceiverBIK_TextUpdate(object sender, EventArgs e)
         {
-            
-            cbReceiverKO.Text = cbReceiverBIK.Text;
+           // cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (dtpRDDate.Checked)
+                MessageBox.Show("Chechek");
+            else
+                MessageBox.Show("not checked");
+
         }
     }
 }

@@ -35,23 +35,23 @@ namespace Aviso
                 DateTimePicker dtp = (b.Control as DateTimePicker);
                 if (dtp != null)
                 {
-                    if (e.Value == System.DBNull.Value)
-                    {
-                        dtp.ShowCheckBox = true;
-                        dtp.Checked = false;
-                        // have to set e.Value to SOMETHING, since it’s coming in as NULL 
-                        // if i set to DateTime.Today, and that’s DIFFERENT than the control’s current  
-                        // value, then it triggers a CHANGE to the value, which CHECKS the box (not ok) 
-                        // the trick – set e.Value to whatever value the control currently has.   
-                        // This does NOT cause a CHANGE, and the checkbox stays OFF. 
-                        e.Value = dtp.Value;
-                    }
-                    else
-                    {
-                        dtp.ShowCheckBox = true;
-                        dtp.Checked = true;
-                        // leave e.Value unchanged – it’s not null, so the DTP is fine with it. 
-                    }
+                    if (e.Value == System.DBNull.Value || e.Value == null)
+                      {
+                          dtp.ShowCheckBox = true;
+                          dtp.Checked = false;
+                          // have to set e.Value to SOMETHING, since it’s coming in as NULL 
+                          // if i set to DateTime.Today, and that’s DIFFERENT than the control’s current  
+                          // value, then it triggers a CHANGE to the value, which CHECKS the box (not ok) 
+                          // the trick – set e.Value to whatever value the control currently has.   
+                          // This does NOT cause a CHANGE, and the checkbox stays OFF. 
+                          e.Value = dtp.Value;
+                      }
+                      else
+                      {
+                          dtp.ShowCheckBox = true;
+                          dtp.Checked = true;
+                          // leave e.Value unchanged – it’s not null, so the DTP is fine with it. 
+                      }
                 }
             }
         }
@@ -67,17 +67,21 @@ namespace Aviso
                 DateTimePicker dtp = (b.Control as DateTimePicker);
                 if (dtp != null)
                 {
-                    if (dtp.Checked == false)
-                    {
-                        dtp.ShowCheckBox = true;
-                        dtp.Checked = false;
-                        e.Value = new Nullable<DateTime>();
-                    }
+                    /* if (dtp.Checked == false)
+                     {
+                         dtp.ShowCheckBox = true;
+                         dtp.Checked = false;
+                         e.Value = new Nullable<DateTime>();
+                     }
+                     else
+                     {
+                         DateTime val = Convert.ToDateTime(e.Value).Date;
+                         e.Value = new Nullable<DateTime>(val);
+                     }*/
+                    if (dtp.Checked)
+                        e.Value = dtp.Value;
                     else
-                    {
-                        DateTime val = Convert.ToDateTime(e.Value).Date;
-                        e.Value = new Nullable<DateTime>(val);
-                    }
+                        e.Value = DBNull.Value;
                 }
             }
         }
