@@ -1,4 +1,6 @@
-﻿namespace Aviso
+﻿using System.Windows.Forms;
+
+namespace Aviso
 {
     partial class MainForm
     {
@@ -22,6 +24,7 @@
             }
             base.Dispose(disposing);
         }
+
 
         #region Windows Form Designer generated code
 

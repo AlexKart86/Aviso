@@ -4,6 +4,9 @@
 
     partial class AvisoDataSet
     {
+        partial class post_avisoDataTable
+        {
+        }
     }
 }
 

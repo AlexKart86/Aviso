@@ -54,6 +54,17 @@ namespace Aviso
             cbReceiverBIK.ValueMember = "NEWNUM";
             cbReceiverBIK.DisplayMember = "NEWNUM";
 
+            cbReceiverKO.DataSource = bs_lookup;
+            cbReceiverKO.ValueMember = "KSNP";
+            cbReceiverKO.DisplayMember = "KSNP";
+
+            cbSenderBIK.DataSource = bs_lookup;
+            cbSenderBIK.ValueMember = "NEWNUM";
+            cbSenderBIK.DisplayMember = "NEWNUM";
+
+            cbReceiverKO.DataSource = bs_lookup;
+            cbReceiverKO.ValueMember = "KSNP";
+            cbReceiverKO.DisplayMember = "KSNP";
         }
 
         public AvisoPostEdit(BindingSource bs_main, BindingSource bs_lookup)
@@ -94,6 +105,22 @@ namespace Aviso
         private void cbItemType_Validating(object sender, CancelEventArgs e)
         {
             e.Cancel = CommonUtils.CheckRequiredField((Control)sender, errPaymentType);
+        }
+
+        private void AllowDigits_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void cbReceiverBIK_ValueMemberChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbReceiverBIK_TextUpdate(object sender, EventArgs e)
+        {
+            
+            cbReceiverKO.Text = cbReceiverBIK.Text;
         }
     }
 }
