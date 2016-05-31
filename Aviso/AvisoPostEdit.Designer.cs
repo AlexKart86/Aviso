@@ -440,7 +440,6 @@ namespace Aviso
             this.cbReceiverBIK.Size = new System.Drawing.Size(259, 24);
             this.cbReceiverBIK.TabIndex = 0;
             this.cbReceiverBIK.TextUpdate += new System.EventHandler(this.cbReceiverBIK_TextUpdate);
-            this.cbReceiverBIK.ValueMemberChanged += new System.EventHandler(this.cbReceiverBIK_ValueMemberChanged);
             // 
             // label14
             // 
@@ -513,12 +512,13 @@ namespace Aviso
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AvisoPostEdit";
-            this.Text = "Добавление/Редактирование почтового авизо";
+            this.Text = "Добавление/Редактирование почтового авизо";            
             this.Load += new System.EventHandler(this.AvisoPostEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

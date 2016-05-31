@@ -17,29 +17,7 @@ namespace Aviso
         //Настройка биндингов 
         private void InitBindList()
         {
-            txtNum.DataBindings.Add("Text", bs_main, "NUM", false);
 
-            Binding b_CreateDate = new Binding("Value", bs_main, "CREATE_DATE", true);
-            dtpCreatedDate.DataBindings.Add(b_CreateDate);
-            b_CreateDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
-            b_CreateDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
-
-            cbItemType.DataBindings.Add("Text", bs_main, "PAYMENT_TYPE");
-            cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");
-            txtRDNum.DataBindings.Add("Text", bs_main, "RD_NUM");
-
-            Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);            
-            b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
-            b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
-            dtpRDDate.DataBindings.Add(b_RDDate);
-
-            txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
-            txtKPD.DataBindings.Add("Text", bs_main, "KPD");
-
-            Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);
-            dtpKPDDate.DataBindings.Add(b_KPDDate);
-            b_KPDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
-            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
 
             cbSenderBIK.DataBindings.Add("Text", bs_main, "SENDER_BIK");
             cbSenderKO.DataBindings.Add("Text", bs_main, "SENDER_KO");
@@ -64,12 +42,38 @@ namespace Aviso
             cbReceiverKO.DataSource = LookupList.lookupBs;
             cbReceiverKO.ValueMember = "KSNP";
             cbReceiverKO.DisplayMember = "KSNP";
+
+
+
+            txtNum.DataBindings.Add("Text", bs_main, "NUM", false);
+
+            Binding b_CreateDate = new Binding("Value", bs_main, "CREATE_DATE", true);
+            dtpCreatedDate.DataBindings.Add(b_CreateDate);
+            b_CreateDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
+            b_CreateDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
+
+            cbItemType.DataBindings.Add("Text", bs_main, "PAYMENT_TYPE");
+            cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");
+            txtRDNum.DataBindings.Add("Text", bs_main, "RD_NUM");
+
+            Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);            
+            b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
+            b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
+            dtpRDDate.DataBindings.Add(b_RDDate);
+
+            txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
+            txtKPD.DataBindings.Add("Text", bs_main, "KPD");
+
+            Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);
+            dtpKPDDate.DataBindings.Add(b_KPDDate);
+            b_KPDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
+            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);            
         }
 
         public AvisoPostEdit(BindingSource bs_main)
         {            
-            this.bs_main = bs_main;
-            InitializeComponent();
+            this.bs_main = bs_main;            
+            InitializeComponent();            
             InitBindList();
         }
         
@@ -108,11 +112,6 @@ namespace Aviso
         private void AllowDigits_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void cbReceiverBIK_ValueMemberChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void cbReceiverBIK_TextUpdate(object sender, EventArgs e)

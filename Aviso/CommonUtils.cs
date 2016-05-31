@@ -67,7 +67,7 @@ namespace Aviso
                 DateTimePicker dtp = (b.Control as DateTimePicker);
                 if (dtp != null)
                 {
-                    /* if (dtp.Checked == false)
+                    if (dtp.Checked == false)
                      {
                          dtp.ShowCheckBox = true;
                          dtp.Checked = false;
@@ -77,11 +77,7 @@ namespace Aviso
                      {
                          DateTime val = Convert.ToDateTime(e.Value).Date;
                          e.Value = new Nullable<DateTime>(val);
-                     }*/
-                    if (dtp.Checked)
-                        e.Value = dtp.Value;
-                    else
-                        e.Value = DBNull.Value;
+                     }                    
                 }
             }
         }
