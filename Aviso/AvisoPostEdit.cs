@@ -240,5 +240,65 @@ namespace Aviso
             else
                 errReceiverKO.SetError(cbReceiverKO, "");
         }
+
+        private void cbSenderBIK_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbSenderBIK.Text))
+            {
+                e.Cancel = true;
+                errSenderBIK.SetError(cbSenderBIK, "Данное поле должно быть заполненным");
+            }
+            else if (string.IsNullOrEmpty(LookupList.LookupNewNum(cbSenderBIK.Text, "NEWNUM")))
+            {
+                e.Cancel = true;
+                errSenderBIK.SetError(cbSenderBIK, "Введен несуществующий БИК");
+            }
+            else
+                errSenderBIK.SetError(cbSenderBIK, "");
+        }
+
+        private void cbReceiverBIK_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbReceiverBIK.Text))
+            {
+                e.Cancel = true;
+                errReceiverBIK.SetError(cbReceiverBIK, "Данное поле должно быть заполненным");
+            }
+            else if (string.IsNullOrEmpty(LookupList.LookupNewNum(cbReceiverBIK.Text, "NEWNUM")))
+            {
+                e.Cancel = true;
+                errReceiverBIK.SetError(cbReceiverBIK, "Введен несуществующий БИК");
+            }
+            else
+                errReceiverBIK.SetError(cbReceiverBIK, "");
+        }
+
+        private void dtpRDDate_Validating(object sender, CancelEventArgs e)
+        {
+            if (dtpRDDate.Checked && dtpRDDate.Value.Date > DateTime.Today)
+            {
+                e.Cancel = true;
+                errRDDate.SetError(dtpRDDate, "Дата РД не может быть большей за текущую дату");
+            }
+            else
+                errRDDate.SetError(dtpRDDate, "");
+        }
+
+        private void txtRDNum_Validating(object sender, CancelEventArgs e)
+        {
+            Int32 i;
+            if (string.IsNullOrEmpty(txtRDNum.Text))
+            {
+                e.Cancel = true;
+                errRDNum.SetError(txtRDNum, "Данное поле должно быть заполненным");
+            }
+            else if (!Int32.TryParse(txtRDNum.Text, out i) || i <= 0)
+            {
+                e.Cancel = true;
+                errRDNum.SetError(txtRDNum, "В данное поле не может быть занесено нулевое значение");
+            }
+            else
+                errRDNum.SetError(txtRDNum, "");
+        }
     }
 }

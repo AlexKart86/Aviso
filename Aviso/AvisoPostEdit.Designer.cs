@@ -86,6 +86,10 @@ namespace Aviso
             this.errReceiverBill = new System.Windows.Forms.ErrorProvider(this.components);
             this.errSenderKO = new System.Windows.Forms.ErrorProvider(this.components);
             this.errReceiverKO = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errSenderBIK = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errReceiverBIK = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errRDDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errRDNum = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
@@ -95,6 +99,10 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errSenderKO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverKO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSenderBIK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errReceiverBIK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRDDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRDNum)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNum
@@ -214,6 +222,7 @@ namespace Aviso
             this.txtRDNum.Name = "txtRDNum";
             this.txtRDNum.Size = new System.Drawing.Size(156, 23);
             this.txtRDNum.TabIndex = 4;
+            this.txtRDNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtRDNum_Validating);
             // 
             // errOperType
             // 
@@ -245,6 +254,7 @@ namespace Aviso
             this.dtpRDDate.Size = new System.Drawing.Size(156, 23);
             this.dtpRDDate.TabIndex = 5;
             this.dtpRDDate.ValueChanged += new System.EventHandler(this.dtpRDDate_ValueChanged);
+            this.dtpRDDate.Validating += new System.ComponentModel.CancelEventHandler(this.dtpRDDate_Validating);
             // 
             // label6
             // 
@@ -368,6 +378,7 @@ namespace Aviso
             this.cbSenderBIK.TabIndex = 0;
             this.cbSenderBIK.SelectedIndexChanged += new System.EventHandler(this.cbSenderBIK_SelectedIndexChanged);
             this.cbSenderBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
+            this.cbSenderBIK.Validating += new System.ComponentModel.CancelEventHandler(this.cbSenderBIK_Validating);
             // 
             // groupBox2
             // 
@@ -455,6 +466,7 @@ namespace Aviso
             this.cbReceiverBIK.TabIndex = 0;
             this.cbReceiverBIK.SelectedIndexChanged += new System.EventHandler(this.cbReceiverBIK_SelectedIndexChanged);
             this.cbReceiverBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
+            this.cbReceiverBIK.Validating += new System.ComponentModel.CancelEventHandler(this.cbReceiverBIK_Validating);
             // 
             // label14
             // 
@@ -508,6 +520,25 @@ namespace Aviso
             // 
             this.errReceiverKO.ContainerControl = this;
             // 
+            // errSenderBIK
+            // 
+            this.errSenderBIK.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errSenderBIK.ContainerControl = this;
+            // 
+            // errReceiverBIK
+            // 
+            this.errReceiverBIK.ContainerControl = this;
+            // 
+            // errRDDate
+            // 
+            this.errRDDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errRDDate.ContainerControl = this;
+            // 
+            // errRDNum
+            // 
+            this.errRDNum.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errRDNum.ContainerControl = this;
+            // 
             // AvisoPostEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -556,6 +587,10 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errSenderKO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverKO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSenderBIK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errReceiverBIK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRDDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRDNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,5 +641,9 @@ namespace Aviso
         private ErrorProvider errReceiverBill;
         private ErrorProvider errSenderKO;
         private ErrorProvider errReceiverKO;
+        private ErrorProvider errSenderBIK;
+        private ErrorProvider errReceiverBIK;
+        private ErrorProvider errRDDate;
+        private ErrorProvider errRDNum;
     }
 }
