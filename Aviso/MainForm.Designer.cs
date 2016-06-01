@@ -35,10 +35,9 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.avisoDataSet = new Aviso.AvisoDataSet();
             this.dgvLookup = new System.Windows.Forms.DataGridView();
             this.btnEditAviso = new System.Windows.Forms.Button();
             this.btnAddAviso = new System.Windows.Forms.Button();
@@ -51,6 +50,8 @@ namespace Aviso
             this.btnDeleteAviso = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.avisoDataSet = new Aviso.AvisoDataSet();
             this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,17 +71,19 @@ namespace Aviso
             this.KPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAvisoPost
             // 
             this.dgvAvisoPost.AllowUserToAddRows = false;
             this.dgvAvisoPost.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAvisoPost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -111,7 +114,7 @@ namespace Aviso
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 289);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 287);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.btnEditAviso_Click);
             // 
@@ -119,16 +122,6 @@ namespace Aviso
             // 
             this.postavisoBindingSource.DataMember = "post_aviso";
             this.postavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
-            // 
-            // avisoDataSetBindingSource
-            // 
-            this.avisoDataSetBindingSource.DataSource = this.avisoDataSet;
-            this.avisoDataSetBindingSource.Position = 0;
-            // 
-            // avisoDataSet
-            // 
-            this.avisoDataSet.DataSetName = "AvisoDataSet";
-            this.avisoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvLookup
             // 
@@ -262,6 +255,16 @@ namespace Aviso
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // avisoDataSetBindingSource
+            // 
+            this.avisoDataSetBindingSource.DataSource = this.avisoDataSet;
+            this.avisoDataSetBindingSource.Position = 0;
+            // 
+            // avisoDataSet
+            // 
+            this.avisoDataSet.DataSetName = "AvisoDataSet";
+            this.avisoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // post_avisoTableAdapter
             // 
@@ -397,15 +400,16 @@ namespace Aviso
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авизо";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

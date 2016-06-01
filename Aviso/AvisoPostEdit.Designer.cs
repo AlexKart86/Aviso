@@ -393,6 +393,7 @@ namespace Aviso
             this.btnReceiverSearch.TabStop = false;
             this.btnReceiverSearch.Text = "Найти";
             this.btnReceiverSearch.UseVisualStyleBackColor = true;
+            this.btnReceiverSearch.Click += new System.EventHandler(this.btnReceiverSearch_Click);
             // 
             // label11
             // 
@@ -514,6 +515,7 @@ namespace Aviso
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AvisoPostEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавление/Редактирование почтового авизо";
             this.Load += new System.EventHandler(this.AvisoPostEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).EndInit();

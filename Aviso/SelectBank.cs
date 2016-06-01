@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Форма для выбора банка по кнопкам "Найти"
 namespace Aviso
 {
     public partial class SelectBank : Form
@@ -16,8 +17,14 @@ namespace Aviso
         {
             InitializeComponent();
             dgvMain.DataSource = LookupList.lookupBs;
+            dgvMain.Columns["NEWNUM"].DefaultCellStyle.BackColor = Color.Yellow;            
+            dgvMain.Columns["KSNP"].DefaultCellStyle.BackColor = Color.Yellow;
+            
         }
 
-
+        private void dgvMain_DoubleClick(object sender, EventArgs e)
+        {
+            btnOK.PerformClick();
+        }
     }
 }

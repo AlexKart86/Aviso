@@ -164,14 +164,26 @@ namespace Aviso
 
         private void btnSenderSearch_Click(object sender, EventArgs e)
         {
-            SelectBank frm = new SelectBank();            
+            SelectBank frm = new SelectBank();
+            LookupList.lookupBs.Position =  LookupList.lookupBs.Find("NEWNUM", cbSenderBIK.Text);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 DataRowView row = (DataRowView)LookupList.lookupBs.Current;
                 cbSenderBIK.Text = Convert.ToString(row["NEWNUM"]);
                 cbSenderKO.Text = Convert.ToString(row["KSNP"]);
             }
+        }
 
+        private void btnReceiverSearch_Click(object sender, EventArgs e)
+        {
+            SelectBank frm = new SelectBank();
+            LookupList.lookupBs.Position = LookupList.lookupBs.Find("NEWNUM", cbReceiverBIK.Text);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                DataRowView row = (DataRowView)LookupList.lookupBs.Current;
+                cbReceiverBIK.Text = Convert.ToString(row["NEWNUM"]);
+                cbReceiverKO.Text = Convert.ToString(row["KSNP"]);
+            }
         }
     }
 }
