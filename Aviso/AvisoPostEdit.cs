@@ -185,5 +185,31 @@ namespace Aviso
                 cbReceiverKO.Text = Convert.ToString(row["KSNP"]);
             }
         }
+
+        private void txtSenderBill_Validating(object sender, CancelEventArgs e)
+        {
+            //Поле "Номер лицевого счета отправителя" должно быть
+            //Заполненным, если пусто поле "КО отправителя"
+            if (String.IsNullOrEmpty(cbSenderKO.Text) && String.IsNullOrEmpty(txtSenderBill.Text))
+            {
+                e.Cancel = true;
+                errSenderBill.SetError(txtSenderBill, "Данное поле должно быть заполненным, поскольку поле \"Корсчет КО плательщика\" не заполнено");
+            }
+            else
+                errSenderBill.SetError(txtSenderBill, "");
+        }
+
+        private void txtReceiverBill_Validating(object sender, CancelEventArgs e)
+        {
+            //Поле "Номер лицевого счета получателя" должно быть
+            //Заполненным, если пусто поле "КО отправителя"
+            if (String.IsNullOrEmpty(cbReceiverKO.Text) && String.IsNullOrEmpty(txtReceiverBill.Text))
+            {
+                e.Cancel = true;
+                errReceiverBill.SetError(txtReceiverBill, "Данное поле должно быть заполненным, поскольку поле \"Корсчет КО получателя\" не заполнено");
+            }
+            else
+                errReceiverBill.SetError(txtReceiverBill, "");
+        }
     }
 }

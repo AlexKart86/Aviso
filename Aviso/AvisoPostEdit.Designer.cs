@@ -60,7 +60,7 @@ namespace Aviso
             this.dtpRDDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.errPaymentType = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errSenderBill = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtRDSum = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -83,12 +83,14 @@ namespace Aviso
             this.label15 = new System.Windows.Forms.Label();
             this.dtpKPDDate = new System.Windows.Forms.DateTimePicker();
             this.txtKPD = new System.Windows.Forms.MaskedTextBox();
+            this.errReceiverBill = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSenderBill)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errReceiverBill)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNum
@@ -254,10 +256,10 @@ namespace Aviso
             this.errPaymentType.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errPaymentType.ContainerControl = this;
             // 
-            // errorProvider2
+            // errSenderBill
             // 
-            this.errorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider2.ContainerControl = this;
+            this.errSenderBill.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errSenderBill.ContainerControl = this;
             // 
             // txtRDSum
             // 
@@ -299,6 +301,7 @@ namespace Aviso
             this.txtSenderBill.Name = "txtSenderBill";
             this.txtSenderBill.Size = new System.Drawing.Size(259, 23);
             this.txtSenderBill.TabIndex = 2;
+            this.txtSenderBill.Validating += new System.ComponentModel.CancelEventHandler(this.txtSenderBill_Validating);          
             // 
             // btnSenderSearch
             // 
@@ -383,6 +386,7 @@ namespace Aviso
             this.txtReceiverBill.Name = "txtReceiverBill";
             this.txtReceiverBill.Size = new System.Drawing.Size(259, 23);
             this.txtReceiverBill.TabIndex = 2;
+            this.txtReceiverBill.Validating += new System.ComponentModel.CancelEventHandler(this.txtReceiverBill_Validating);
             // 
             // btnReceiverSearch
             // 
@@ -481,6 +485,11 @@ namespace Aviso
             this.txtKPD.Size = new System.Drawing.Size(156, 23);
             this.txtKPD.TabIndex = 7;
             // 
+            // errReceiverBill
+            // 
+            this.errReceiverBill.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errReceiverBill.ContainerControl = this;
+            // 
             // AvisoPostEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -521,11 +530,12 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSenderBill)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errReceiverBill)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,7 +560,7 @@ namespace Aviso
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpRDDate;
         private System.Windows.Forms.ErrorProvider errPaymentType;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errSenderBill;
         private System.Windows.Forms.MaskedTextBox txtRDSum;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -573,5 +583,6 @@ namespace Aviso
         private System.Windows.Forms.MaskedTextBox txtReceiverBill;
         private System.Windows.Forms.MaskedTextBox txtSenderBill;
         private System.Windows.Forms.MaskedTextBox txtKPD;
+        private ErrorProvider errReceiverBill;
     }
 }

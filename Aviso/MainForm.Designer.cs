@@ -35,13 +35,11 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvLookup = new System.Windows.Forms.DataGridView();
             this.btnEditAviso = new System.Windows.Forms.Button();
             this.btnAddAviso = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -71,7 +69,6 @@ namespace Aviso
             this.KPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
@@ -82,8 +79,9 @@ namespace Aviso
             // 
             this.dgvAvisoPost.AllowUserToAddRows = false;
             this.dgvAvisoPost.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAvisoPost.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAvisoPost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -114,7 +112,7 @@ namespace Aviso
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 287);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 497);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.btnEditAviso_Click);
             // 
@@ -123,18 +121,9 @@ namespace Aviso
             this.postavisoBindingSource.DataMember = "post_aviso";
             this.postavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
             // 
-            // dgvLookup
-            // 
-            this.dgvLookup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLookup.Location = new System.Drawing.Point(728, 373);
-            this.dgvLookup.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvLookup.Name = "dgvLookup";
-            this.dgvLookup.Size = new System.Drawing.Size(433, 224);
-            this.dgvLookup.TabIndex = 1;
-            // 
             // btnEditAviso
             // 
-            this.btnEditAviso.Location = new System.Drawing.Point(114, 359);
+            this.btnEditAviso.Location = new System.Drawing.Point(109, 13);
             this.btnEditAviso.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditAviso.Name = "btnEditAviso";
             this.btnEditAviso.Size = new System.Drawing.Size(113, 26);
@@ -145,7 +134,7 @@ namespace Aviso
             // 
             // btnAddAviso
             // 
-            this.btnAddAviso.Location = new System.Drawing.Point(18, 359);
+            this.btnAddAviso.Location = new System.Drawing.Point(13, 13);
             this.btnAddAviso.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAviso.Name = "btnAddAviso";
             this.btnAddAviso.Size = new System.Drawing.Size(88, 26);
@@ -153,15 +142,6 @@ namespace Aviso
             this.btnAddAviso.Text = "Добавить";
             this.btnAddAviso.UseVisualStyleBackColor = true;
             this.btnAddAviso.Click += new System.EventHandler(this.btnAddAviso_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postavisoBindingSource, "NUM", true));
-            this.textBox1.Location = new System.Drawing.Point(396, 502);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 21);
-            this.textBox1.TabIndex = 5;
             // 
             // button3
             // 
@@ -176,7 +156,7 @@ namespace Aviso
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(18, 408);
+            this.button4.Location = new System.Drawing.Point(376, 13);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 26);
@@ -187,17 +167,18 @@ namespace Aviso
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(14, 14);
+            this.tabControl1.Location = new System.Drawing.Point(15, 47);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1164, 337);
+            this.tabControl1.Size = new System.Drawing.Size(1164, 547);
             this.tabControl1.TabIndex = 8;
             // 
             // tabPage1
@@ -207,7 +188,7 @@ namespace Aviso
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1156, 306);
+            this.tabPage1.Size = new System.Drawing.Size(1156, 516);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Почтовое авизо";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -225,7 +206,7 @@ namespace Aviso
             // 
             // btnDeleteAviso
             // 
-            this.btnDeleteAviso.Location = new System.Drawing.Point(234, 359);
+            this.btnDeleteAviso.Location = new System.Drawing.Point(229, 13);
             this.btnDeleteAviso.Name = "btnDeleteAviso";
             this.btnDeleteAviso.Size = new System.Drawing.Size(75, 26);
             this.btnDeleteAviso.TabIndex = 9;
@@ -241,14 +222,14 @@ namespace Aviso
             this.comboBox1.Items.AddRange(new object[] {
             "Почтой",
             "Телеграфом"});
-            this.comboBox1.Location = new System.Drawing.Point(57, 459);
+            this.comboBox1.Location = new System.Drawing.Point(552, 16);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 10;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 408);
+            this.button1.Location = new System.Drawing.Point(471, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;
@@ -276,6 +257,7 @@ namespace Aviso
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // NUM
             // 
@@ -393,10 +375,8 @@ namespace Aviso
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAddAviso);
             this.Controls.Add(this.btnEditAviso);
-            this.Controls.Add(this.dgvLookup);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
@@ -405,13 +385,11 @@ namespace Aviso
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -422,10 +400,8 @@ namespace Aviso
         private AvisoDataSet avisoDataSet;
         private System.Windows.Forms.BindingSource postavisoBindingSource;
         private AvisoDataSetTableAdapters.post_avisoTableAdapter post_avisoTableAdapter;
-        private System.Windows.Forms.DataGridView dgvLookup;
         private System.Windows.Forms.Button btnEditAviso;
         private System.Windows.Forms.Button btnAddAviso;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabControl tabControl1;

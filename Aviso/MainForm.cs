@@ -45,7 +45,7 @@ namespace Aviso
             InitializeComponent();
             //this.dgvLookup.DataSource = lookupDataSet;
             //this.dgvLookup.DataMember = lookupDataSet.Tables[0].TableName;
-            dgvLookup.DataSource = LookupList.lookupBs;
+            //dgvLookup.DataSource = LookupList.lookupBs;
         }
 
 
@@ -80,7 +80,8 @@ namespace Aviso
         {
             DataRowView row = (DataRowView)postavisoBindingSource.AddNew();
             row["NUM"] = CalcPostAvisoNextNum(avisoDataSet.Tables["post_aviso"]);
-            row["CREATE_DATE"] = DateTime.Today;            
+            row["CREATE_DATE"] = DateTime.Today;
+            row["KPD_DATE"] = DateTime.Today;
             EditPostAviso();
         }
 
