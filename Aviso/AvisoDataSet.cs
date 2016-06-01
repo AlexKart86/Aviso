@@ -1,4 +1,7 @@
-﻿namespace Aviso
+﻿using System;
+using System.Data.OleDb;
+
+namespace Aviso
 {
 
 
@@ -14,6 +17,10 @@ namespace Aviso.AvisoDataSetTableAdapters
 {
     partial class post_avisoTableAdapter
     {
+        public static explicit operator OleDbDataAdapter(post_avisoTableAdapter v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public partial class telegraph_avisoTableAdapter {

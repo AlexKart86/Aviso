@@ -48,6 +48,7 @@ namespace Aviso
             dgvLookup.DataSource = LookupList.lookupBs;
         }
 
+
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
@@ -85,15 +86,16 @@ namespace Aviso
 
         private void button1_Click(object sender, EventArgs e)
         {
-            postavisoBindingSource.EndEdit();
-            post_avisoTableAdapter.Update(avisoDataSet);
+            /* postavisoBindingSource.EndEdit();
+            post_avisoTableAdapter.Update(avisoDataSet);*/
+            
         }
 
         private void btnDeleteAviso_Click(object sender, EventArgs e)
         {
             postavisoBindingSource.RemoveCurrent();
             postavisoBindingSource.EndEdit();
-            post_avisoTableAdapter.Update(avisoDataSet);
+            post_avisoTableAdapter.Update(avisoDataSet);            
         }
     }
 }
