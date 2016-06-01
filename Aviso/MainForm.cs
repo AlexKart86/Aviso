@@ -46,7 +46,6 @@ namespace Aviso
             //this.dgvLookup.DataSource = lookupDataSet;
             //this.dgvLookup.DataMember = lookupDataSet.Tables[0].TableName;
             dgvLookup.DataSource = LookupList.lookupBs;
-
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

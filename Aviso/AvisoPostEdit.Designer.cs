@@ -122,6 +122,7 @@ namespace Aviso
             this.dtpCreatedDate.ShowCheckBox = true;
             this.dtpCreatedDate.Size = new System.Drawing.Size(156, 23);
             this.dtpCreatedDate.TabIndex = 1;
+            this.dtpCreatedDate.ValueChanged += new System.EventHandler(this.dtpRDDate_ValueChanged);
             // 
             // btnSave
             // 
@@ -229,6 +230,7 @@ namespace Aviso
             // 
             // dtpRDDate
             // 
+            this.dtpRDDate.Checked = false;
             this.dtpRDDate.CustomFormat = "dd/MM/yyyy";
             this.dtpRDDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpRDDate.Location = new System.Drawing.Point(143, 192);
@@ -236,6 +238,7 @@ namespace Aviso
             this.dtpRDDate.ShowCheckBox = true;
             this.dtpRDDate.Size = new System.Drawing.Size(156, 23);
             this.dtpRDDate.TabIndex = 5;
+            this.dtpRDDate.ValueChanged += new System.EventHandler(this.dtpRDDate_ValueChanged);
             // 
             // label6
             // 
@@ -413,7 +416,6 @@ namespace Aviso
             // 
             this.cbReceiverKO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbReceiverKO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbReceiverKO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbReceiverKO.FormattingEnabled = true;
             this.cbReceiverKO.Location = new System.Drawing.Point(20, 94);
             this.cbReceiverKO.Name = "cbReceiverKO";
@@ -433,7 +435,6 @@ namespace Aviso
             // 
             this.cbReceiverBIK.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbReceiverBIK.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbReceiverBIK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbReceiverBIK.FormattingEnabled = true;
             this.cbReceiverBIK.Location = new System.Drawing.Point(20, 42);
             this.cbReceiverBIK.Name = "cbReceiverBIK";
@@ -469,6 +470,7 @@ namespace Aviso
             this.dtpKPDDate.ShowCheckBox = true;
             this.dtpKPDDate.Size = new System.Drawing.Size(156, 23);
             this.dtpKPDDate.TabIndex = 8;
+            this.dtpKPDDate.ValueChanged += new System.EventHandler(this.dtpRDDate_ValueChanged);
             // 
             // txtKPD
             // 
@@ -512,13 +514,12 @@ namespace Aviso
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AvisoPostEdit";
-            this.Text = "Добавление/Редактирование почтового авизо";            
+            this.Text = "Добавление/Редактирование почтового авизо";
             this.Load += new System.EventHandler(this.AvisoPostEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

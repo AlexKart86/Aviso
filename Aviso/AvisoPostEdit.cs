@@ -27,23 +27,26 @@ namespace Aviso
             cbReceiverKO.DataBindings.Add("Text", bs_main, "RECEIVER_KO");
             txtReceiverBill.DataBindings.Add("Text", bs_main, "RECEIVER_BILL");
 
-            cbReceiverBIK.DataSource = LookupList.lookupBs;
+            cbReceiverKO.DataSource = LookupList.GetNewLookupBS();
+            cbReceiverKO.ValueMember = "KSNP";
+            cbReceiverKO.DisplayMember = "KSNP";
+
+            cbReceiverBIK.DataSource = LookupList.GetNewLookupBS();
             cbReceiverBIK.ValueMember = "NEWNUM";
             cbReceiverBIK.DisplayMember = "NEWNUM";
 
-            cbReceiverKO.DataSource = LookupList.lookupBs;
-            cbReceiverKO.ValueMember = "KSNP";
-            cbReceiverKO.DisplayMember = "KSNP";
 
-            cbSenderBIK.DataSource = LookupList.lookupBs;
+            cbSenderBIK.DataSource = LookupList.GetNewLookupBS();
             cbSenderBIK.ValueMember = "NEWNUM";
             cbSenderBIK.DisplayMember = "NEWNUM";
 
-            cbReceiverKO.DataSource = LookupList.lookupBs;
-            cbReceiverKO.ValueMember = "KSNP";
-            cbReceiverKO.DisplayMember = "KSNP";
-
-
+            cbSenderKO.DataSource = LookupList.GetNewLookupBS();
+            cbSenderKO.ValueMember = "KSNP";
+            cbSenderKO.DisplayMember = "KSNP";
+           /* LookupList.FillComboBox(cbReceiverKO, "KSNP");
+            LookupList.FillComboBox(cbReceiverBIK, "NEWNUM");
+            LookupList.FillComboBox(cbSenderKO, "KSNP");
+            LookupList.FillComboBox(cbSenderBIK, "NEWNUM");*/
 
             txtNum.DataBindings.Add("Text", bs_main, "NUM", false);
 
@@ -59,7 +62,7 @@ namespace Aviso
             Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);            
             b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
             b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
-            dtpRDDate.DataBindings.Add(b_RDDate);
+            dtpRDDate.DataBindings.Add(b_RDDate);            
 
             txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
             txtKPD.DataBindings.Add("Text", bs_main, "KPD");
@@ -67,7 +70,7 @@ namespace Aviso
             Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);
             dtpKPDDate.DataBindings.Add(b_KPDDate);
             b_KPDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
-            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);            
+            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);   
         }
 
         public AvisoPostEdit(BindingSource bs_main)
@@ -99,9 +102,23 @@ namespace Aviso
                         
         }
 
+        private bool IsFieldNull(string field_name)
+        {
+            DataRowView row = (DataRowView)bs_main.Current;
+            if (Convert.ToString(row[field_name]) == "")
+                return true;
+            else
+                return false;                
+        }
+
         private void AvisoPostEdit_Load(object sender, EventArgs e)
         {
-            //dtpRDDate.Checked = false;
+            dtpRDDate.Checked = !IsFieldNull("RD_DATE");
+            dtpCreatedDate.Checked = !IsFieldNull("CREATE_DATE");
+            dtpKPDDate.Checked = !IsFieldNull("KPD_DATE");
+            DtpRefreshFormat(dtpRDDate);
+            DtpRefreshFormat(dtpKPDDate);
+            DtpRefreshFormat(dtpCreatedDate);            
         }
 
         private void cbItemType_Validating(object sender, CancelEventArgs e)
@@ -119,13 +136,24 @@ namespace Aviso
            // cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if (dtpRDDate.Checked)
-                MessageBox.Show("Chechek");
-            else
-                MessageBox.Show("not checked");
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            DataRowView row = (DataRowView)bs_main.Current;
+            if (Convert.ToString(row["RD_DATE"]) == "")
+                MessageBox.Show("NULL!");
+            else
+                MessageBox.Show("Not Null");
+        }
+
+        private void DtpRefreshFormat(DateTimePicker dtp)
+        {
+            dtp.CustomFormat = dtp.Checked ? "dd/MM/yyyy" : " ";
+        }
+
+        private void dtpRDDate_ValueChanged(object sender, EventArgs e)
+        {
+            DtpRefreshFormat((DateTimePicker)sender);
         }
     }
 }

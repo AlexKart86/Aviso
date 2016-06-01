@@ -17,6 +17,13 @@ namespace Aviso
         public static readonly DataSet lookupDataSet;
         public static readonly BindingSource lookupBs;
 
+        public static BindingSource GetNewLookupBS()
+        {
+            BindingSource bs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);
+            bs.DataSource = lookupDataSet;
+            return bs;
+        }
+
         static LookupList()
         {
             string constr = ConfigurationManager.ConnectionStrings["Dictionary"].ConnectionString;
@@ -46,10 +53,19 @@ namespace Aviso
                 lookupBs.Position = pos;
                 DataRowView  row = (DataRowView) lookupBs.Current;
                 return Convert.ToString(row[resultFieldName]);
-            }
-            
+            }            
         }
 
+        //Заполня
+        public static void FillComboBox(ComboBox cb, string field_name, bool IsAddEmpty = false )
+        {
+            cb.Items.Clear();            
+            foreach (DataRow row in lookupDataSet.Tables[0].Rows)
+            {
+                if (IsAddEmpty || !string.IsNullOrEmpty(Convert.ToString(row[field_name])))
+                    cb.Items.Add(Convert.ToString(row[field_name]));                    
+            }
+        }
 
 
     }

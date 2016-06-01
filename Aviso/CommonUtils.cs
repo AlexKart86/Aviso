@@ -37,15 +37,15 @@ namespace Aviso
                 {
                     if (e.Value == System.DBNull.Value || e.Value == null)
                       {
-                          dtp.ShowCheckBox = true;
-                          dtp.Checked = false;
-                          // have to set e.Value to SOMETHING, since it’s coming in as NULL 
-                          // if i set to DateTime.Today, and that’s DIFFERENT than the control’s current  
-                          // value, then it triggers a CHANGE to the value, which CHECKS the box (not ok) 
-                          // the trick – set e.Value to whatever value the control currently has.   
-                          // This does NOT cause a CHANGE, and the checkbox stays OFF. 
-                          e.Value = dtp.Value;
-                      }
+                            dtp.ShowCheckBox = true;
+                            dtp.Checked = false;
+                            // have to set e.Value to SOMETHING, since it’s coming in as NULL 
+                            // if i set to DateTime.Today, and that’s DIFFERENT than the control’s current  
+                            // value, then it triggers a CHANGE to the value, which CHECKS the box (not ok) 
+                            // the trick – set e.Value to whatever value the control currently has.   
+                            // This does NOT cause a CHANGE, and the checkbox stays OFF. 
+                            e.Value = dtp.Value;
+                    }
                       else
                       {
                           dtp.ShowCheckBox = true;
@@ -71,7 +71,9 @@ namespace Aviso
                      {
                          dtp.ShowCheckBox = true;
                          dtp.Checked = false;
-                         e.Value = new Nullable<DateTime>();
+                        //e.Value = new Nullable<DateTime>();
+                        e.Value = DBNull.Value;
+
                      }
                      else
                      {
