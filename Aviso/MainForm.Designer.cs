@@ -37,6 +37,8 @@ namespace Aviso
             this.components = new System.ComponentModel.Container();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.avisoDataSet = new Aviso.AvisoDataSet();
             this.dgvLookup = new System.Windows.Forms.DataGridView();
             this.btnEditAviso = new System.Windows.Forms.Button();
             this.btnAddAviso = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@ namespace Aviso
             this.btnDeleteAviso = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.avisoDataSet = new Aviso.AvisoDataSet();
             this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,11 +70,11 @@ namespace Aviso
             this.KPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAvisoPost
@@ -104,7 +104,7 @@ namespace Aviso
             this.KPD,
             this.KPD_DATE});
             this.dgvAvisoPost.DataSource = this.postavisoBindingSource;
-            this.dgvAvisoPost.Location = new System.Drawing.Point(15, 5);
+            this.dgvAvisoPost.Location = new System.Drawing.Point(7, 4);
             this.dgvAvisoPost.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAvisoPost.MultiSelect = false;
             this.dgvAvisoPost.Name = "dgvAvisoPost";
@@ -119,6 +119,16 @@ namespace Aviso
             // 
             this.postavisoBindingSource.DataMember = "post_aviso";
             this.postavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
+            // 
+            // avisoDataSetBindingSource
+            // 
+            this.avisoDataSetBindingSource.DataSource = this.avisoDataSet;
+            this.avisoDataSetBindingSource.Position = 0;
+            // 
+            // avisoDataSet
+            // 
+            this.avisoDataSet.DataSetName = "AvisoDataSet";
+            this.avisoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvLookup
             // 
@@ -253,16 +263,6 @@ namespace Aviso
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // avisoDataSetBindingSource
-            // 
-            this.avisoDataSetBindingSource.DataSource = this.avisoDataSet;
-            this.avisoDataSetBindingSource.Position = 0;
-            // 
-            // avisoDataSet
-            // 
-            this.avisoDataSet.DataSetName = "AvisoDataSet";
-            this.avisoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // post_avisoTableAdapter
             // 
             this.post_avisoTableAdapter.ClearBeforeFill = true;
@@ -273,7 +273,6 @@ namespace Aviso
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Visible = false;
             // 
             // NUM
             // 
@@ -402,11 +401,11 @@ namespace Aviso
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLookup)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,22 +430,22 @@ namespace Aviso
         private System.Windows.Forms.Button btnDeleteAviso;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NUM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CREATE_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_TYPE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OPERATION_TYPE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RD_NUM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RD_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RD_SUM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SENDER_BIK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SENDER_KO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SENDER_BILL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RECEIVER_BIK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RECEIVER_KO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RECEIVER_BILL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KPD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KPD_DATE;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn NUM;
+        private DataGridViewTextBoxColumn CREATE_DATE;
+        private DataGridViewTextBoxColumn PAYMENT_TYPE;
+        private DataGridViewTextBoxColumn OPERATION_TYPE;
+        private DataGridViewTextBoxColumn RD_NUM;
+        private DataGridViewTextBoxColumn RD_DATE;
+        private DataGridViewTextBoxColumn RD_SUM;
+        private DataGridViewTextBoxColumn SENDER_BIK;
+        private DataGridViewTextBoxColumn SENDER_KO;
+        private DataGridViewTextBoxColumn SENDER_BILL;
+        private DataGridViewTextBoxColumn RECEIVER_BIK;
+        private DataGridViewTextBoxColumn RECEIVER_KO;
+        private DataGridViewTextBoxColumn RECEIVER_BILL;
+        private DataGridViewTextBoxColumn KPD;
+        private DataGridViewTextBoxColumn KPD_DATE;
     }
 }
 

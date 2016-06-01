@@ -17,10 +17,13 @@ namespace Aviso
         public static readonly DataSet lookupDataSet;
         public static readonly BindingSource lookupBs;
 
-        public static BindingSource GetNewLookupBS()
+        public static BindingSource GetNewLookupBS(string filter = "")
         {
             BindingSource bs = new BindingSource(lookupDataSet, lookupDataSet.Tables[0].TableName);
             bs.DataSource = lookupDataSet;
+            if (!String.IsNullOrEmpty(filter))
+                bs.Filter = filter;
+
             return bs;
         }
 

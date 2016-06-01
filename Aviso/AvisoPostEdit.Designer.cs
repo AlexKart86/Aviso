@@ -287,7 +287,7 @@ namespace Aviso
             this.groupBox1.Controls.Add(this.cbSenderBIK);
             this.groupBox1.Location = new System.Drawing.Point(325, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 240);
+            this.groupBox1.Size = new System.Drawing.Size(310, 240);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Плательщик";
@@ -332,7 +332,6 @@ namespace Aviso
             // 
             this.cbSenderKO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSenderKO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbSenderKO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbSenderKO.FormattingEnabled = true;
             this.cbSenderKO.Location = new System.Drawing.Point(17, 97);
             this.cbSenderKO.Name = "cbSenderKO";
@@ -352,12 +351,12 @@ namespace Aviso
             // 
             this.cbSenderBIK.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSenderBIK.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbSenderBIK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbSenderBIK.FormattingEnabled = true;
             this.cbSenderBIK.Location = new System.Drawing.Point(17, 45);
             this.cbSenderBIK.Name = "cbSenderBIK";
             this.cbSenderBIK.Size = new System.Drawing.Size(259, 24);
             this.cbSenderBIK.TabIndex = 0;
+            this.cbSenderBIK.TextUpdate += new System.EventHandler(this.cbSenderBIK_TextUpdate);
             this.cbSenderBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
             // 
             // groupBox2
@@ -371,7 +370,7 @@ namespace Aviso
             this.groupBox2.Controls.Add(this.cbReceiverBIK);
             this.groupBox2.Location = new System.Drawing.Point(646, 18);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(316, 237);
+            this.groupBox2.Size = new System.Drawing.Size(310, 237);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Получатель";

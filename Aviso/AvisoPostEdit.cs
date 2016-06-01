@@ -27,7 +27,7 @@ namespace Aviso
             cbReceiverKO.DataBindings.Add("Text", bs_main, "RECEIVER_KO");
             txtReceiverBill.DataBindings.Add("Text", bs_main, "RECEIVER_BILL");
 
-            cbReceiverKO.DataSource = LookupList.GetNewLookupBS();
+            cbReceiverKO.DataSource = LookupList.GetNewLookupBS("KSNP is not null");
             cbReceiverKO.ValueMember = "KSNP";
             cbReceiverKO.DisplayMember = "KSNP";
 
@@ -40,9 +40,10 @@ namespace Aviso
             cbSenderBIK.ValueMember = "NEWNUM";
             cbSenderBIK.DisplayMember = "NEWNUM";
 
-            cbSenderKO.DataSource = LookupList.GetNewLookupBS();
+            cbSenderKO.DataSource = LookupList.GetNewLookupBS("KSNP is not null");
             cbSenderKO.ValueMember = "KSNP";
             cbSenderKO.DisplayMember = "KSNP";
+
            /* LookupList.FillComboBox(cbReceiverKO, "KSNP");
             LookupList.FillComboBox(cbReceiverBIK, "NEWNUM");
             LookupList.FillComboBox(cbSenderKO, "KSNP");
@@ -133,7 +134,7 @@ namespace Aviso
 
         private void cbReceiverBIK_TextUpdate(object sender, EventArgs e)
         {
-           // cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
+           cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
         }
 
 
@@ -154,6 +155,11 @@ namespace Aviso
         private void dtpRDDate_ValueChanged(object sender, EventArgs e)
         {
             DtpRefreshFormat((DateTimePicker)sender);
+        }
+
+        private void cbSenderBIK_TextUpdate(object sender, EventArgs e)
+        {
+            cbSenderKO.Text = LookupList.LookupNewNum(cbSenderBIK.Text, "KSNP");
         }
     }
 }
