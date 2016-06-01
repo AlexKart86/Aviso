@@ -161,5 +161,17 @@ namespace Aviso
         {
             cbSenderKO.Text = LookupList.LookupNewNum(cbSenderBIK.Text, "KSNP");
         }
+
+        private void btnSenderSearch_Click(object sender, EventArgs e)
+        {
+            SelectBank frm = new SelectBank();            
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                DataRowView row = (DataRowView)LookupList.lookupBs.Current;
+                cbSenderBIK.Text = Convert.ToString(row["NEWNUM"]);
+                cbSenderKO.Text = Convert.ToString(row["KSNP"]);
+            }
+
+        }
     }
 }

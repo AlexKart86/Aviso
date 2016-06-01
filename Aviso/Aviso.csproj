@@ -71,6 +71,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectBank.Designer.cs">
+      <DependentUpon>SelectBank.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AvisoPostEdit.resx">
       <DependentUpon>AvisoPostEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SelectBank.resx">
+      <DependentUpon>SelectBank.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AvisoDataSet.xsc">
       <DependentUpon>AvisoDataSet.xsd</DependentUpon>
     </None>

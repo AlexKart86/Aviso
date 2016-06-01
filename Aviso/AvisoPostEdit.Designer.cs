@@ -309,6 +309,7 @@ namespace Aviso
             this.btnSenderSearch.TabStop = false;
             this.btnSenderSearch.Text = "Найти";
             this.btnSenderSearch.UseVisualStyleBackColor = true;
+            this.btnSenderSearch.Click += new System.EventHandler(this.btnSenderSearch_Click);
             // 
             // label10
             // 
