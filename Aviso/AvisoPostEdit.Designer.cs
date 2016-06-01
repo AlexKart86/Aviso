@@ -84,6 +84,8 @@ namespace Aviso
             this.dtpKPDDate = new System.Windows.Forms.DateTimePicker();
             this.txtKPD = new System.Windows.Forms.MaskedTextBox();
             this.errReceiverBill = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errSenderKO = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errReceiverKO = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
@@ -91,6 +93,8 @@ namespace Aviso
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSenderKO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errReceiverKO)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNum
@@ -301,7 +305,7 @@ namespace Aviso
             this.txtSenderBill.Name = "txtSenderBill";
             this.txtSenderBill.Size = new System.Drawing.Size(259, 23);
             this.txtSenderBill.TabIndex = 2;
-            this.txtSenderBill.Validating += new System.ComponentModel.CancelEventHandler(this.txtSenderBill_Validating);          
+            this.txtSenderBill.Validating += new System.ComponentModel.CancelEventHandler(this.txtSenderBill_Validating);
             // 
             // btnSenderSearch
             // 
@@ -341,6 +345,8 @@ namespace Aviso
             this.cbSenderKO.Name = "cbSenderKO";
             this.cbSenderKO.Size = new System.Drawing.Size(259, 24);
             this.cbSenderKO.TabIndex = 1;
+            this.cbSenderKO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
+            this.cbSenderKO.Validating += new System.ComponentModel.CancelEventHandler(this.cbSenderKO_Validating);
             // 
             // label8
             // 
@@ -360,7 +366,7 @@ namespace Aviso
             this.cbSenderBIK.Name = "cbSenderBIK";
             this.cbSenderBIK.Size = new System.Drawing.Size(259, 24);
             this.cbSenderBIK.TabIndex = 0;
-            this.cbSenderBIK.TextUpdate += new System.EventHandler(this.cbSenderBIK_TextUpdate);
+            this.cbSenderBIK.SelectedIndexChanged += new System.EventHandler(this.cbSenderBIK_SelectedIndexChanged);
             this.cbSenderBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
             // 
             // groupBox2
@@ -426,6 +432,8 @@ namespace Aviso
             this.cbReceiverKO.Name = "cbReceiverKO";
             this.cbReceiverKO.Size = new System.Drawing.Size(259, 24);
             this.cbReceiverKO.TabIndex = 1;
+            this.cbReceiverKO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
+            this.cbReceiverKO.Validating += new System.ComponentModel.CancelEventHandler(this.cbReceiverKO_Validating);
             // 
             // label13
             // 
@@ -445,7 +453,8 @@ namespace Aviso
             this.cbReceiverBIK.Name = "cbReceiverBIK";
             this.cbReceiverBIK.Size = new System.Drawing.Size(259, 24);
             this.cbReceiverBIK.TabIndex = 0;
-            this.cbReceiverBIK.TextUpdate += new System.EventHandler(this.cbReceiverBIK_TextUpdate);
+            this.cbReceiverBIK.SelectedIndexChanged += new System.EventHandler(this.cbReceiverBIK_SelectedIndexChanged);
+            this.cbReceiverBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
             // 
             // label14
             // 
@@ -489,6 +498,15 @@ namespace Aviso
             // 
             this.errReceiverBill.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errReceiverBill.ContainerControl = this;
+            // 
+            // errSenderKO
+            // 
+            this.errSenderKO.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errSenderKO.ContainerControl = this;
+            // 
+            // errReceiverKO
+            // 
+            this.errReceiverKO.ContainerControl = this;
             // 
             // AvisoPostEdit
             // 
@@ -536,6 +554,8 @@ namespace Aviso
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSenderKO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errReceiverKO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,5 +604,7 @@ namespace Aviso
         private System.Windows.Forms.MaskedTextBox txtSenderBill;
         private System.Windows.Forms.MaskedTextBox txtKPD;
         private ErrorProvider errReceiverBill;
+        private ErrorProvider errSenderKO;
+        private ErrorProvider errReceiverKO;
     }
 }

@@ -132,11 +132,6 @@ namespace Aviso
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void cbReceiverBIK_TextUpdate(object sender, EventArgs e)
-        {
-           cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
-        }
-
 
         private void button1_Click_2(object sender, EventArgs e)
         {
@@ -157,10 +152,6 @@ namespace Aviso
             DtpRefreshFormat((DateTimePicker)sender);
         }
 
-        private void cbSenderBIK_TextUpdate(object sender, EventArgs e)
-        {
-            cbSenderKO.Text = LookupList.LookupNewNum(cbSenderBIK.Text, "KSNP");
-        }
 
         private void btnSenderSearch_Click(object sender, EventArgs e)
         {
@@ -193,7 +184,7 @@ namespace Aviso
             if (String.IsNullOrEmpty(cbSenderKO.Text) && String.IsNullOrEmpty(txtSenderBill.Text))
             {
                 e.Cancel = true;
-                errSenderBill.SetError(txtSenderBill, "Данное поле должно быть заполненным, поскольку поле \"Корсчет КО плательщика\" не заполнено");
+                errSenderBill.SetError(txtSenderBill, "Данное поле должно быть заполненным,\r\n поскольку поле \"Корсчет КО плательщика\" не заполнено");
             }
             else
                 errSenderBill.SetError(txtSenderBill, "");
@@ -202,14 +193,52 @@ namespace Aviso
         private void txtReceiverBill_Validating(object sender, CancelEventArgs e)
         {
             //Поле "Номер лицевого счета получателя" должно быть
-            //Заполненным, если пусто поле "КО отправителя"
+            //Заполненным, если пусто поле "КО получателя"
             if (String.IsNullOrEmpty(cbReceiverKO.Text) && String.IsNullOrEmpty(txtReceiverBill.Text))
             {
                 e.Cancel = true;
-                errReceiverBill.SetError(txtReceiverBill, "Данное поле должно быть заполненным, поскольку поле \"Корсчет КО получателя\" не заполнено");
+                errReceiverBill.SetError(txtReceiverBill, "Данное поле должно быть заполненным, \r\n поскольку поле \"Корсчет КО получателя\" не заполнено");
             }
             else
                 errReceiverBill.SetError(txtReceiverBill, "");
+        }
+
+        //Автоподстановка КО при выборе БИК банка
+        private void cbReceiverBIK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
+        }
+        
+
+        private void cbSenderBIK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSenderKO.Text = LookupList.LookupNewNum(cbSenderBIK.Text, "KSNP");
+        }
+
+        private void cbSenderKO_Validating(object sender, CancelEventArgs e)
+        {
+            //Если БИК и КО оба заполнены, то они должны соответствовать друг другу
+            if (!string.IsNullOrEmpty(cbSenderBIK.Text) && !string.IsNullOrEmpty(cbSenderKO.Text)
+                 && LookupList.LookupNewNum(cbSenderBIK.Text, "KSNP") != cbSenderKO.Text)
+            {
+                e.Cancel = true;
+                errSenderKO.SetError(cbSenderKO, "КО плательщика не соответсвтвует БИК плательщика");
+            }
+            else
+                errSenderKO.SetError(cbSenderKO, "");
+        }
+
+        private void cbReceiverKO_Validating(object sender, CancelEventArgs e)
+        {
+            //Если БИК и КО оба заполнены, то они должны соответствовать друг другу
+            if (!string.IsNullOrEmpty(cbReceiverBIK.Text) && !string.IsNullOrEmpty(cbReceiverKO.Text)
+                 && LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP") != cbReceiverKO.Text)
+            {
+                e.Cancel = true;
+                errReceiverKO.SetError(cbReceiverKO, "КО получателя не соответсвтвует БИК получателя");
+            }
+            else
+                errReceiverKO.SetError(cbReceiverKO, "");
         }
     }
 }
