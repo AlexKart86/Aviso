@@ -377,6 +377,7 @@ namespace Aviso
             this.cbSenderBIK.Size = new System.Drawing.Size(259, 24);
             this.cbSenderBIK.TabIndex = 0;
             this.cbSenderBIK.SelectedIndexChanged += new System.EventHandler(this.cbSenderBIK_SelectedIndexChanged);
+            this.cbSenderBIK.TextChanged += new System.EventHandler(this.cbSenderBIK_SelectedIndexChanged);
             this.cbSenderBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
             this.cbSenderBIK.Validating += new System.ComponentModel.CancelEventHandler(this.cbSenderBIK_Validating);
             // 
@@ -465,6 +466,7 @@ namespace Aviso
             this.cbReceiverBIK.Size = new System.Drawing.Size(259, 24);
             this.cbReceiverBIK.TabIndex = 0;
             this.cbReceiverBIK.SelectedIndexChanged += new System.EventHandler(this.cbReceiverBIK_SelectedIndexChanged);
+            this.cbReceiverBIK.TextChanged += new System.EventHandler(this.cbReceiverBIK_SelectedIndexChanged);
             this.cbReceiverBIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowDigits_KeyPress);
             this.cbReceiverBIK.Validating += new System.ComponentModel.CancelEventHandler(this.cbReceiverBIK_Validating);
             // 

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.OleDb;
+using Novacode;
+using System.IO;
 
 namespace Aviso
 {
@@ -73,7 +75,16 @@ namespace Aviso
 
         private void button4_Click(object sender, EventArgs e)
         {
-            postavisoBindingSource.AddNew(); 
+            //postavisoBindingSource.AddNew(); 
+            //DocX doc = DocX.Load(@"D:\1.docx");
+            CombineDocs r = new CombineDocs();
+            List<byte[]> lst = new List<byte[]>();
+            lst.Add(File.ReadAllBytes(@"k:\Test\1.docx"));
+            lst.Add(File.ReadAllBytes(@"k:\Test\2.docx"));
+            lst.Add(File.ReadAllBytes(@"k:\Test\3.docx"));
+            byte[] str =  r.OpenAndCombine(lst);
+            File.WriteAllBytes(@"k:\Test\11.docx", str);
+            lst.Clear();
         }
 
         private void btnAddAviso_Click(object sender, EventArgs e)
@@ -97,6 +108,13 @@ namespace Aviso
             postavisoBindingSource.RemoveCurrent();
             postavisoBindingSource.EndEdit();
             post_avisoTableAdapter.Update(avisoDataSet);            
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            dlgSelectReport.ShowDialog();
+            if (dlgSelectReport.FileName != "")
+               AvisoPostReporter.PrintCurrent(postavisoBindingSource, dlgSelectReport.FileName);
         }
     }
 }

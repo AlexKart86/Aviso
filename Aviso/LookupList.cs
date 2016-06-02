@@ -29,9 +29,8 @@ namespace Aviso
 
         static LookupList()
         {
-            string constr = ConfigurationManager.ConnectionStrings["Dictionary"].ConnectionString;
-            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string path = (System.IO.Path.GetDirectoryName(executable));
+            string constr = ConfigurationManager.ConnectionStrings["Dictionary"].ConnectionString;            
+            string path = CommonUtils.GetCurrentDir();
             constr = constr.Replace("|DataDirectory|", path);
             OleDbConnection con = new OleDbConnection(constr);
             string sql = "select * from BNKSEEK.DBF";

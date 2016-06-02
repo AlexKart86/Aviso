@@ -10,6 +10,13 @@ namespace Aviso
 {
     public  static class CommonUtils
     {
+
+        public static string GetCurrentDir()
+        {
+            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            return (System.IO.Path.GetDirectoryName(executable));
+        }
+
         public static bool CheckRequiredField(Control sender, ErrorProvider err)
         {
             if (String.IsNullOrEmpty(sender.Text))
