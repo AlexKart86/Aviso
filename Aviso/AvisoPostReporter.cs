@@ -26,11 +26,46 @@ namespace Aviso
 
             string long_addr = ind + ", " + tnp + " " + nnp + ", " + namen;
             lst.Add(new Tuple<string, string>("LONG_ADDRESS", long_addr));
-            lst.Add(new Tuple<string, string>("RECEIVER_KO", Convert.ToString(row["RECEIVER_KO"])));
+            lst.Add(new Tuple<string, string>("BIK_B", rks));
+
+            string receiver_ko = Convert.ToString(row["RECEIVER_KO"]);
+            if (string.IsNullOrEmpty(receiver_ko))
+                receiver_ko = string.Format("{0:D20}", 0);
+            
+            lst.Add(new Tuple<string, string>("RECEIVER_KO", receiver_ko));
+            lst.Add(new Tuple<string, string>("RECEIVER_BIK", Convert.ToString(row["RECEIVER_BIK"])));
+            lst.Add(new Tuple<string, string>("RECEIVER_BILL", Convert.ToString(row["RECEIVER_BILL"])));
+            
+            string summ = Convert.ToString(row["RD_SUM"]);
+            lst.Add(new Tuple<string, string>("SUMM", summ));
+
+            string summ_kop = "";
+            //Определяем, является ли сумма целочисленной
+            int i;             
+            if (!Int32.TryParse(summ, out i))
+                summ_kop = "КОПЕЕК";
+            lst.Add(new Tuple<string, string>("SUMM_KOP", summ_kop));
+            lst.Add(new Tuple<string, string>("RD_NUM", Convert.ToString(row["RD_NUM"])));
+
+            DateTime rd_date = Convert.ToDateTime(row["RD_DATE"]);                       
+            lst.Add(new Tuple<string, string>("RD_DATE", CommonUtils.FormatDate(rd_date)));
+            DateTime aviso_date = Convert.ToDateTime(row["CREATE_DATE"]);
+            lst.Add(new Tuple<string, string>("AVISO_DATE", CommonUtils.FormatDate(aviso_date)));
+            DateTime kpd_date = Convert.ToDateTime(row["KPD_DATE"]);
+            lst.Add(new Tuple<string, string>("KPD_DATE", CommonUtils.FormatDate(kpd_date)));
+
+            string sender_ko = Convert.ToString(row["sender_KO"]);
+            if (string.IsNullOrEmpty(sender_ko))
+                sender_ko = string.Format("{0:D20}", 0);
+            lst.Add(new Tuple<string, string>("sender_KO", sender_ko));
+            lst.Add(new Tuple<string, string>("sender_BIK", Convert.ToString(row["sender_BIK"])));
+            lst.Add(new Tuple<string, string>("sender_BILL", Convert.ToString(row["sender_BILL"])));
+
+            lst.Add(new Tuple<string, string>("NUM", Convert.ToString(row["NUM"])));
+            lst.Add(new Tuple<string, string>("KPD", Convert.ToString(row["KPD"])));
 
             string template_name;
             template_name = CommonUtils.GetCurrentDir() + @"\credit_post_aviso.docx";
-
             return ReportOutput.CreateReport(template_name, result_file, lst);
         }
     }

@@ -91,6 +91,11 @@ namespace Aviso
             }
         }
 
+        public static string FormatDate(DateTime t)
+        {
+            return t.ToString("dd'/'MM'/'yyyy");
+        }
+
 
 
     }
