@@ -21,7 +21,10 @@ namespace Aviso
             string ind = LookupList.LookupNewNum(rks, "IND");
             string nnp = LookupList.LookupNewNum(rks, "NNP");
             string namen = LookupList.LookupNewNum(rks, "NAMEN");
-            string long_addr = ind + "," + nnp + "," + namen;
+            string tnp = LookupList.LookupNewNum(rks, "TNP");
+            tnp = LookupList.DecodeTNP(tnp);
+
+            string long_addr = ind + ", " + tnp + " " + nnp + ", " + namen;
             lst.Add(new Tuple<string, string>("LONG_ADDRESS", long_addr));
             lst.Add(new Tuple<string, string>("RECEIVER_KO", Convert.ToString(row["RECEIVER_KO"])));
 

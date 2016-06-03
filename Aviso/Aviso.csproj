@@ -115,7 +115,9 @@
     <None Include="AvisoDataSet.xss">
       <DependentUpon>AvisoDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BNKSEEK.DBF" />
+    <None Include="BNKSEEK.DBF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="credit_post_aviso.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

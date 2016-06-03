@@ -27,6 +27,25 @@ namespace Aviso
             return bs;
         }
 
+        public static string DecodeTNP(string tnp)
+        {
+            switch (tnp)
+            {
+                case "1":
+                    return "г.";                    
+                case "2":
+                    return "п.";                    
+                case "3":
+                    return "с.";                    
+                case "4":
+                    return "пгт.";                    
+                case "5":
+                    return "ст-ца";                    
+                default:
+                    return "";
+            }
+        }
+
         static LookupList()
         {
             string constr = ConfigurationManager.ConnectionStrings["Dictionary"].ConnectionString;            
