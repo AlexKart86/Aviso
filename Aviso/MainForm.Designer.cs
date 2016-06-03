@@ -35,7 +35,7 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +80,6 @@ namespace Aviso
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnDeleteAviso = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -98,8 +97,8 @@ namespace Aviso
             this.dgvAvisoPost.AllowUserToAddRows = false;
             this.dgvAvisoPost.AllowUserToDeleteRows = false;
             this.dgvAvisoPost.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAvisoPost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -483,19 +482,6 @@ namespace Aviso
             this.btnDeleteAviso.UseVisualStyleBackColor = true;
             this.btnDeleteAviso.Click += new System.EventHandler(this.btnDeleteAviso_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.postavisoBindingSource, "PAYMENT_TYPE", true));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Почтой",
-            "Телеграфом"});
-            this.comboBox1.Location = new System.Drawing.Point(959, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 10;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(860, 15);
@@ -532,7 +518,6 @@ namespace Aviso
             this.ClientSize = new System.Drawing.Size(1192, 607);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnDeleteAviso);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
@@ -570,7 +555,6 @@ namespace Aviso
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDeleteAviso;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn NUM;

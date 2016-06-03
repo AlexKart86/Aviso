@@ -57,16 +57,28 @@ namespace Aviso
             string sender_ko = Convert.ToString(row["sender_KO"]);
             if (string.IsNullOrEmpty(sender_ko))
                 sender_ko = string.Format("{0:D20}", 0);
-            lst.Add(new Tuple<string, string>("sender_KO", sender_ko));
-            lst.Add(new Tuple<string, string>("sender_BIK", Convert.ToString(row["sender_BIK"])));
-            lst.Add(new Tuple<string, string>("sender_BILL", Convert.ToString(row["sender_BILL"])));
+            lst.Add(new Tuple<string, string>("SENDER_KO", sender_ko));
+            lst.Add(new Tuple<string, string>("SENDER_BIK", Convert.ToString(row["SENDER_BIK"])));
+            lst.Add(new Tuple<string, string>("SENDER_BILL", Convert.ToString(row["SENDER_BILL"])));
 
             lst.Add(new Tuple<string, string>("NUM", Convert.ToString(row["NUM"])));
             lst.Add(new Tuple<string, string>("KPD", Convert.ToString(row["KPD"])));
 
-            string template_name;
-            template_name = CommonUtils.GetCurrentDir() + @"\credit_post_aviso.docx";
-            return ReportOutput.CreateReport(template_name, result_file, lst);
+            //Определяемся, какой из шаблонов нужен
+            string template_name = "";
+            string sender_bik = Convert.ToString(row["SENDER_BIK"]);
+            if (sender_bik.Substring(0,4) == "0475")            
+               template_name = CommonUtils.GetCurrentDir() + @"\Templates\credit_post_aviso.docx";
+            else
+            {
+                string receiver_bik = Convert.ToString(row["RECEIVER_BIK"]);
+                if (receiver_bik.Substring(0,4) == "0475")
+                    template_name = CommonUtils.GetCurrentDir() + @"\Templates\debit_post_aviso.docx";
+            }
+            if (!string.IsNullOrEmpty(template_name))
+                return ReportOutput.CreateReport(template_name, result_file, lst);
+            else
+                return false;
         }
     }
 }
