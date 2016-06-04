@@ -68,6 +68,12 @@
       <DependentUpon>AvisoPostEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="AvisoPostReporter.cs" />
+    <Compile Include="AvisoTeleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvisoTeleEdit.Designer.cs">
+      <DependentUpon>AvisoTeleEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="CombineDocs.cs" />
     <Compile Include="CommonUtils.cs" />
     <Compile Include="LookupList.cs" />
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="AvisoPostEdit.resx">
       <DependentUpon>AvisoPostEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvisoTeleEdit.resx">
+      <DependentUpon>AvisoTeleEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

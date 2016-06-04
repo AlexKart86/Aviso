@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Aviso
 {
-    public partial class AvisoPostEdit : Form
+    public partial class AvisoTeleEdit : Form
     {
         private BindingSource bs_main;        
 
@@ -69,7 +69,7 @@ namespace Aviso
             b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);   
         }
 
-        public AvisoPostEdit(BindingSource bs_main)
+        public AvisoTeleEdit(BindingSource bs_main)
         {            
             this.bs_main = bs_main;            
             InitializeComponent();            
@@ -107,7 +107,7 @@ namespace Aviso
                 return false;                
         }
 
-        private void AvisoPostEdit_Load(object sender, EventArgs e)
+        private void AvisoTeleEdit_Load(object sender, EventArgs e)
         {
             dtpRDDate.Checked = !IsFieldNull("RD_DATE");
             dtpCreatedDate.Checked = !IsFieldNull("CREATE_DATE");
@@ -297,3 +297,4 @@ namespace Aviso
         }
     }
 }
+

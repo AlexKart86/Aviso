@@ -796,7 +796,71 @@ namespace Aviso {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnregister_date;
+            private global::System.Data.DataColumn columnNUM;
+            
+            private global::System.Data.DataColumn columnCREATE_DATE;
+            
+            private global::System.Data.DataColumn columnPAYMENT_TYPE;
+            
+            private global::System.Data.DataColumn columnOPERATION_TYPE;
+            
+            private global::System.Data.DataColumn columnRD_NUM;
+            
+            private global::System.Data.DataColumn columnRD_DATE;
+            
+            private global::System.Data.DataColumn columnOFF_DATE;
+            
+            private global::System.Data.DataColumn columnRD_SUM;
+            
+            private global::System.Data.DataColumn columnSENDER_INN;
+            
+            private global::System.Data.DataColumn columnSENDER_KPP;
+            
+            private global::System.Data.DataColumn columnSENDER_NAME;
+            
+            private global::System.Data.DataColumn columnSENDER_BIK;
+            
+            private global::System.Data.DataColumn columnSENDER_KO;
+            
+            private global::System.Data.DataColumn columnSENDER_KO_NAME;
+            
+            private global::System.Data.DataColumn columnSENDER_BILL;
+            
+            private global::System.Data.DataColumn columnRECEIVER_INN;
+            
+            private global::System.Data.DataColumn columnRECEIVER_KPP;
+            
+            private global::System.Data.DataColumn columnRECEIVER_NAME;
+            
+            private global::System.Data.DataColumn columnRECEIVER_BIK;
+            
+            private global::System.Data.DataColumn columnRECEIVER_KO;
+            
+            private global::System.Data.DataColumn columnRECEIVER_BILL;
+            
+            private global::System.Data.DataColumn columnPAYMENT_GOAL;
+            
+            private global::System.Data.DataColumn columnN101;
+            
+            private global::System.Data.DataColumn columnN104;
+            
+            private global::System.Data.DataColumn columnN105;
+            
+            private global::System.Data.DataColumn columnN106;
+            
+            private global::System.Data.DataColumn columnN107;
+            
+            private global::System.Data.DataColumn columnN108;
+            
+            private global::System.Data.DataColumn columnN109;
+            
+            private global::System.Data.DataColumn columnN110;
+            
+            private global::System.Data.DataColumn columnKPD;
+            
+            private global::System.Data.DataColumn columnKPD_DATE;
+            
+            private global::System.Data.DataColumn columnRECEIVER_KO_NAME;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -841,9 +905,265 @@ namespace Aviso {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn register_dateColumn {
+            public global::System.Data.DataColumn NUMColumn {
                 get {
-                    return this.columnregister_date;
+                    return this.columnNUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CREATE_DATEColumn {
+                get {
+                    return this.columnCREATE_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_TYPEColumn {
+                get {
+                    return this.columnPAYMENT_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OPERATION_TYPEColumn {
+                get {
+                    return this.columnOPERATION_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RD_NUMColumn {
+                get {
+                    return this.columnRD_NUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RD_DATEColumn {
+                get {
+                    return this.columnRD_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OFF_DATEColumn {
+                get {
+                    return this.columnOFF_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RD_SUMColumn {
+                get {
+                    return this.columnRD_SUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_INNColumn {
+                get {
+                    return this.columnSENDER_INN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_KPPColumn {
+                get {
+                    return this.columnSENDER_KPP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_NAMEColumn {
+                get {
+                    return this.columnSENDER_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_BIKColumn {
+                get {
+                    return this.columnSENDER_BIK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_KOColumn {
+                get {
+                    return this.columnSENDER_KO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_KO_NAMEColumn {
+                get {
+                    return this.columnSENDER_KO_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENDER_BILLColumn {
+                get {
+                    return this.columnSENDER_BILL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_INNColumn {
+                get {
+                    return this.columnRECEIVER_INN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_KPPColumn {
+                get {
+                    return this.columnRECEIVER_KPP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_NAMEColumn {
+                get {
+                    return this.columnRECEIVER_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_BIKColumn {
+                get {
+                    return this.columnRECEIVER_BIK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_KOColumn {
+                get {
+                    return this.columnRECEIVER_KO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_BILLColumn {
+                get {
+                    return this.columnRECEIVER_BILL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PAYMENT_GOALColumn {
+                get {
+                    return this.columnPAYMENT_GOAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N101Column {
+                get {
+                    return this.columnN101;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N104Column {
+                get {
+                    return this.columnN104;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N105Column {
+                get {
+                    return this.columnN105;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N106Column {
+                get {
+                    return this.columnN106;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N107Column {
+                get {
+                    return this.columnN107;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N108Column {
+                get {
+                    return this.columnN108;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N109Column {
+                get {
+                    return this.columnN109;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn N110Column {
+                get {
+                    return this.columnN110;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KPDColumn {
+                get {
+                    return this.columnKPD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KPD_DATEColumn {
+                get {
+                    return this.columnKPD_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECEIVER_KO_NAMEColumn {
+                get {
+                    return this.columnRECEIVER_KO_NAME;
                 }
             }
             
@@ -884,11 +1204,76 @@ namespace Aviso {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public telegraph_avisoRow Addtelegraph_avisoRow(System.DateTime register_date) {
+            public telegraph_avisoRow Addtelegraph_avisoRow(
+                        int NUM, 
+                        System.DateTime CREATE_DATE, 
+                        string PAYMENT_TYPE, 
+                        string OPERATION_TYPE, 
+                        string RD_NUM, 
+                        System.DateTime RD_DATE, 
+                        System.DateTime OFF_DATE, 
+                        float RD_SUM, 
+                        string SENDER_INN, 
+                        string SENDER_KPP, 
+                        string SENDER_NAME, 
+                        string SENDER_BIK, 
+                        string SENDER_KO, 
+                        string SENDER_KO_NAME, 
+                        string SENDER_BILL, 
+                        string RECEIVER_INN, 
+                        string RECEIVER_KPP, 
+                        string RECEIVER_NAME, 
+                        string RECEIVER_BIK, 
+                        string RECEIVER_KO, 
+                        string RECEIVER_BILL, 
+                        string PAYMENT_GOAL, 
+                        string N101, 
+                        string N104, 
+                        string N105, 
+                        string N106, 
+                        string N107, 
+                        string N108, 
+                        string N109, 
+                        string N110, 
+                        string KPD, 
+                        System.DateTime KPD_DATE, 
+                        string RECEIVER_KO_NAME) {
                 telegraph_avisoRow rowtelegraph_avisoRow = ((telegraph_avisoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        register_date};
+                        NUM,
+                        CREATE_DATE,
+                        PAYMENT_TYPE,
+                        OPERATION_TYPE,
+                        RD_NUM,
+                        RD_DATE,
+                        OFF_DATE,
+                        RD_SUM,
+                        SENDER_INN,
+                        SENDER_KPP,
+                        SENDER_NAME,
+                        SENDER_BIK,
+                        SENDER_KO,
+                        SENDER_KO_NAME,
+                        SENDER_BILL,
+                        RECEIVER_INN,
+                        RECEIVER_KPP,
+                        RECEIVER_NAME,
+                        RECEIVER_BIK,
+                        RECEIVER_KO,
+                        RECEIVER_BILL,
+                        PAYMENT_GOAL,
+                        N101,
+                        N104,
+                        N105,
+                        N106,
+                        N107,
+                        N108,
+                        N109,
+                        N110,
+                        KPD,
+                        KPD_DATE,
+                        RECEIVER_KO_NAME};
                 rowtelegraph_avisoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtelegraph_avisoRow);
                 return rowtelegraph_avisoRow;
@@ -919,7 +1304,39 @@ namespace Aviso {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnregister_date = base.Columns["register_date"];
+                this.columnNUM = base.Columns["NUM"];
+                this.columnCREATE_DATE = base.Columns["CREATE_DATE"];
+                this.columnPAYMENT_TYPE = base.Columns["PAYMENT_TYPE"];
+                this.columnOPERATION_TYPE = base.Columns["OPERATION_TYPE"];
+                this.columnRD_NUM = base.Columns["RD_NUM"];
+                this.columnRD_DATE = base.Columns["RD_DATE"];
+                this.columnOFF_DATE = base.Columns["OFF_DATE"];
+                this.columnRD_SUM = base.Columns["RD_SUM"];
+                this.columnSENDER_INN = base.Columns["SENDER_INN"];
+                this.columnSENDER_KPP = base.Columns["SENDER_KPP"];
+                this.columnSENDER_NAME = base.Columns["SENDER_NAME"];
+                this.columnSENDER_BIK = base.Columns["SENDER_BIK"];
+                this.columnSENDER_KO = base.Columns["SENDER_KO"];
+                this.columnSENDER_KO_NAME = base.Columns["SENDER_KO_NAME"];
+                this.columnSENDER_BILL = base.Columns["SENDER_BILL"];
+                this.columnRECEIVER_INN = base.Columns["RECEIVER_INN"];
+                this.columnRECEIVER_KPP = base.Columns["RECEIVER_KPP"];
+                this.columnRECEIVER_NAME = base.Columns["RECEIVER_NAME"];
+                this.columnRECEIVER_BIK = base.Columns["RECEIVER_BIK"];
+                this.columnRECEIVER_KO = base.Columns["RECEIVER_KO"];
+                this.columnRECEIVER_BILL = base.Columns["RECEIVER_BILL"];
+                this.columnPAYMENT_GOAL = base.Columns["PAYMENT_GOAL"];
+                this.columnN101 = base.Columns["N101"];
+                this.columnN104 = base.Columns["N104"];
+                this.columnN105 = base.Columns["N105"];
+                this.columnN106 = base.Columns["N106"];
+                this.columnN107 = base.Columns["N107"];
+                this.columnN108 = base.Columns["N108"];
+                this.columnN109 = base.Columns["N109"];
+                this.columnN110 = base.Columns["N110"];
+                this.columnKPD = base.Columns["KPD"];
+                this.columnKPD_DATE = base.Columns["KPD_DATE"];
+                this.columnRECEIVER_KO_NAME = base.Columns["RECEIVER_KO_NAME"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -927,14 +1344,105 @@ namespace Aviso {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnregister_date = new global::System.Data.DataColumn("register_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnregister_date);
+                this.columnNUM = new global::System.Data.DataColumn("NUM", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNUM);
+                this.columnCREATE_DATE = new global::System.Data.DataColumn("CREATE_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCREATE_DATE);
+                this.columnPAYMENT_TYPE = new global::System.Data.DataColumn("PAYMENT_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_TYPE);
+                this.columnOPERATION_TYPE = new global::System.Data.DataColumn("OPERATION_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOPERATION_TYPE);
+                this.columnRD_NUM = new global::System.Data.DataColumn("RD_NUM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRD_NUM);
+                this.columnRD_DATE = new global::System.Data.DataColumn("RD_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRD_DATE);
+                this.columnOFF_DATE = new global::System.Data.DataColumn("OFF_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOFF_DATE);
+                this.columnRD_SUM = new global::System.Data.DataColumn("RD_SUM", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRD_SUM);
+                this.columnSENDER_INN = new global::System.Data.DataColumn("SENDER_INN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_INN);
+                this.columnSENDER_KPP = new global::System.Data.DataColumn("SENDER_KPP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_KPP);
+                this.columnSENDER_NAME = new global::System.Data.DataColumn("SENDER_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_NAME);
+                this.columnSENDER_BIK = new global::System.Data.DataColumn("SENDER_BIK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_BIK);
+                this.columnSENDER_KO = new global::System.Data.DataColumn("SENDER_KO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_KO);
+                this.columnSENDER_KO_NAME = new global::System.Data.DataColumn("SENDER_KO_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_KO_NAME);
+                this.columnSENDER_BILL = new global::System.Data.DataColumn("SENDER_BILL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENDER_BILL);
+                this.columnRECEIVER_INN = new global::System.Data.DataColumn("RECEIVER_INN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_INN);
+                this.columnRECEIVER_KPP = new global::System.Data.DataColumn("RECEIVER_KPP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_KPP);
+                this.columnRECEIVER_NAME = new global::System.Data.DataColumn("RECEIVER_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_NAME);
+                this.columnRECEIVER_BIK = new global::System.Data.DataColumn("RECEIVER_BIK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_BIK);
+                this.columnRECEIVER_KO = new global::System.Data.DataColumn("RECEIVER_KO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_KO);
+                this.columnRECEIVER_BILL = new global::System.Data.DataColumn("RECEIVER_BILL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_BILL);
+                this.columnPAYMENT_GOAL = new global::System.Data.DataColumn("PAYMENT_GOAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAYMENT_GOAL);
+                this.columnN101 = new global::System.Data.DataColumn("N101", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN101);
+                this.columnN104 = new global::System.Data.DataColumn("N104", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN104);
+                this.columnN105 = new global::System.Data.DataColumn("N105", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN105);
+                this.columnN106 = new global::System.Data.DataColumn("N106", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN106);
+                this.columnN107 = new global::System.Data.DataColumn("N107", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN107);
+                this.columnN108 = new global::System.Data.DataColumn("N108", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN108);
+                this.columnN109 = new global::System.Data.DataColumn("N109", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN109);
+                this.columnN110 = new global::System.Data.DataColumn("N110", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN110);
+                this.columnKPD = new global::System.Data.DataColumn("KPD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKPD);
+                this.columnKPD_DATE = new global::System.Data.DataColumn("KPD_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKPD_DATE);
+                this.columnRECEIVER_KO_NAME = new global::System.Data.DataColumn("RECEIVER_KO_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEIVER_KO_NAME);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = 1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
+                this.columnPAYMENT_TYPE.MaxLength = 10;
+                this.columnOPERATION_TYPE.MaxLength = 2;
+                this.columnRD_NUM.MaxLength = 6;
+                this.columnSENDER_INN.MaxLength = 12;
+                this.columnSENDER_KPP.MaxLength = 9;
+                this.columnSENDER_NAME.MaxLength = 160;
+                this.columnSENDER_BIK.MaxLength = 9;
+                this.columnSENDER_KO.MaxLength = 20;
+                this.columnSENDER_KO_NAME.MaxLength = 120;
+                this.columnSENDER_BILL.MaxLength = 20;
+                this.columnRECEIVER_INN.MaxLength = 12;
+                this.columnRECEIVER_KPP.MaxLength = 9;
+                this.columnRECEIVER_NAME.MaxLength = 255;
+                this.columnRECEIVER_BIK.MaxLength = 9;
+                this.columnRECEIVER_KO.MaxLength = 20;
+                this.columnRECEIVER_BILL.MaxLength = 20;
+                this.columnPAYMENT_GOAL.MaxLength = 255;
+                this.columnN101.MaxLength = 2;
+                this.columnN104.MaxLength = 20;
+                this.columnN105.MaxLength = 11;
+                this.columnN106.MaxLength = 2;
+                this.columnN107.MaxLength = 10;
+                this.columnN108.MaxLength = 255;
+                this.columnN109.MaxLength = 10;
+                this.columnN110.MaxLength = 2;
+                this.columnKPD.MaxLength = 9;
+                this.columnRECEIVER_KO_NAME.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1534,30 +2042,926 @@ namespace Aviso {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime register_date {
+            public int NUM {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletelegraph_aviso.register_dateColumn]));
+                        return ((int)(this[this.tabletelegraph_aviso.NUMColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'register_date\' in table \'telegraph_aviso\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NUM\' in table \'telegraph_aviso\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletelegraph_aviso.register_dateColumn] = value;
+                    this[this.tabletelegraph_aviso.NUMColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isregister_dateNull() {
-                return this.IsNull(this.tabletelegraph_aviso.register_dateColumn);
+            public System.DateTime CREATE_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletelegraph_aviso.CREATE_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CREATE_DATE\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.CREATE_DATEColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setregister_dateNull() {
-                this[this.tabletelegraph_aviso.register_dateColumn] = global::System.Convert.DBNull;
+            public string PAYMENT_TYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.PAYMENT_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PAYMENT_TYPE\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.PAYMENT_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string OPERATION_TYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.OPERATION_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OPERATION_TYPE\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.OPERATION_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RD_NUM {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RD_NUMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RD_NUM\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RD_NUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime RD_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletelegraph_aviso.RD_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RD_DATE\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RD_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime OFF_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletelegraph_aviso.OFF_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OFF_DATE\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.OFF_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float RD_SUM {
+                get {
+                    try {
+                        return ((float)(this[this.tabletelegraph_aviso.RD_SUMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RD_SUM\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RD_SUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_INN {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_INNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_INN\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_INNColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_KPP {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_KPPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_KPP\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_KPPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_NAME\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_BIK {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_BIKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_BIK\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_BIKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_KO {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_KOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_KO\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_KOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_KO_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_KO_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_KO_NAME\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_KO_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SENDER_BILL {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.SENDER_BILLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENDER_BILL\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.SENDER_BILLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_INN {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_INNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_INN\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_INNColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_KPP {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_KPPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_KPP\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_KPPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_NAME\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_BIK {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_BIKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_BIK\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_BIKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_KO {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_KOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_KO\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_KOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_BILL {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_BILLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_BILL\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_BILLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PAYMENT_GOAL {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.PAYMENT_GOALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PAYMENT_GOAL\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.PAYMENT_GOALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N101 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N101Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N101\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N101Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N104 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N104Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N104\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N104Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N105 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N105Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N105\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N105Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N106 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N106Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N106\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N106Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N107 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N107Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N107\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N107Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N108 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N108Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N108\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N108Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N109 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N109Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N109\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N109Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string N110 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.N110Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'N110\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.N110Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string KPD {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.KPDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KPD\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.KPDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime KPD_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletelegraph_aviso.KPD_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KPD_DATE\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.KPD_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RECEIVER_KO_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tabletelegraph_aviso.RECEIVER_KO_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEIVER_KO_NAME\' in table \'telegraph_aviso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletelegraph_aviso.RECEIVER_KO_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNUMNull() {
+                return this.IsNull(this.tabletelegraph_aviso.NUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNUMNull() {
+                this[this.tabletelegraph_aviso.NUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCREATE_DATENull() {
+                return this.IsNull(this.tabletelegraph_aviso.CREATE_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCREATE_DATENull() {
+                this[this.tabletelegraph_aviso.CREATE_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_TYPENull() {
+                return this.IsNull(this.tabletelegraph_aviso.PAYMENT_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_TYPENull() {
+                this[this.tabletelegraph_aviso.PAYMENT_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOPERATION_TYPENull() {
+                return this.IsNull(this.tabletelegraph_aviso.OPERATION_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOPERATION_TYPENull() {
+                this[this.tabletelegraph_aviso.OPERATION_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRD_NUMNull() {
+                return this.IsNull(this.tabletelegraph_aviso.RD_NUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRD_NUMNull() {
+                this[this.tabletelegraph_aviso.RD_NUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRD_DATENull() {
+                return this.IsNull(this.tabletelegraph_aviso.RD_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRD_DATENull() {
+                this[this.tabletelegraph_aviso.RD_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOFF_DATENull() {
+                return this.IsNull(this.tabletelegraph_aviso.OFF_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOFF_DATENull() {
+                this[this.tabletelegraph_aviso.OFF_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRD_SUMNull() {
+                return this.IsNull(this.tabletelegraph_aviso.RD_SUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRD_SUMNull() {
+                this[this.tabletelegraph_aviso.RD_SUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_INNNull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_INNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_INNNull() {
+                this[this.tabletelegraph_aviso.SENDER_INNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_KPPNull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_KPPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_KPPNull() {
+                this[this.tabletelegraph_aviso.SENDER_KPPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_NAMENull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_NAMENull() {
+                this[this.tabletelegraph_aviso.SENDER_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_BIKNull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_BIKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_BIKNull() {
+                this[this.tabletelegraph_aviso.SENDER_BIKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_KONull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_KOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_KONull() {
+                this[this.tabletelegraph_aviso.SENDER_KOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_KO_NAMENull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_KO_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_KO_NAMENull() {
+                this[this.tabletelegraph_aviso.SENDER_KO_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENDER_BILLNull() {
+                return this.IsNull(this.tabletelegraph_aviso.SENDER_BILLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENDER_BILLNull() {
+                this[this.tabletelegraph_aviso.SENDER_BILLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_INNNull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_INNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_INNNull() {
+                this[this.tabletelegraph_aviso.RECEIVER_INNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_KPPNull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_KPPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_KPPNull() {
+                this[this.tabletelegraph_aviso.RECEIVER_KPPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_NAMENull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_NAMENull() {
+                this[this.tabletelegraph_aviso.RECEIVER_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_BIKNull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_BIKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_BIKNull() {
+                this[this.tabletelegraph_aviso.RECEIVER_BIKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_KONull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_KOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_KONull() {
+                this[this.tabletelegraph_aviso.RECEIVER_KOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_BILLNull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_BILLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_BILLNull() {
+                this[this.tabletelegraph_aviso.RECEIVER_BILLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPAYMENT_GOALNull() {
+                return this.IsNull(this.tabletelegraph_aviso.PAYMENT_GOALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPAYMENT_GOALNull() {
+                this[this.tabletelegraph_aviso.PAYMENT_GOALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN101Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N101Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN101Null() {
+                this[this.tabletelegraph_aviso.N101Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN104Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N104Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN104Null() {
+                this[this.tabletelegraph_aviso.N104Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN105Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N105Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN105Null() {
+                this[this.tabletelegraph_aviso.N105Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN106Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N106Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN106Null() {
+                this[this.tabletelegraph_aviso.N106Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN107Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N107Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN107Null() {
+                this[this.tabletelegraph_aviso.N107Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN108Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N108Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN108Null() {
+                this[this.tabletelegraph_aviso.N108Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN109Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N109Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN109Null() {
+                this[this.tabletelegraph_aviso.N109Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsN110Null() {
+                return this.IsNull(this.tabletelegraph_aviso.N110Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetN110Null() {
+                this[this.tabletelegraph_aviso.N110Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKPDNull() {
+                return this.IsNull(this.tabletelegraph_aviso.KPDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKPDNull() {
+                this[this.tabletelegraph_aviso.KPDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKPD_DATENull() {
+                return this.IsNull(this.tabletelegraph_aviso.KPD_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKPD_DATENull() {
+                this[this.tabletelegraph_aviso.KPD_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRECEIVER_KO_NAMENull() {
+                return this.IsNull(this.tabletelegraph_aviso.RECEIVER_KO_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRECEIVER_KO_NAMENull() {
+                this[this.tabletelegraph_aviso.RECEIVER_KO_NAMEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2010,30 +3414,120 @@ namespace Aviso.AvisoDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "telegraph_aviso";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("register_date", "register_date");
+            tableMapping.ColumnMappings.Add("NUM", "NUM");
+            tableMapping.ColumnMappings.Add("CREATE_DATE", "CREATE_DATE");
+            tableMapping.ColumnMappings.Add("PAYMENT_TYPE", "PAYMENT_TYPE");
+            tableMapping.ColumnMappings.Add("OPERATION_TYPE", "OPERATION_TYPE");
+            tableMapping.ColumnMappings.Add("RD_NUM", "RD_NUM");
+            tableMapping.ColumnMappings.Add("RD_DATE", "RD_DATE");
+            tableMapping.ColumnMappings.Add("OFF_DATE", "OFF_DATE");
+            tableMapping.ColumnMappings.Add("RD_SUM", "RD_SUM");
+            tableMapping.ColumnMappings.Add("SENDER_INN", "SENDER_INN");
+            tableMapping.ColumnMappings.Add("SENDER_KPP", "SENDER_KPP");
+            tableMapping.ColumnMappings.Add("SENDER_NAME", "SENDER_NAME");
+            tableMapping.ColumnMappings.Add("SENDER_BIK", "SENDER_BIK");
+            tableMapping.ColumnMappings.Add("SENDER_KO", "SENDER_KO");
+            tableMapping.ColumnMappings.Add("SENDER_KO_NAME", "SENDER_KO_NAME");
+            tableMapping.ColumnMappings.Add("SENDER_BILL", "SENDER_BILL");
+            tableMapping.ColumnMappings.Add("RECEIVER_INN", "RECEIVER_INN");
+            tableMapping.ColumnMappings.Add("RECEIVER_KPP", "RECEIVER_KPP");
+            tableMapping.ColumnMappings.Add("RECEIVER_NAME", "RECEIVER_NAME");
+            tableMapping.ColumnMappings.Add("RECEIVER_BIK", "RECEIVER_BIK");
+            tableMapping.ColumnMappings.Add("RECEIVER_KO", "RECEIVER_KO");
+            tableMapping.ColumnMappings.Add("RECEIVER_BILL", "RECEIVER_BILL");
+            tableMapping.ColumnMappings.Add("PAYMENT_GOAL", "PAYMENT_GOAL");
+            tableMapping.ColumnMappings.Add("N101", "N101");
+            tableMapping.ColumnMappings.Add("N104", "N104");
+            tableMapping.ColumnMappings.Add("N105", "N105");
+            tableMapping.ColumnMappings.Add("N106", "N106");
+            tableMapping.ColumnMappings.Add("N107", "N107");
+            tableMapping.ColumnMappings.Add("N108", "N108");
+            tableMapping.ColumnMappings.Add("N109", "N109");
+            tableMapping.ColumnMappings.Add("N110", "N110");
+            tableMapping.ColumnMappings.Add("KPD", "KPD");
+            tableMapping.ColumnMappings.Add("KPD_DATE", "KPD_DATE");
+            tableMapping.ColumnMappings.Add("RECEIVER_KO_NAME", "RECEIVER_KO_NAME");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `telegraph_aviso` WHERE ((`ID` = ?) AND ((? = 1 AND `register_date` I" +
-                "S NULL) OR (`register_date` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `telegraph_aviso` WHERE ((`ID` = ?))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_register_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "register_date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_register_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "register_date", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `telegraph_aviso` (`register_date`) VALUES (?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `telegraph_aviso` (`NUM`, `CREATE_DATE`, `PAYMENT_TYPE`, `OPERATION_TYPE`, `RD_NUM`, `RD_DATE`, `OFF_DATE`, `RD_SUM`, `SENDER_INN`, `SENDER_KPP`, `SENDER_NAME`, `SENDER_BIK`, `SENDER_KO`, `SENDER_KO_NAME`, `SENDER_BILL`, `RECEIVER_INN`, `RECEIVER_KPP`, `RECEIVER_NAME`, `RECEIVER_BIK`, `RECEIVER_KO`, `RECEIVER_KO_NAME`, `RECEIVER_BILL`, `PAYMENT_GOAL`, `N101`, `N104`, `N105`, `N106`, `N107`, `N108`, `N109`, `N110`, `KPD`, `KPD_DATE`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("register_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "register_date", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CREATE_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CREATE_DATE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_TYPE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_DATE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OFF_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OFF_DATE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_INN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_INN", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KPP", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KPP", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BIK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BIK", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KO_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KO_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BILL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BILL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_INN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_INN", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_KPP", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_KPP", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_BIK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_BIK", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_KO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_KO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_KO_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_KO_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_BILL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_BILL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_GOAL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_GOAL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N101", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N101", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N104", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N104", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N105", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N105", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N106", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N106", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N107", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N107", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N108", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N108", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N109", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N109", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N110", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N110", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KPD", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KPD", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KPD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KPD_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `telegraph_aviso` SET `register_date` = ? WHERE ((`ID` = ?) AND ((? = 1 AN" +
-                "D `register_date` IS NULL) OR (`register_date` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `telegraph_aviso` SET `NUM` = ?, `CREATE_DATE` = ?, `PAYMENT_TYPE` = ?, `OPERATION_TYPE` = ?, `RD_NUM` = ?, `RD_DATE` = ?, `OFF_DATE` = ?, `RD_SUM` = ?, `SENDER_INN` = ?, `SENDER_KPP` = ?, `SENDER_NAME` = ?, `SENDER_BIK` = ?, `SENDER_KO` = ?, `SENDER_KO_NAME` = ?, `SENDER_BILL` = ?, `RECEIVER_INN` = ?, `RECEIVER_KPP` = ?, `RECEIVER_NAME` = ?, `RECEIVER_BIK` = ?, `RECEIVER_KO` = ?, `RECEIVER_KO_NAME` = ?, `RECEIVER_BILL` = ?, `PAYMENT_GOAL` = ?, `N101` = ?, `N104` = ?, `N105` = ?, `N106` = ?, `N107` = ?, `N108` = ?, `N109` = ?, `N110` = ?, `KPD` = ?, `KPD_DATE` = ? WHERE ((`ID` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("register_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "register_date", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CREATE_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CREATE_DATE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_TYPE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_DATE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OFF_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OFF_DATE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_INN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_INN", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KPP", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KPP", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BIK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BIK", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KO_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KO_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BILL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BILL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_INN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_INN", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_KPP", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_KPP", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_BIK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_BIK", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_KO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_KO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_KO_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_KO_NAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RECEIVER_BILL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RECEIVER_BILL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_GOAL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_GOAL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N101", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N101", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N104", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N104", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N105", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N105", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N106", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N106", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N107", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N107", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N108", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N108", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N109", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N109", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("N110", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "N110", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KPD", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KPD", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KPD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KPD_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_register_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "register_date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_register_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "register_date", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2049,7 +3543,7 @@ namespace Aviso.AvisoDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, register_date FROM telegraph_aviso";
+            this._commandCollection[0].CommandText = "SELECT * FROM telegraph_aviso";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2104,99 +3598,6 @@ namespace Aviso.AvisoDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<global::System.DateTime> Original_register_date) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_register_date.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_register_date.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> register_date) {
-            if ((register_date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(register_date.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> register_date, int Original_ID, global::System.Nullable<global::System.DateTime> Original_register_date) {
-            if ((register_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(register_date.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID));
-            if ((Original_register_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Original_register_date.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
         }
     }
     

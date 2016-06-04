@@ -35,7 +35,8 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,22 +54,22 @@ namespace Aviso
             this.RECEIVER_BILL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pAYMENTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oPERATIONTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDSUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sENDERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sENDERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sENDERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEIVERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEIVERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEIVERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nUMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cREATEDATEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pAYMENTTYPEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oPERATIONTYPEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDNUMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDDATEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDSUMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERBIKDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERKODataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERBILLDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERBIKDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERKODataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERBILLDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDDATEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.avisoDataSet = new Aviso.AvisoDataSet();
@@ -76,20 +77,64 @@ namespace Aviso
             this.btnAddAviso = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tcMain = new System.Windows.Forms.TabControl();
+            this.tpPostAviso = new System.Windows.Forms.TabPage();
+            this.tpTeleAviso = new System.Windows.Forms.TabPage();
+            this.dgvAvisoTele = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pAYMENTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oPERATIONTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oFFDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDSUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERINNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERKPPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERKONAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENDERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERINNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERKPPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEIVERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pAYMENTGOALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n101DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n104DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n105DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n106DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n107DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n108DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n109DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.n110DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDeleteAviso = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
             this.btnPrint = new System.Windows.Forms.Button();
             this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
+            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
+            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
+            this.mmAdd = new System.Windows.Forms.MenuStrip();
+            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tcMain.SuspendLayout();
+            this.tpPostAviso.SuspendLayout();
+            this.tpTeleAviso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoTele)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telegraphavisoBindingSource)).BeginInit();
+            this.mmAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAvisoPost
@@ -97,8 +142,8 @@ namespace Aviso
             this.dgvAvisoPost.AllowUserToAddRows = false;
             this.dgvAvisoPost.AllowUserToDeleteRows = false;
             this.dgvAvisoPost.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAvisoPost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -121,22 +166,22 @@ namespace Aviso
             this.RECEIVER_BILL,
             this.KPD,
             this.KPD_DATE,
-            this.iDDataGridViewTextBoxColumn,
-            this.nUMDataGridViewTextBoxColumn,
-            this.cREATEDATEDataGridViewTextBoxColumn,
-            this.pAYMENTTYPEDataGridViewTextBoxColumn,
-            this.oPERATIONTYPEDataGridViewTextBoxColumn,
-            this.rDNUMDataGridViewTextBoxColumn,
-            this.rDDATEDataGridViewTextBoxColumn,
-            this.rDSUMDataGridViewTextBoxColumn,
-            this.sENDERBIKDataGridViewTextBoxColumn,
-            this.sENDERKODataGridViewTextBoxColumn,
-            this.sENDERBILLDataGridViewTextBoxColumn,
-            this.rECEIVERBIKDataGridViewTextBoxColumn,
-            this.rECEIVERKODataGridViewTextBoxColumn,
-            this.rECEIVERBILLDataGridViewTextBoxColumn,
-            this.kPDDataGridViewTextBoxColumn,
-            this.kPDDATEDataGridViewTextBoxColumn});
+            this.iDDataGridViewTextBoxColumn1,
+            this.nUMDataGridViewTextBoxColumn1,
+            this.cREATEDATEDataGridViewTextBoxColumn1,
+            this.pAYMENTTYPEDataGridViewTextBoxColumn1,
+            this.oPERATIONTYPEDataGridViewTextBoxColumn1,
+            this.rDNUMDataGridViewTextBoxColumn1,
+            this.rDDATEDataGridViewTextBoxColumn1,
+            this.rDSUMDataGridViewTextBoxColumn1,
+            this.sENDERBIKDataGridViewTextBoxColumn1,
+            this.sENDERKODataGridViewTextBoxColumn1,
+            this.sENDERBILLDataGridViewTextBoxColumn1,
+            this.rECEIVERBIKDataGridViewTextBoxColumn1,
+            this.rECEIVERKODataGridViewTextBoxColumn1,
+            this.rECEIVERBILLDataGridViewTextBoxColumn1,
+            this.kPDDataGridViewTextBoxColumn1,
+            this.kPDDATEDataGridViewTextBoxColumn1});
             this.dgvAvisoPost.DataSource = this.postavisoBindingSource;
             this.dgvAvisoPost.Location = new System.Drawing.Point(7, 4);
             this.dgvAvisoPost.Margin = new System.Windows.Forms.Padding(4);
@@ -145,7 +190,7 @@ namespace Aviso
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 497);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 495);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.btnEditAviso_Click);
             // 
@@ -262,117 +307,117 @@ namespace Aviso
             this.KPD_DATE.Name = "KPD_DATE";
             this.KPD_DATE.ReadOnly = true;
             // 
-            // iDDataGridViewTextBoxColumn
+            // iDDataGridViewTextBoxColumn1
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // nUMDataGridViewTextBoxColumn
+            // nUMDataGridViewTextBoxColumn1
             // 
-            this.nUMDataGridViewTextBoxColumn.DataPropertyName = "NUM";
-            this.nUMDataGridViewTextBoxColumn.HeaderText = "NUM";
-            this.nUMDataGridViewTextBoxColumn.Name = "nUMDataGridViewTextBoxColumn";
-            this.nUMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nUMDataGridViewTextBoxColumn1.DataPropertyName = "NUM";
+            this.nUMDataGridViewTextBoxColumn1.HeaderText = "NUM";
+            this.nUMDataGridViewTextBoxColumn1.Name = "nUMDataGridViewTextBoxColumn1";
+            this.nUMDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // cREATEDATEDataGridViewTextBoxColumn
+            // cREATEDATEDataGridViewTextBoxColumn1
             // 
-            this.cREATEDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATE_DATE";
-            this.cREATEDATEDataGridViewTextBoxColumn.HeaderText = "CREATE_DATE";
-            this.cREATEDATEDataGridViewTextBoxColumn.Name = "cREATEDATEDataGridViewTextBoxColumn";
-            this.cREATEDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cREATEDATEDataGridViewTextBoxColumn1.DataPropertyName = "CREATE_DATE";
+            this.cREATEDATEDataGridViewTextBoxColumn1.HeaderText = "CREATE_DATE";
+            this.cREATEDATEDataGridViewTextBoxColumn1.Name = "cREATEDATEDataGridViewTextBoxColumn1";
+            this.cREATEDATEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // pAYMENTTYPEDataGridViewTextBoxColumn
+            // pAYMENTTYPEDataGridViewTextBoxColumn1
             // 
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_TYPE";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.HeaderText = "PAYMENT_TYPE";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.Name = "pAYMENTTYPEDataGridViewTextBoxColumn";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pAYMENTTYPEDataGridViewTextBoxColumn1.DataPropertyName = "PAYMENT_TYPE";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn1.HeaderText = "PAYMENT_TYPE";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn1.Name = "pAYMENTTYPEDataGridViewTextBoxColumn1";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // oPERATIONTYPEDataGridViewTextBoxColumn
+            // oPERATIONTYPEDataGridViewTextBoxColumn1
             // 
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.DataPropertyName = "OPERATION_TYPE";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.HeaderText = "OPERATION_TYPE";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.Name = "oPERATIONTYPEDataGridViewTextBoxColumn";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.oPERATIONTYPEDataGridViewTextBoxColumn1.DataPropertyName = "OPERATION_TYPE";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn1.HeaderText = "OPERATION_TYPE";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn1.Name = "oPERATIONTYPEDataGridViewTextBoxColumn1";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // rDNUMDataGridViewTextBoxColumn
+            // rDNUMDataGridViewTextBoxColumn1
             // 
-            this.rDNUMDataGridViewTextBoxColumn.DataPropertyName = "RD_NUM";
-            this.rDNUMDataGridViewTextBoxColumn.HeaderText = "RD_NUM";
-            this.rDNUMDataGridViewTextBoxColumn.Name = "rDNUMDataGridViewTextBoxColumn";
-            this.rDNUMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rDNUMDataGridViewTextBoxColumn1.DataPropertyName = "RD_NUM";
+            this.rDNUMDataGridViewTextBoxColumn1.HeaderText = "RD_NUM";
+            this.rDNUMDataGridViewTextBoxColumn1.Name = "rDNUMDataGridViewTextBoxColumn1";
+            this.rDNUMDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // rDDATEDataGridViewTextBoxColumn
+            // rDDATEDataGridViewTextBoxColumn1
             // 
-            this.rDDATEDataGridViewTextBoxColumn.DataPropertyName = "RD_DATE";
-            this.rDDATEDataGridViewTextBoxColumn.HeaderText = "RD_DATE";
-            this.rDDATEDataGridViewTextBoxColumn.Name = "rDDATEDataGridViewTextBoxColumn";
-            this.rDDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rDDATEDataGridViewTextBoxColumn1.DataPropertyName = "RD_DATE";
+            this.rDDATEDataGridViewTextBoxColumn1.HeaderText = "RD_DATE";
+            this.rDDATEDataGridViewTextBoxColumn1.Name = "rDDATEDataGridViewTextBoxColumn1";
+            this.rDDATEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // rDSUMDataGridViewTextBoxColumn
+            // rDSUMDataGridViewTextBoxColumn1
             // 
-            this.rDSUMDataGridViewTextBoxColumn.DataPropertyName = "RD_SUM";
-            this.rDSUMDataGridViewTextBoxColumn.HeaderText = "RD_SUM";
-            this.rDSUMDataGridViewTextBoxColumn.Name = "rDSUMDataGridViewTextBoxColumn";
-            this.rDSUMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rDSUMDataGridViewTextBoxColumn1.DataPropertyName = "RD_SUM";
+            this.rDSUMDataGridViewTextBoxColumn1.HeaderText = "RD_SUM";
+            this.rDSUMDataGridViewTextBoxColumn1.Name = "rDSUMDataGridViewTextBoxColumn1";
+            this.rDSUMDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // sENDERBIKDataGridViewTextBoxColumn
+            // sENDERBIKDataGridViewTextBoxColumn1
             // 
-            this.sENDERBIKDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BIK";
-            this.sENDERBIKDataGridViewTextBoxColumn.HeaderText = "SENDER_BIK";
-            this.sENDERBIKDataGridViewTextBoxColumn.Name = "sENDERBIKDataGridViewTextBoxColumn";
-            this.sENDERBIKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sENDERBIKDataGridViewTextBoxColumn1.DataPropertyName = "SENDER_BIK";
+            this.sENDERBIKDataGridViewTextBoxColumn1.HeaderText = "SENDER_BIK";
+            this.sENDERBIKDataGridViewTextBoxColumn1.Name = "sENDERBIKDataGridViewTextBoxColumn1";
+            this.sENDERBIKDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // sENDERKODataGridViewTextBoxColumn
+            // sENDERKODataGridViewTextBoxColumn1
             // 
-            this.sENDERKODataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO";
-            this.sENDERKODataGridViewTextBoxColumn.HeaderText = "SENDER_KO";
-            this.sENDERKODataGridViewTextBoxColumn.Name = "sENDERKODataGridViewTextBoxColumn";
-            this.sENDERKODataGridViewTextBoxColumn.ReadOnly = true;
+            this.sENDERKODataGridViewTextBoxColumn1.DataPropertyName = "SENDER_KO";
+            this.sENDERKODataGridViewTextBoxColumn1.HeaderText = "SENDER_KO";
+            this.sENDERKODataGridViewTextBoxColumn1.Name = "sENDERKODataGridViewTextBoxColumn1";
+            this.sENDERKODataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // sENDERBILLDataGridViewTextBoxColumn
+            // sENDERBILLDataGridViewTextBoxColumn1
             // 
-            this.sENDERBILLDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BILL";
-            this.sENDERBILLDataGridViewTextBoxColumn.HeaderText = "SENDER_BILL";
-            this.sENDERBILLDataGridViewTextBoxColumn.Name = "sENDERBILLDataGridViewTextBoxColumn";
-            this.sENDERBILLDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sENDERBILLDataGridViewTextBoxColumn1.DataPropertyName = "SENDER_BILL";
+            this.sENDERBILLDataGridViewTextBoxColumn1.HeaderText = "SENDER_BILL";
+            this.sENDERBILLDataGridViewTextBoxColumn1.Name = "sENDERBILLDataGridViewTextBoxColumn1";
+            this.sENDERBILLDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // rECEIVERBIKDataGridViewTextBoxColumn
+            // rECEIVERBIKDataGridViewTextBoxColumn1
             // 
-            this.rECEIVERBIKDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BIK";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.HeaderText = "RECEIVER_BIK";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.Name = "rECEIVERBIKDataGridViewTextBoxColumn";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECEIVERBIKDataGridViewTextBoxColumn1.DataPropertyName = "RECEIVER_BIK";
+            this.rECEIVERBIKDataGridViewTextBoxColumn1.HeaderText = "RECEIVER_BIK";
+            this.rECEIVERBIKDataGridViewTextBoxColumn1.Name = "rECEIVERBIKDataGridViewTextBoxColumn1";
+            this.rECEIVERBIKDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // rECEIVERKODataGridViewTextBoxColumn
+            // rECEIVERKODataGridViewTextBoxColumn1
             // 
-            this.rECEIVERKODataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KO";
-            this.rECEIVERKODataGridViewTextBoxColumn.HeaderText = "RECEIVER_KO";
-            this.rECEIVERKODataGridViewTextBoxColumn.Name = "rECEIVERKODataGridViewTextBoxColumn";
-            this.rECEIVERKODataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECEIVERKODataGridViewTextBoxColumn1.DataPropertyName = "RECEIVER_KO";
+            this.rECEIVERKODataGridViewTextBoxColumn1.HeaderText = "RECEIVER_KO";
+            this.rECEIVERKODataGridViewTextBoxColumn1.Name = "rECEIVERKODataGridViewTextBoxColumn1";
+            this.rECEIVERKODataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // rECEIVERBILLDataGridViewTextBoxColumn
+            // rECEIVERBILLDataGridViewTextBoxColumn1
             // 
-            this.rECEIVERBILLDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BILL";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.HeaderText = "RECEIVER_BILL";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.Name = "rECEIVERBILLDataGridViewTextBoxColumn";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECEIVERBILLDataGridViewTextBoxColumn1.DataPropertyName = "RECEIVER_BILL";
+            this.rECEIVERBILLDataGridViewTextBoxColumn1.HeaderText = "RECEIVER_BILL";
+            this.rECEIVERBILLDataGridViewTextBoxColumn1.Name = "rECEIVERBILLDataGridViewTextBoxColumn1";
+            this.rECEIVERBILLDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // kPDDataGridViewTextBoxColumn
+            // kPDDataGridViewTextBoxColumn1
             // 
-            this.kPDDataGridViewTextBoxColumn.DataPropertyName = "KPD";
-            this.kPDDataGridViewTextBoxColumn.HeaderText = "KPD";
-            this.kPDDataGridViewTextBoxColumn.Name = "kPDDataGridViewTextBoxColumn";
-            this.kPDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kPDDataGridViewTextBoxColumn1.DataPropertyName = "KPD";
+            this.kPDDataGridViewTextBoxColumn1.HeaderText = "KPD";
+            this.kPDDataGridViewTextBoxColumn1.Name = "kPDDataGridViewTextBoxColumn1";
+            this.kPDDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // kPDDATEDataGridViewTextBoxColumn
+            // kPDDATEDataGridViewTextBoxColumn1
             // 
-            this.kPDDATEDataGridViewTextBoxColumn.DataPropertyName = "KPD_DATE";
-            this.kPDDATEDataGridViewTextBoxColumn.HeaderText = "KPD_DATE";
-            this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
-            this.kPDDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kPDDATEDataGridViewTextBoxColumn1.DataPropertyName = "KPD_DATE";
+            this.kPDDATEDataGridViewTextBoxColumn1.HeaderText = "KPD_DATE";
+            this.kPDDATEDataGridViewTextBoxColumn1.Name = "kPDDATEDataGridViewTextBoxColumn1";
+            this.kPDDATEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // postavisoBindingSource
             // 
@@ -391,7 +436,7 @@ namespace Aviso
             // 
             // btnEditAviso
             // 
-            this.btnEditAviso.Location = new System.Drawing.Point(109, 13);
+            this.btnEditAviso.Location = new System.Drawing.Point(767, 26);
             this.btnEditAviso.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditAviso.Name = "btnEditAviso";
             this.btnEditAviso.Size = new System.Drawing.Size(113, 26);
@@ -402,7 +447,7 @@ namespace Aviso
             // 
             // btnAddAviso
             // 
-            this.btnAddAviso.Location = new System.Drawing.Point(13, 13);
+            this.btnAddAviso.Location = new System.Drawing.Point(671, 26);
             this.btnAddAviso.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAviso.Name = "btnAddAviso";
             this.btnAddAviso.Size = new System.Drawing.Size(88, 26);
@@ -424,7 +469,7 @@ namespace Aviso
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(726, 15);
+            this.button4.Location = new System.Drawing.Point(888, 24);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 26);
@@ -433,48 +478,301 @@ namespace Aviso
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // tabControl1
+            // tcMain
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(15, 47);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1164, 547);
-            this.tabControl1.TabIndex = 8;
+            this.tcMain.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tcMain.Controls.Add(this.tpPostAviso);
+            this.tcMain.Controls.Add(this.tpTeleAviso);
+            this.tcMain.Location = new System.Drawing.Point(15, 47);
+            this.tcMain.Margin = new System.Windows.Forms.Padding(4);
+            this.tcMain.Multiline = true;
+            this.tcMain.Name = "tcMain";
+            this.tcMain.SelectedIndex = 0;
+            this.tcMain.Size = new System.Drawing.Size(1164, 547);
+            this.tcMain.TabIndex = 8;
             // 
-            // tabPage1
+            // tpPostAviso
             // 
-            this.tabPage1.Controls.Add(this.dgvAvisoPost);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1156, 516);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Почтовое авизо";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpPostAviso.Controls.Add(this.dgvAvisoPost);
+            this.tpPostAviso.Location = new System.Drawing.Point(4, 27);
+            this.tpPostAviso.Margin = new System.Windows.Forms.Padding(4);
+            this.tpPostAviso.Name = "tpPostAviso";
+            this.tpPostAviso.Padding = new System.Windows.Forms.Padding(4);
+            this.tpPostAviso.Size = new System.Drawing.Size(1156, 516);
+            this.tpPostAviso.TabIndex = 0;
+            this.tpPostAviso.Text = "Почтовое авизо";
+            this.tpPostAviso.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tpTeleAviso
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1156, 516);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Телеграфное авизо";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tpTeleAviso.Controls.Add(this.dgvAvisoTele);
+            this.tpTeleAviso.Location = new System.Drawing.Point(4, 27);
+            this.tpTeleAviso.Margin = new System.Windows.Forms.Padding(4);
+            this.tpTeleAviso.Name = "tpTeleAviso";
+            this.tpTeleAviso.Padding = new System.Windows.Forms.Padding(4);
+            this.tpTeleAviso.Size = new System.Drawing.Size(1156, 516);
+            this.tpTeleAviso.TabIndex = 1;
+            this.tpTeleAviso.Text = "Телеграфное авизо";
+            this.tpTeleAviso.UseVisualStyleBackColor = true;
+            // 
+            // dgvAvisoTele
+            // 
+            this.dgvAvisoTele.AllowUserToAddRows = false;
+            this.dgvAvisoTele.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAvisoTele.AutoGenerateColumns = false;
+            this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.nUMDataGridViewTextBoxColumn,
+            this.cREATEDATEDataGridViewTextBoxColumn,
+            this.pAYMENTTYPEDataGridViewTextBoxColumn,
+            this.oPERATIONTYPEDataGridViewTextBoxColumn,
+            this.rDNUMDataGridViewTextBoxColumn,
+            this.rDDATEDataGridViewTextBoxColumn,
+            this.oFFDATEDataGridViewTextBoxColumn,
+            this.rDSUMDataGridViewTextBoxColumn,
+            this.sENDERINNDataGridViewTextBoxColumn,
+            this.sENDERKPPDataGridViewTextBoxColumn,
+            this.sENDERNAMEDataGridViewTextBoxColumn,
+            this.sENDERBIKDataGridViewTextBoxColumn,
+            this.sENDERKODataGridViewTextBoxColumn,
+            this.sENDERKONAMEDataGridViewTextBoxColumn,
+            this.sENDERBILLDataGridViewTextBoxColumn,
+            this.rECEIVERINNDataGridViewTextBoxColumn,
+            this.rECEIVERKPPDataGridViewTextBoxColumn,
+            this.rECEIVERNAMEDataGridViewTextBoxColumn,
+            this.rECEIVERBIKDataGridViewTextBoxColumn,
+            this.rECEIVERKODataGridViewTextBoxColumn,
+            this.rECEIVERBILLDataGridViewTextBoxColumn,
+            this.pAYMENTGOALDataGridViewTextBoxColumn,
+            this.n101DataGridViewTextBoxColumn,
+            this.n104DataGridViewTextBoxColumn,
+            this.n105DataGridViewTextBoxColumn,
+            this.n106DataGridViewTextBoxColumn,
+            this.n107DataGridViewTextBoxColumn,
+            this.n108DataGridViewTextBoxColumn,
+            this.n109DataGridViewTextBoxColumn,
+            this.n110DataGridViewTextBoxColumn,
+            this.kPDDataGridViewTextBoxColumn,
+            this.kPDDATEDataGridViewTextBoxColumn});
+            this.dgvAvisoTele.DataSource = this.telegraphavisoBindingSource;
+            this.dgvAvisoTele.Location = new System.Drawing.Point(7, 7);
+            this.dgvAvisoTele.Name = "dgvAvisoTele";
+            this.dgvAvisoTele.Size = new System.Drawing.Size(1142, 502);
+            this.dgvAvisoTele.TabIndex = 0;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nUMDataGridViewTextBoxColumn
+            // 
+            this.nUMDataGridViewTextBoxColumn.DataPropertyName = "NUM";
+            this.nUMDataGridViewTextBoxColumn.HeaderText = "Номер авизо";
+            this.nUMDataGridViewTextBoxColumn.Name = "nUMDataGridViewTextBoxColumn";
+            // 
+            // cREATEDATEDataGridViewTextBoxColumn
+            // 
+            this.cREATEDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATE_DATE";
+            this.cREATEDATEDataGridViewTextBoxColumn.HeaderText = "Дата авизо";
+            this.cREATEDATEDataGridViewTextBoxColumn.Name = "cREATEDATEDataGridViewTextBoxColumn";
+            // 
+            // pAYMENTTYPEDataGridViewTextBoxColumn
+            // 
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_TYPE";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.HeaderText = "Вид платежа";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.Name = "pAYMENTTYPEDataGridViewTextBoxColumn";
+            // 
+            // oPERATIONTYPEDataGridViewTextBoxColumn
+            // 
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.DataPropertyName = "OPERATION_TYPE";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.HeaderText = "Вид операции";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.Name = "oPERATIONTYPEDataGridViewTextBoxColumn";
+            // 
+            // rDNUMDataGridViewTextBoxColumn
+            // 
+            this.rDNUMDataGridViewTextBoxColumn.DataPropertyName = "RD_NUM";
+            this.rDNUMDataGridViewTextBoxColumn.HeaderText = "Номер РД";
+            this.rDNUMDataGridViewTextBoxColumn.Name = "rDNUMDataGridViewTextBoxColumn";
+            // 
+            // rDDATEDataGridViewTextBoxColumn
+            // 
+            this.rDDATEDataGridViewTextBoxColumn.DataPropertyName = "RD_DATE";
+            this.rDDATEDataGridViewTextBoxColumn.HeaderText = "Дата РД";
+            this.rDDATEDataGridViewTextBoxColumn.Name = "rDDATEDataGridViewTextBoxColumn";
+            // 
+            // oFFDATEDataGridViewTextBoxColumn
+            // 
+            this.oFFDATEDataGridViewTextBoxColumn.DataPropertyName = "OFF_DATE";
+            this.oFFDATEDataGridViewTextBoxColumn.HeaderText = "Списано со счета  плательщика";
+            this.oFFDATEDataGridViewTextBoxColumn.Name = "oFFDATEDataGridViewTextBoxColumn";
+            // 
+            // rDSUMDataGridViewTextBoxColumn
+            // 
+            this.rDSUMDataGridViewTextBoxColumn.DataPropertyName = "RD_SUM";
+            this.rDSUMDataGridViewTextBoxColumn.HeaderText = "Сумма РД";
+            this.rDSUMDataGridViewTextBoxColumn.Name = "rDSUMDataGridViewTextBoxColumn";
+            // 
+            // sENDERINNDataGridViewTextBoxColumn
+            // 
+            this.sENDERINNDataGridViewTextBoxColumn.DataPropertyName = "SENDER_INN";
+            this.sENDERINNDataGridViewTextBoxColumn.HeaderText = "ИНН плательщика";
+            this.sENDERINNDataGridViewTextBoxColumn.Name = "sENDERINNDataGridViewTextBoxColumn";
+            // 
+            // sENDERKPPDataGridViewTextBoxColumn
+            // 
+            this.sENDERKPPDataGridViewTextBoxColumn.DataPropertyName = "SENDER_KPP";
+            this.sENDERKPPDataGridViewTextBoxColumn.HeaderText = "КПП плательщика";
+            this.sENDERKPPDataGridViewTextBoxColumn.Name = "sENDERKPPDataGridViewTextBoxColumn";
+            // 
+            // sENDERNAMEDataGridViewTextBoxColumn
+            // 
+            this.sENDERNAMEDataGridViewTextBoxColumn.DataPropertyName = "SENDER_NAME";
+            this.sENDERNAMEDataGridViewTextBoxColumn.HeaderText = "Наименование плательщика";
+            this.sENDERNAMEDataGridViewTextBoxColumn.Name = "sENDERNAMEDataGridViewTextBoxColumn";
+            // 
+            // sENDERBIKDataGridViewTextBoxColumn
+            // 
+            this.sENDERBIKDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BIK";
+            this.sENDERBIKDataGridViewTextBoxColumn.HeaderText = "БИК банка плательщика";
+            this.sENDERBIKDataGridViewTextBoxColumn.Name = "sENDERBIKDataGridViewTextBoxColumn";
+            // 
+            // sENDERKODataGridViewTextBoxColumn
+            // 
+            this.sENDERKODataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO";
+            this.sENDERKODataGridViewTextBoxColumn.HeaderText = "Корсчет КО плательщика";
+            this.sENDERKODataGridViewTextBoxColumn.Name = "sENDERKODataGridViewTextBoxColumn";
+            // 
+            // sENDERKONAMEDataGridViewTextBoxColumn
+            // 
+            this.sENDERKONAMEDataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO_NAME";
+            this.sENDERKONAMEDataGridViewTextBoxColumn.HeaderText = "Наименование КО плательщика";
+            this.sENDERKONAMEDataGridViewTextBoxColumn.Name = "sENDERKONAMEDataGridViewTextBoxColumn";
+            // 
+            // sENDERBILLDataGridViewTextBoxColumn
+            // 
+            this.sENDERBILLDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BILL";
+            this.sENDERBILLDataGridViewTextBoxColumn.HeaderText = "Номер лицевого счета плательщика";
+            this.sENDERBILLDataGridViewTextBoxColumn.Name = "sENDERBILLDataGridViewTextBoxColumn";
+            // 
+            // rECEIVERINNDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERINNDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_INN";
+            this.rECEIVERINNDataGridViewTextBoxColumn.HeaderText = "ИНН получателя";
+            this.rECEIVERINNDataGridViewTextBoxColumn.Name = "rECEIVERINNDataGridViewTextBoxColumn";
+            // 
+            // rECEIVERKPPDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERKPPDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KPP";
+            this.rECEIVERKPPDataGridViewTextBoxColumn.HeaderText = "КПП получателя";
+            this.rECEIVERKPPDataGridViewTextBoxColumn.Name = "rECEIVERKPPDataGridViewTextBoxColumn";
+            // 
+            // rECEIVERNAMEDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_NAME";
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.HeaderText = "Наименование получателя";
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.Name = "rECEIVERNAMEDataGridViewTextBoxColumn";
+            // 
+            // rECEIVERBIKDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERBIKDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BIK";
+            this.rECEIVERBIKDataGridViewTextBoxColumn.HeaderText = "БИК банка получателя";
+            this.rECEIVERBIKDataGridViewTextBoxColumn.Name = "rECEIVERBIKDataGridViewTextBoxColumn";
+            // 
+            // rECEIVERKODataGridViewTextBoxColumn
+            // 
+            this.rECEIVERKODataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KO";
+            this.rECEIVERKODataGridViewTextBoxColumn.HeaderText = "Корсчет КО получателя";
+            this.rECEIVERKODataGridViewTextBoxColumn.Name = "rECEIVERKODataGridViewTextBoxColumn";
+            // 
+            // rECEIVERBILLDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERBILLDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BILL";
+            this.rECEIVERBILLDataGridViewTextBoxColumn.HeaderText = "RECEIVER_BILL";
+            this.rECEIVERBILLDataGridViewTextBoxColumn.Name = "rECEIVERBILLDataGridViewTextBoxColumn";
+            // 
+            // pAYMENTGOALDataGridViewTextBoxColumn
+            // 
+            this.pAYMENTGOALDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_GOAL";
+            this.pAYMENTGOALDataGridViewTextBoxColumn.HeaderText = "PAYMENT_GOAL";
+            this.pAYMENTGOALDataGridViewTextBoxColumn.Name = "pAYMENTGOALDataGridViewTextBoxColumn";
+            // 
+            // n101DataGridViewTextBoxColumn
+            // 
+            this.n101DataGridViewTextBoxColumn.DataPropertyName = "N101";
+            this.n101DataGridViewTextBoxColumn.HeaderText = "N101";
+            this.n101DataGridViewTextBoxColumn.Name = "n101DataGridViewTextBoxColumn";
+            // 
+            // n104DataGridViewTextBoxColumn
+            // 
+            this.n104DataGridViewTextBoxColumn.DataPropertyName = "N104";
+            this.n104DataGridViewTextBoxColumn.HeaderText = "N104";
+            this.n104DataGridViewTextBoxColumn.Name = "n104DataGridViewTextBoxColumn";
+            // 
+            // n105DataGridViewTextBoxColumn
+            // 
+            this.n105DataGridViewTextBoxColumn.DataPropertyName = "N105";
+            this.n105DataGridViewTextBoxColumn.HeaderText = "N105";
+            this.n105DataGridViewTextBoxColumn.Name = "n105DataGridViewTextBoxColumn";
+            // 
+            // n106DataGridViewTextBoxColumn
+            // 
+            this.n106DataGridViewTextBoxColumn.DataPropertyName = "N106";
+            this.n106DataGridViewTextBoxColumn.HeaderText = "N106";
+            this.n106DataGridViewTextBoxColumn.Name = "n106DataGridViewTextBoxColumn";
+            // 
+            // n107DataGridViewTextBoxColumn
+            // 
+            this.n107DataGridViewTextBoxColumn.DataPropertyName = "N107";
+            this.n107DataGridViewTextBoxColumn.HeaderText = "N107";
+            this.n107DataGridViewTextBoxColumn.Name = "n107DataGridViewTextBoxColumn";
+            // 
+            // n108DataGridViewTextBoxColumn
+            // 
+            this.n108DataGridViewTextBoxColumn.DataPropertyName = "N108";
+            this.n108DataGridViewTextBoxColumn.HeaderText = "N108";
+            this.n108DataGridViewTextBoxColumn.Name = "n108DataGridViewTextBoxColumn";
+            // 
+            // n109DataGridViewTextBoxColumn
+            // 
+            this.n109DataGridViewTextBoxColumn.DataPropertyName = "N109";
+            this.n109DataGridViewTextBoxColumn.HeaderText = "N109";
+            this.n109DataGridViewTextBoxColumn.Name = "n109DataGridViewTextBoxColumn";
+            // 
+            // n110DataGridViewTextBoxColumn
+            // 
+            this.n110DataGridViewTextBoxColumn.DataPropertyName = "N110";
+            this.n110DataGridViewTextBoxColumn.HeaderText = "N110";
+            this.n110DataGridViewTextBoxColumn.Name = "n110DataGridViewTextBoxColumn";
+            // 
+            // kPDDataGridViewTextBoxColumn
+            // 
+            this.kPDDataGridViewTextBoxColumn.DataPropertyName = "KPD";
+            this.kPDDataGridViewTextBoxColumn.HeaderText = "KPD";
+            this.kPDDataGridViewTextBoxColumn.Name = "kPDDataGridViewTextBoxColumn";
+            // 
+            // kPDDATEDataGridViewTextBoxColumn
+            // 
+            this.kPDDATEDataGridViewTextBoxColumn.DataPropertyName = "KPD_DATE";
+            this.kPDDATEDataGridViewTextBoxColumn.HeaderText = "KPD_DATE";
+            this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
+            // 
+            // telegraphavisoBindingSource
+            // 
+            this.telegraphavisoBindingSource.DataMember = "telegraph_aviso";
+            this.telegraphavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
             // 
             // btnDeleteAviso
             // 
-            this.btnDeleteAviso.Location = new System.Drawing.Point(229, 13);
+            this.btnDeleteAviso.Location = new System.Drawing.Point(589, 41);
             this.btnDeleteAviso.Name = "btnDeleteAviso";
             this.btnDeleteAviso.Size = new System.Drawing.Size(75, 26);
             this.btnDeleteAviso.TabIndex = 9;
@@ -482,23 +780,9 @@ namespace Aviso
             this.btnDeleteAviso.UseVisualStyleBackColor = true;
             this.btnDeleteAviso.Click += new System.EventHandler(this.btnDeleteAviso_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(860, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // post_avisoTableAdapter
-            // 
-            this.post_avisoTableAdapter.ClearBeforeFill = true;
-            // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(325, 12);
+            this.btnPrint.Location = new System.Drawing.Point(983, 24);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(83, 28);
             this.btnPrint.TabIndex = 12;
@@ -511,20 +795,70 @@ namespace Aviso
             this.dlgSelectReport.Filter = "MS Word Documents|*.docx";
             this.dlgSelectReport.Title = "Выберите имя файла";
             // 
+            // post_avisoTableAdapter
+            // 
+            this.post_avisoTableAdapter.ClearBeforeFill = true;
+            // 
+            // telegraph_avisoTableAdapter
+            // 
+            this.telegraph_avisoTableAdapter.ClearBeforeFill = true;
+            // 
+            // mmAdd
+            // 
+            this.mmAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mmAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mAdd,
+            this.mEdit,
+            this.mDel,
+            this.mPrint});
+            this.mmAdd.Location = new System.Drawing.Point(0, 0);
+            this.mmAdd.Name = "mmAdd";
+            this.mmAdd.Size = new System.Drawing.Size(1192, 25);
+            this.mmAdd.TabIndex = 13;
+            this.mmAdd.Text = "Добавить";
+            // 
+            // mAdd
+            // 
+            this.mAdd.Name = "mAdd";
+            this.mAdd.Size = new System.Drawing.Size(78, 21);
+            this.mAdd.Text = "Добавить";
+            this.mAdd.Click += new System.EventHandler(this.mAdd_Click);
+            // 
+            // mEdit
+            // 
+            this.mEdit.Name = "mEdit";
+            this.mEdit.Size = new System.Drawing.Size(108, 21);
+            this.mEdit.Text = "Редактировать";
+            this.mEdit.Click += new System.EventHandler(this.mEdit_Click);
+            // 
+            // mDel
+            // 
+            this.mDel.Name = "mDel";
+            this.mDel.Size = new System.Drawing.Size(67, 21);
+            this.mDel.Text = "Удалить";
+            this.mDel.Click += new System.EventHandler(this.mDel_Click);
+            // 
+            // mPrint
+            // 
+            this.mPrint.Name = "mPrint";
+            this.mPrint.Size = new System.Drawing.Size(62, 21);
+            this.mPrint.Text = "Печать";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 607);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDeleteAviso);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcMain);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnAddAviso);
             this.Controls.Add(this.btnEditAviso);
+            this.Controls.Add(this.mmAdd);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainMenuStrip = this.mmAdd;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -534,9 +868,15 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tcMain.ResumeLayout(false);
+            this.tpPostAviso.ResumeLayout(false);
+            this.tpTeleAviso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoTele)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telegraphavisoBindingSource)).EndInit();
+            this.mmAdd.ResumeLayout(false);
+            this.mmAdd.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -551,11 +891,12 @@ namespace Aviso
         private System.Windows.Forms.Button btnAddAviso;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tcMain;
+        private System.Windows.Forms.TabPage tpPostAviso;
+        private System.Windows.Forms.TabPage tpTeleAviso;
         private System.Windows.Forms.Button btnDeleteAviso;
-        private System.Windows.Forms.Button button1;
+        private Button btnPrint;
+        private SaveFileDialog dlgSelectReport;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn NUM;
         private DataGridViewTextBoxColumn CREATE_DATE;
@@ -572,6 +913,9 @@ namespace Aviso
         private DataGridViewTextBoxColumn RECEIVER_BILL;
         private DataGridViewTextBoxColumn KPD;
         private DataGridViewTextBoxColumn KPD_DATE;
+        private DataGridView dgvAvisoTele;
+        private BindingSource telegraphavisoBindingSource;
+        private AvisoDataSetTableAdapters.telegraph_avisoTableAdapter telegraph_avisoTableAdapter;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn;
@@ -579,17 +923,53 @@ namespace Aviso
         private DataGridViewTextBoxColumn oPERATIONTYPEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn rDNUMDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn rDDATEDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn oFFDATEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn rDSUMDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sENDERINNDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sENDERKPPDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sENDERNAMEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sENDERBIKDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sENDERKODataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sENDERKONAMEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sENDERBILLDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rECEIVERINNDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rECEIVERKPPDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rECEIVERNAMEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn rECEIVERBIKDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn rECEIVERKODataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn pAYMENTGOALDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n101DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n104DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n105DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n106DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n107DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n108DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n109DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn n110DataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn;
-        private Button btnPrint;
-        private SaveFileDialog dlgSelectReport;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn pAYMENTTYPEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn oPERATIONTYPEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rDNUMDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rDDATEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rDSUMDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sENDERBIKDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sENDERKODataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sENDERBILLDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rECEIVERBIKDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rECEIVERKODataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn1;
+        private MenuStrip mmAdd;
+        private ToolStripMenuItem mAdd;
+        private ToolStripMenuItem mEdit;
+        private ToolStripMenuItem mDel;
+        private ToolStripMenuItem mPrint;
     }
 }
 

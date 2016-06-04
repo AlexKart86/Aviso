@@ -11,6 +11,7 @@ using System.Configuration;
 using System.Data.OleDb;
 using Novacode;
 using System.IO;
+using System.Data.Common;
 
 namespace Aviso
 {
@@ -30,6 +31,7 @@ namespace Aviso
             return max + 1;
         }
 
+        //Редактирование почтового авизо
         private void EditPostAviso()
         {
             AvisoPostEdit frm = new AvisoPostEdit(this.postavisoBindingSource);
@@ -37,10 +39,22 @@ namespace Aviso
                 postavisoBindingSource.EndEdit();
             else
                 postavisoBindingSource.CancelEdit();  
-            this.post_avisoTableAdapter.Update(this.avisoDataSet);
-                        
+            this.post_avisoTableAdapter.Update(this.avisoDataSet);                        
             dgvAvisoPost.Refresh();
         }
+
+        //Редактирование телеграфного авизо
+        private void EditTeleAviso()
+        {
+            AvisoTeleEdit frm = new AvisoTeleEdit(this.telegraphavisoBindingSource);
+            if (frm.ShowDialog() == DialogResult.OK)
+                telegraphavisoBindingSource.EndEdit();
+            else
+                telegraphavisoBindingSource.CancelEdit();            
+            this.telegraph_avisoTableAdapter.Update(this.avisoDataSet);
+            dgvAvisoTele.Refresh();
+        }
+
 
         public MainForm()
         {            
@@ -58,13 +72,15 @@ namespace Aviso
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'avisoDataSet.telegraph_aviso' table. You can move, or remove it, as needed.
+            this.telegraph_avisoTableAdapter.Fill(this.avisoDataSet.telegraph_aviso);
             // TODO: This line of code loads data into the 'avisoDataSet.post_aviso' table. You can move, or remove it, as needed.
             this.post_avisoTableAdapter.Fill(this.avisoDataSet.post_aviso);            
         }
 
         private void btnEditAviso_Click(object sender, EventArgs e)
         {
-            EditPostAviso();            
+            
         }
 
 
@@ -89,25 +105,12 @@ namespace Aviso
 
         private void btnAddAviso_Click(object sender, EventArgs e)
         {
-            DataRowView row = (DataRowView)postavisoBindingSource.AddNew();
-            row["NUM"] = CalcPostAvisoNextNum(avisoDataSet.Tables["post_aviso"]);
-            row["CREATE_DATE"] = DateTime.Today;
-            row["KPD_DATE"] = DateTime.Today;
-            EditPostAviso();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /* postavisoBindingSource.EndEdit();
-            post_avisoTableAdapter.Update(avisoDataSet);*/
-            
         }
+        
 
         private void btnDeleteAviso_Click(object sender, EventArgs e)
         {
-            postavisoBindingSource.RemoveCurrent();
-            postavisoBindingSource.EndEdit();
-            post_avisoTableAdapter.Update(avisoDataSet);            
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -115,6 +118,73 @@ namespace Aviso
             dlgSelectReport.ShowDialog();
             if (dlgSelectReport.FileName != "")
                AvisoPostReporter.PrintCurrent(postavisoBindingSource, dlgSelectReport.FileName);
+        }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mAdd_Click(object sender, EventArgs e)
+        {
+            if (tcMain.SelectedTab == tpPostAviso)
+            {
+                DataRowView row = (DataRowView)postavisoBindingSource.AddNew();
+                row["NUM"] = CalcPostAvisoNextNum(avisoDataSet.Tables["post_aviso"]);
+                row["CREATE_DATE"] = DateTime.Today;
+                row["KPD_DATE"] = DateTime.Today;
+                EditPostAviso();
+            }
+            else if (tcMain.SelectedTab == tpTeleAviso)
+            {
+                DataRowView row = (DataRowView)telegraphavisoBindingSource.AddNew();
+                row["NUM"] = CalcPostAvisoNextNum(avisoDataSet.Tables["telegraph_aviso"]);
+                row["CREATE_DATE"] = DateTime.Today;
+                row["KPD_DATE"] = DateTime.Today;
+                EditTeleAviso();
+            }
+        }
+
+        private void mEdit_Click(object sender, EventArgs e)
+        {
+            if (tcMain.SelectedTab == tpPostAviso)
+            {                
+                EditPostAviso();
+            }
+            else if (tcMain.SelectedTab == tpTeleAviso)
+            {                
+                EditTeleAviso();
+            }
+            
+        }
+
+        private void mDel_Click(object sender, EventArgs e)
+        {
+
+            BindingSource bs;            
+
+            if (tcMain.SelectedTab == tpPostAviso)            
+                bs = postavisoBindingSource;                
+            else if (tcMain.SelectedTab == tpTeleAviso)            
+                bs = telegraphavisoBindingSource;            
+            else
+                return;
+
+            if (bs.Count > 0)
+            {
+                if (MessageBox.Show("Вы уверены что хотите удалить выделенное авизо?",
+                    "Подтверждение удаления авизо",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    bs.RemoveCurrent();
+                    bs.EndEdit();
+                    if (tcMain.SelectedTab == tpPostAviso)
+                        post_avisoTableAdapter.Update(avisoDataSet);
+                    else if (tcMain.SelectedTab == tpTeleAviso)
+                        telegraph_avisoTableAdapter.Update(avisoDataSet);                    
+                }
+            }
+
         }
     }
 }
