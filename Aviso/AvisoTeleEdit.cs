@@ -12,7 +12,7 @@ namespace Aviso
 {
     public partial class AvisoTeleEdit : Form
     {
-        private BindingSource bs_main;        
+        private BindingSource bs_main;
 
         //Настройка биндингов 
         private void InitBindList()
@@ -55,10 +55,10 @@ namespace Aviso
             cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");
             txtRDNum.DataBindings.Add("Text", bs_main, "RD_NUM");
 
-            Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);            
+            Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);
             b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
             b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
-            dtpRDDate.DataBindings.Add(b_RDDate);            
+            dtpRDDate.DataBindings.Add(b_RDDate);
 
             txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
             txtKPD.DataBindings.Add("Text", bs_main, "KPD");
@@ -75,7 +75,24 @@ namespace Aviso
 
             txtSenderINN.DataBindings.Add("Text", bs_main, "SENDER_INN");
             txtSenderKPP.DataBindings.Add("Text", bs_main, "SENDER_KPP");
+            txtSenderName.DataBindings.Add("Text", bs_main, "SENDER_NAME");
+            txtSenderKOName.DataBindings.Add("Text", bs_main, "SENDER_KO_NAME");
 
+            txtReceiverINN.DataBindings.Add("Text", bs_main, "RECEIVER_INN");
+            txtReceiverKPP.DataBindings.Add("Text", bs_main, "RECEIVER_KPP");
+            txtReceiverName.DataBindings.Add("Text", bs_main, "RECEIVER_NAME");
+            txtReceiverKOName.DataBindings.Add("Text", bs_main, "RECEIVER_KO_NAME");
+
+            txtPaymentGoal.DataBindings.Add("Text", bs_main, "PAYMENT_GOAL");
+
+            txt101.DataBindings.Add("Text", bs_main, "N_101");
+            txt104.DataBindings.Add("Text", bs_main, "N_104");
+            txt105.DataBindings.Add("Text", bs_main, "N_105");
+            txt106.DataBindings.Add("Text", bs_main, "N_106");
+            txt107.DataBindings.Add("Text", bs_main, "N_107");
+            txt108.DataBindings.Add("Text", bs_main, "N_108");
+            txt109.DataBindings.Add("Text", bs_main, "N_109");
+            txt110.DataBindings.Add("Text", bs_main, "N_110");
         }
 
         public AvisoTeleEdit(BindingSource bs_main)
@@ -121,9 +138,11 @@ namespace Aviso
             dtpRDDate.Checked = !IsFieldNull("RD_DATE");
             dtpCreatedDate.Checked = !IsFieldNull("CREATE_DATE");
             dtpKPDDate.Checked = !IsFieldNull("KPD_DATE");
+            dtpOffDate.Checked = !IsFieldNull("OFF_DATE");
             DtpRefreshFormat(dtpRDDate);
             DtpRefreshFormat(dtpKPDDate);
-            DtpRefreshFormat(dtpCreatedDate);            
+            DtpRefreshFormat(dtpCreatedDate);
+            DtpRefreshFormat(dtpOffDate);
         }
 
         private void cbItemType_Validating(object sender, CancelEventArgs e)
@@ -207,12 +226,14 @@ namespace Aviso
         private void cbReceiverBIK_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbReceiverKO.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "KSNP");
+            txtReceiverKOName.Text = LookupList.LookupNewNum(cbReceiverBIK.Text, "NAMEP");
         }
         
 
         private void cbSenderBIK_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbSenderKO.Text = LookupList.LookupNewNum(cbSenderBIK.Text, "KSNP");
+            txtSenderKOName.Text = LookupList.LookupNewNum(cbSenderBIK.Text, "NAMEP");
         }
 
         private void cbSenderKO_Validating(object sender, CancelEventArgs e)
@@ -315,6 +336,21 @@ namespace Aviso
             }
             else
                 errOffDate.SetError(dtpOffDate, "");
+        }
+
+        private void txtSenderName_Validating(object sender, CancelEventArgs e)
+        {
+           e.Cancel =  CommonUtils.CheckRequiredField((Control)sender, errSenderName);
+        }
+
+        private void txtReceiverName_Validating(object sender, CancelEventArgs e)
+        {
+            e.Cancel = CommonUtils.CheckRequiredField((Control)sender, errReceiverName);
+        }
+
+        private void txtPaymentGoal_Validating(object sender, CancelEventArgs e)
+        {
+            e.Cancel = CommonUtils.CheckRequiredField((Control)sender, errPaymentGoal);
         }
     }
 }

@@ -35,8 +35,8 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,8 +138,8 @@ namespace Aviso
             this.dgvAvisoPost.AllowUserToAddRows = false;
             this.dgvAvisoPost.AllowUserToDeleteRows = false;
             this.dgvAvisoPost.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAvisoPost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -495,8 +495,9 @@ namespace Aviso
             // 
             this.dgvAvisoTele.AllowUserToAddRows = false;
             this.dgvAvisoTele.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvAvisoTele.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAvisoTele.AutoGenerateColumns = false;
             this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -536,6 +537,7 @@ namespace Aviso
             this.dgvAvisoTele.DataSource = this.telegraphavisoBindingSource;
             this.dgvAvisoTele.Location = new System.Drawing.Point(7, 7);
             this.dgvAvisoTele.Name = "dgvAvisoTele";
+            this.dgvAvisoTele.RowHeadersVisible = false;
             this.dgvAvisoTele.Size = new System.Drawing.Size(1142, 502);
             this.dgvAvisoTele.TabIndex = 0;
             // 
