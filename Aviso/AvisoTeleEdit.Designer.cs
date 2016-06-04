@@ -90,6 +90,13 @@ namespace Aviso
             this.errReceiverBIK = new System.Windows.Forms.ErrorProvider(this.components);
             this.errRDDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errRDNum = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dtpOffDate = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.errOffDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtSenderINN = new System.Windows.Forms.MaskedTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtSenderKPP = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
@@ -103,6 +110,7 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBIK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errOffDate)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNum
@@ -140,7 +148,7 @@ namespace Aviso
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(24, 346);
+            this.btnSave.Location = new System.Drawing.Point(15, 407);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
@@ -152,12 +160,13 @@ namespace Aviso
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(143, 346);
+            this.btnCancel.Location = new System.Drawing.Point(134, 407);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(92, 28);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Отменить";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -277,7 +286,7 @@ namespace Aviso
             // 
             // txtRDSum
             // 
-            this.txtRDSum.Location = new System.Drawing.Point(143, 227);
+            this.txtRDSum.Location = new System.Drawing.Point(143, 273);
             this.txtRDSum.Name = "txtRDSum";
             this.txtRDSum.PromptChar = ' ';
             this.txtRDSum.Size = new System.Drawing.Size(156, 23);
@@ -286,7 +295,7 @@ namespace Aviso
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 228);
+            this.label7.Location = new System.Drawing.Point(13, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 17);
             this.label7.TabIndex = 17;
@@ -294,6 +303,10 @@ namespace Aviso
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSenderKPP);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.txtSenderINN);
+            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtSenderBill);
             this.groupBox1.Controls.Add(this.btnSenderSearch);
             this.groupBox1.Controls.Add(this.label10);
@@ -303,14 +316,14 @@ namespace Aviso
             this.groupBox1.Controls.Add(this.cbSenderBIK);
             this.groupBox1.Location = new System.Drawing.Point(325, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 240);
+            this.groupBox1.Size = new System.Drawing.Size(310, 351);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Плательщик";
             // 
             // txtSenderBill
             // 
-            this.txtSenderBill.Location = new System.Drawing.Point(17, 155);
+            this.txtSenderBill.Location = new System.Drawing.Point(20, 275);
             this.txtSenderBill.Mask = "99999999999999999999";
             this.txtSenderBill.Name = "txtSenderBill";
             this.txtSenderBill.Size = new System.Drawing.Size(259, 23);
@@ -319,7 +332,7 @@ namespace Aviso
             // 
             // btnSenderSearch
             // 
-            this.btnSenderSearch.Location = new System.Drawing.Point(20, 199);
+            this.btnSenderSearch.Location = new System.Drawing.Point(20, 317);
             this.btnSenderSearch.Name = "btnSenderSearch";
             this.btnSenderSearch.Size = new System.Drawing.Size(75, 28);
             this.btnSenderSearch.TabIndex = 7;
@@ -331,7 +344,7 @@ namespace Aviso
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 135);
+            this.label10.Location = new System.Drawing.Point(20, 255);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 17);
             this.label10.TabIndex = 5;
@@ -340,7 +353,7 @@ namespace Aviso
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 77);
+            this.label9.Location = new System.Drawing.Point(20, 197);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 17);
             this.label9.TabIndex = 3;
@@ -351,7 +364,7 @@ namespace Aviso
             this.cbSenderKO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSenderKO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSenderKO.FormattingEnabled = true;
-            this.cbSenderKO.Location = new System.Drawing.Point(17, 97);
+            this.cbSenderKO.Location = new System.Drawing.Point(20, 217);
             this.cbSenderKO.Name = "cbSenderKO";
             this.cbSenderKO.Size = new System.Drawing.Size(259, 24);
             this.cbSenderKO.TabIndex = 1;
@@ -361,7 +374,7 @@ namespace Aviso
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 25);
+            this.label8.Location = new System.Drawing.Point(20, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 17);
             this.label8.TabIndex = 1;
@@ -372,7 +385,7 @@ namespace Aviso
             this.cbSenderBIK.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSenderBIK.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSenderBIK.FormattingEnabled = true;
-            this.cbSenderBIK.Location = new System.Drawing.Point(17, 45);
+            this.cbSenderBIK.Location = new System.Drawing.Point(20, 165);
             this.cbSenderBIK.Name = "cbSenderBIK";
             this.cbSenderBIK.Size = new System.Drawing.Size(259, 24);
             this.cbSenderBIK.TabIndex = 0;
@@ -473,7 +486,7 @@ namespace Aviso
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 263);
+            this.label14.Location = new System.Drawing.Point(13, 309);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 17);
             this.label14.TabIndex = 20;
@@ -482,7 +495,7 @@ namespace Aviso
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 298);
+            this.label15.Location = new System.Drawing.Point(13, 344);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(76, 17);
             this.label15.TabIndex = 22;
@@ -493,7 +506,7 @@ namespace Aviso
             this.dtpKPDDate.Checked = false;
             this.dtpKPDDate.CustomFormat = "dd/MM/yyyy";
             this.dtpKPDDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpKPDDate.Location = new System.Drawing.Point(143, 297);
+            this.dtpKPDDate.Location = new System.Drawing.Point(143, 343);
             this.dtpKPDDate.Name = "dtpKPDDate";
             this.dtpKPDDate.ShowCheckBox = true;
             this.dtpKPDDate.Size = new System.Drawing.Size(156, 23);
@@ -502,7 +515,7 @@ namespace Aviso
             // 
             // txtKPD
             // 
-            this.txtKPD.Location = new System.Drawing.Point(143, 263);
+            this.txtKPD.Location = new System.Drawing.Point(143, 309);
             this.txtKPD.Mask = "99999 999";
             this.txtKPD.Name = "txtKPD";
             this.txtKPD.Size = new System.Drawing.Size(156, 23);
@@ -529,6 +542,7 @@ namespace Aviso
             // 
             // errReceiverBIK
             // 
+            this.errReceiverBIK.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errReceiverBIK.ContainerControl = this;
             // 
             // errRDDate
@@ -541,12 +555,74 @@ namespace Aviso
             this.errRDNum.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errRDNum.ContainerControl = this;
             // 
+            // dtpOffDate
+            // 
+            this.dtpOffDate.Checked = false;
+            this.dtpOffDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpOffDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpOffDate.Location = new System.Drawing.Point(143, 232);
+            this.dtpOffDate.Name = "dtpOffDate";
+            this.dtpOffDate.ShowCheckBox = true;
+            this.dtpOffDate.Size = new System.Drawing.Size(156, 23);
+            this.dtpOffDate.TabIndex = 23;
+            this.dtpOffDate.Validating += new System.ComponentModel.CancelEventHandler(this.dtpOffDate_Validating);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(13, 232);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(125, 17);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "Списано со счета";
+            // 
+            // errOffDate
+            // 
+            this.errOffDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errOffDate.ContainerControl = this;
+            // 
+            // txtSenderINN
+            // 
+            this.txtSenderINN.Location = new System.Drawing.Point(20, 45);
+            this.txtSenderINN.Mask = "999999999999";
+            this.txtSenderINN.Name = "txtSenderINN";
+            this.txtSenderINN.Size = new System.Drawing.Size(259, 23);
+            this.txtSenderINN.TabIndex = 8;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(20, 25);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(130, 17);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "ИНН плательщика";
+            // 
+            // txtSenderKPP
+            // 
+            this.txtSenderKPP.Location = new System.Drawing.Point(20, 97);
+            this.txtSenderKPP.Mask = "999999999999";
+            this.txtSenderKPP.Name = "txtSenderKPP";
+            this.txtSenderKPP.Size = new System.Drawing.Size(259, 23);
+            this.txtSenderKPP.TabIndex = 10;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(20, 77);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(129, 17);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "КПП плательщика";
+            // 
             // AvisoTeleEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(978, 396);
+            this.ClientSize = new System.Drawing.Size(978, 447);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.dtpOffDate);
             this.Controls.Add(this.txtKPD);
             this.Controls.Add(this.dtpKPDDate);
             this.Controls.Add(this.label15);
@@ -576,7 +652,7 @@ namespace Aviso
             this.MinimizeBox = false;
             this.Name = "AvisoTeleEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавление/Редактирование почтового авизо";
+            this.Text = "Добавление/Редактирование телеграфного авизо";
             this.Load += new System.EventHandler(this.AvisoTeleEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).EndInit();
@@ -593,6 +669,7 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBIK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errOffDate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,5 +724,12 @@ namespace Aviso
         private ErrorProvider errReceiverBIK;
         private ErrorProvider errRDDate;
         private ErrorProvider errRDNum;
+        private Label label16;
+        private DateTimePicker dtpOffDate;
+        private ErrorProvider errOffDate;
+        private MaskedTextBox txtSenderKPP;
+        private Label label18;
+        private MaskedTextBox txtSenderINN;
+        private Label label17;
     }
 }

@@ -78,17 +78,6 @@ namespace Aviso
             this.post_avisoTableAdapter.Fill(this.avisoDataSet.post_aviso);            
         }
 
-        private void btnEditAviso_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             //postavisoBindingSource.AddNew(); 
@@ -103,27 +92,8 @@ namespace Aviso
             lst.Clear();
         }
 
-        private void btnAddAviso_Click(object sender, EventArgs e)
-        {
 
-        }
-        
 
-        private void btnDeleteAviso_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            dlgSelectReport.ShowDialog();
-            if (dlgSelectReport.FileName != "")
-               AvisoPostReporter.PrintCurrent(postavisoBindingSource, dlgSelectReport.FileName);
-        }
-
-        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void mAdd_Click(object sender, EventArgs e)
         {
@@ -185,6 +155,13 @@ namespace Aviso
                 }
             }
 
+        }
+
+        private void mPrint_Click(object sender, EventArgs e)
+        {
+            dlgSelectReport.ShowDialog();
+            if (dlgSelectReport.FileName != "")
+                AvisoPostReporter.PrintCurrent(postavisoBindingSource, dlgSelectReport.FileName);
         }
     }
 }

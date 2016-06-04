@@ -35,8 +35,8 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,8 +73,6 @@ namespace Aviso
             this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.avisoDataSet = new Aviso.AvisoDataSet();
-            this.btnEditAviso = new System.Windows.Forms.Button();
-            this.btnAddAviso = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tcMain = new System.Windows.Forms.TabControl();
@@ -115,8 +113,6 @@ namespace Aviso
             this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDeleteAviso = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
             this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
             this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
@@ -142,8 +138,8 @@ namespace Aviso
             this.dgvAvisoPost.AllowUserToAddRows = false;
             this.dgvAvisoPost.AllowUserToDeleteRows = false;
             this.dgvAvisoPost.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAvisoPost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -192,7 +188,7 @@ namespace Aviso
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 495);
             this.dgvAvisoPost.TabIndex = 0;
-            this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.btnEditAviso_Click);
+            this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.mEdit_Click);
             // 
             // ID
             // 
@@ -434,28 +430,6 @@ namespace Aviso
             this.avisoDataSet.DataSetName = "AvisoDataSet";
             this.avisoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnEditAviso
-            // 
-            this.btnEditAviso.Location = new System.Drawing.Point(767, 26);
-            this.btnEditAviso.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditAviso.Name = "btnEditAviso";
-            this.btnEditAviso.Size = new System.Drawing.Size(113, 26);
-            this.btnEditAviso.TabIndex = 2;
-            this.btnEditAviso.Text = "Редактировать";
-            this.btnEditAviso.UseVisualStyleBackColor = true;
-            this.btnEditAviso.Click += new System.EventHandler(this.btnEditAviso_Click);
-            // 
-            // btnAddAviso
-            // 
-            this.btnAddAviso.Location = new System.Drawing.Point(671, 26);
-            this.btnAddAviso.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAviso.Name = "btnAddAviso";
-            this.btnAddAviso.Size = new System.Drawing.Size(88, 26);
-            this.btnAddAviso.TabIndex = 3;
-            this.btnAddAviso.Text = "Добавить";
-            this.btnAddAviso.UseVisualStyleBackColor = true;
-            this.btnAddAviso.Click += new System.EventHandler(this.btnAddAviso_Click);
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(125, 315);
@@ -465,11 +439,10 @@ namespace Aviso
             this.button3.TabIndex = 6;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(888, 24);
+            this.button4.Location = new System.Drawing.Point(994, 29);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 26);
@@ -522,8 +495,8 @@ namespace Aviso
             // 
             this.dgvAvisoTele.AllowUserToAddRows = false;
             this.dgvAvisoTele.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAvisoTele.AutoGenerateColumns = false;
             this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -770,26 +743,6 @@ namespace Aviso
             this.telegraphavisoBindingSource.DataMember = "telegraph_aviso";
             this.telegraphavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
             // 
-            // btnDeleteAviso
-            // 
-            this.btnDeleteAviso.Location = new System.Drawing.Point(589, 41);
-            this.btnDeleteAviso.Name = "btnDeleteAviso";
-            this.btnDeleteAviso.Size = new System.Drawing.Size(75, 26);
-            this.btnDeleteAviso.TabIndex = 9;
-            this.btnDeleteAviso.Text = "Удалить";
-            this.btnDeleteAviso.UseVisualStyleBackColor = true;
-            this.btnDeleteAviso.Click += new System.EventHandler(this.btnDeleteAviso_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(983, 24);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(83, 28);
-            this.btnPrint.TabIndex = 12;
-            this.btnPrint.Text = "Печать";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // dlgSelectReport
             // 
             this.dlgSelectReport.Filter = "MS Word Documents|*.docx";
@@ -843,19 +796,16 @@ namespace Aviso
             this.mPrint.Name = "mPrint";
             this.mPrint.Size = new System.Drawing.Size(62, 21);
             this.mPrint.Text = "Печать";
+            this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 607);
-            this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.btnDeleteAviso);
             this.Controls.Add(this.tcMain);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnAddAviso);
-            this.Controls.Add(this.btnEditAviso);
             this.Controls.Add(this.mmAdd);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainMenuStrip = this.mmAdd;
@@ -887,15 +837,11 @@ namespace Aviso
         private AvisoDataSet avisoDataSet;
         private System.Windows.Forms.BindingSource postavisoBindingSource;
         private AvisoDataSetTableAdapters.post_avisoTableAdapter post_avisoTableAdapter;
-        private System.Windows.Forms.Button btnEditAviso;
-        private System.Windows.Forms.Button btnAddAviso;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabControl tcMain;
         private System.Windows.Forms.TabPage tpPostAviso;
         private System.Windows.Forms.TabPage tpTeleAviso;
-        private System.Windows.Forms.Button btnDeleteAviso;
-        private Button btnPrint;
         private SaveFileDialog dlgSelectReport;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn NUM;

@@ -66,7 +66,16 @@ namespace Aviso
             Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);
             dtpKPDDate.DataBindings.Add(b_KPDDate);
             b_KPDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
-            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);   
+            b_KPDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
+
+            Binding b_offDate = new Binding("Value", bs_main, "OFF_DATE", true);
+            dtpOffDate.DataBindings.Add(b_offDate);
+            b_offDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
+            b_offDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
+
+            txtSenderINN.DataBindings.Add("Text", bs_main, "SENDER_INN");
+            txtSenderKPP.DataBindings.Add("Text", bs_main, "SENDER_KPP");
+
         }
 
         public AvisoTeleEdit(BindingSource bs_main)
@@ -130,11 +139,7 @@ namespace Aviso
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            DataRowView row = (DataRowView)bs_main.Current;
-            if (Convert.ToString(row["RD_DATE"]) == "")
-                MessageBox.Show("NULL!");
-            else
-                MessageBox.Show("Not Null");
+
         }
 
         private void DtpRefreshFormat(DateTimePicker dtp)
@@ -294,6 +299,22 @@ namespace Aviso
             }
             else
                 errRDNum.SetError(txtRDNum, "");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpOffDate_Validating(object sender, CancelEventArgs e)
+        {
+            if (dtpOffDate.Checked && dtpOffDate.Value.Date > DateTime.Today)
+            {
+                e.Cancel = true;
+                errOffDate.SetError(dtpOffDate, "Дата списания со счета не может быть большей за текущую дату");
+            }
+            else
+                errOffDate.SetError(dtpOffDate, "");
         }
     }
 }

@@ -529,6 +529,7 @@ namespace Aviso
             // 
             // errReceiverBIK
             // 
+            this.errReceiverBIK.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errReceiverBIK.ContainerControl = this;
             // 
             // errRDDate
