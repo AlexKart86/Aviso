@@ -88,7 +88,6 @@ namespace Aviso
             this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.mDel = new System.Windows.Forms.ToolStripMenuItem();
             this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pAYMENTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,14 +178,14 @@ namespace Aviso
             this.kPDDataGridViewTextBoxColumn1,
             this.kPDDATEDataGridViewTextBoxColumn1});
             this.dgvAvisoPost.DataSource = this.postavisoBindingSource;
-            this.dgvAvisoPost.Location = new System.Drawing.Point(7, 4);
+            this.dgvAvisoPost.Location = new System.Drawing.Point(0, 0);
             this.dgvAvisoPost.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAvisoPost.MultiSelect = false;
             this.dgvAvisoPost.Name = "dgvAvisoPost";
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1147, 488);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1158, 509);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.mEdit_Click);
             // 
@@ -466,6 +465,7 @@ namespace Aviso
             this.tcMain.SelectedIndex = 0;
             this.tcMain.Size = new System.Drawing.Size(1166, 540);
             this.tcMain.TabIndex = 8;
+            this.tcMain.DoubleClick += new System.EventHandler(this.mEdit_Click);
             // 
             // tpPostAviso
             // 
@@ -504,7 +504,6 @@ namespace Aviso
             this.dgvAvisoTele.AutoGenerateColumns = false;
             this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
             this.nUMDataGridViewTextBoxColumn,
             this.cREATEDATEDataGridViewTextBoxColumn,
             this.pAYMENTTYPEDataGridViewTextBoxColumn,
@@ -538,14 +537,15 @@ namespace Aviso
             this.kPDDataGridViewTextBoxColumn,
             this.kPDDATEDataGridViewTextBoxColumn});
             this.dgvAvisoTele.DataSource = this.telegraphavisoBindingSource;
-            this.dgvAvisoTele.Location = new System.Drawing.Point(7, 7);
+            this.dgvAvisoTele.Location = new System.Drawing.Point(0, 0);
             this.dgvAvisoTele.MultiSelect = false;
             this.dgvAvisoTele.Name = "dgvAvisoTele";
             this.dgvAvisoTele.ReadOnly = true;
             this.dgvAvisoTele.RowHeadersVisible = false;
             this.dgvAvisoTele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoTele.Size = new System.Drawing.Size(1143, 492);
+            this.dgvAvisoTele.Size = new System.Drawing.Size(1158, 509);
             this.dgvAvisoTele.TabIndex = 0;
+            this.dgvAvisoTele.DoubleClick += new System.EventHandler(this.mEdit_Click);
             // 
             // telegraphavisoBindingSource
             // 
@@ -606,14 +606,6 @@ namespace Aviso
             this.mPrint.Size = new System.Drawing.Size(62, 21);
             this.mPrint.Text = "Печать";
             this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
             // nUMDataGridViewTextBoxColumn
             // 
@@ -924,7 +916,6 @@ namespace Aviso
         private ToolStripMenuItem mEdit;
         private ToolStripMenuItem mDel;
         private ToolStripMenuItem mPrint;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn pAYMENTTYPEDataGridViewTextBoxColumn;

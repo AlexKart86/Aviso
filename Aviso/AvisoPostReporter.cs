@@ -9,9 +9,9 @@ using System.Windows.Forms;
 //Класс для печати одного почтового авизо
 namespace Aviso
 {
-    public static class AvisoPostReporter
+    public class AvisoPostReporter: AvisoReporter
     {
-        public static bool PrintCurrent(BindingSource bs, string result_file)
+        public override bool PrintCurrent(BindingSource bs, string result_file)
         {
             DataRowView row = (DataRowView) bs.Current;
             List<Tuple<string, string>> lst = new List<Tuple<string, string>>();

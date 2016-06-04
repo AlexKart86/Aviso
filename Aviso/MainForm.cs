@@ -160,8 +160,29 @@ namespace Aviso
         private void mPrint_Click(object sender, EventArgs e)
         {
             dlgSelectReport.ShowDialog();
+            AvisoReporter rep;
+            BindingSource bs;
             if (dlgSelectReport.FileName != "")
-                AvisoPostReporter.PrintCurrent(postavisoBindingSource, dlgSelectReport.FileName);
+            {
+                if (tcMain.SelectedTab == tpPostAviso)
+                {
+                    rep = new AvisoPostReporter();
+                    bs = postavisoBindingSource;
+                }
+                else if (tcMain.SelectedTab == tpTeleAviso)
+                {
+                    rep = new AvisoTelegraphReporter();
+                    bs = telegraphavisoBindingSource;
+                }
+                else
+                    return;
+
+                if (rep.PrintCurrent(bs, dlgSelectReport.FileName))
+                    MessageBox.Show("Отчет успешно сформирован", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Не удалось сформировать отчет", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

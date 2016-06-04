@@ -753,6 +753,7 @@ namespace Aviso
             this.dtpOffDate.ShowCheckBox = true;
             this.dtpOffDate.Size = new System.Drawing.Size(156, 23);
             this.dtpOffDate.TabIndex = 6;
+            this.dtpOffDate.ValueChanged += new System.EventHandler(this.dtpRDDate_ValueChanged);
             this.dtpOffDate.Validating += new System.ComponentModel.CancelEventHandler(this.dtpOffDate_Validating);
             // 
             // label16

@@ -68,12 +68,14 @@
       <DependentUpon>AvisoPostEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="AvisoPostReporter.cs" />
+    <Compile Include="AvisoReporter.cs" />
     <Compile Include="AvisoTeleEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AvisoTeleEdit.Designer.cs">
       <DependentUpon>AvisoTeleEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="AvisoTelegraphReporter.cs" />
     <Compile Include="CombineDocs.cs" />
     <Compile Include="CommonUtils.cs" />
     <Compile Include="LookupList.cs" />
