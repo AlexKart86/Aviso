@@ -190,7 +190,7 @@ namespace Aviso
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.button2_Click);
@@ -201,7 +201,7 @@ namespace Aviso
             this.btnCancel.Location = new System.Drawing.Point(143, 462);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(92, 28);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Отменить";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

@@ -79,6 +79,15 @@ namespace Aviso
             this.tpPostAviso = new System.Windows.Forms.TabPage();
             this.tpTeleAviso = new System.Windows.Forms.TabPage();
             this.dgvAvisoTele = new System.Windows.Forms.DataGridView();
+            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
+            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
+            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
+            this.mmAdd = new System.Windows.Forms.MenuStrip();
+            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,15 +121,6 @@ namespace Aviso
             this.n110DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
-            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
-            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
-            this.mmAdd = new System.Windows.Forms.MenuStrip();
-            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
@@ -186,7 +186,7 @@ namespace Aviso
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1145, 495);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1147, 488);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.mEdit_Click);
             // 
@@ -464,7 +464,7 @@ namespace Aviso
             this.tcMain.Multiline = true;
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(1164, 547);
+            this.tcMain.Size = new System.Drawing.Size(1166, 540);
             this.tcMain.TabIndex = 8;
             // 
             // tpPostAviso
@@ -474,7 +474,7 @@ namespace Aviso
             this.tpPostAviso.Margin = new System.Windows.Forms.Padding(4);
             this.tpPostAviso.Name = "tpPostAviso";
             this.tpPostAviso.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPostAviso.Size = new System.Drawing.Size(1156, 516);
+            this.tpPostAviso.Size = new System.Drawing.Size(1158, 509);
             this.tpPostAviso.TabIndex = 0;
             this.tpPostAviso.Text = "Почтовое авизо";
             this.tpPostAviso.UseVisualStyleBackColor = true;
@@ -486,7 +486,7 @@ namespace Aviso
             this.tpTeleAviso.Margin = new System.Windows.Forms.Padding(4);
             this.tpTeleAviso.Name = "tpTeleAviso";
             this.tpTeleAviso.Padding = new System.Windows.Forms.Padding(4);
-            this.tpTeleAviso.Size = new System.Drawing.Size(1156, 516);
+            this.tpTeleAviso.Size = new System.Drawing.Size(1158, 509);
             this.tpTeleAviso.TabIndex = 1;
             this.tpTeleAviso.Text = "Телеграфное авизо";
             this.tpTeleAviso.UseVisualStyleBackColor = true;
@@ -498,6 +498,9 @@ namespace Aviso
             this.dgvAvisoTele.AllowUserToResizeRows = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAvisoTele.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAvisoTele.AutoGenerateColumns = false;
             this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -536,209 +539,13 @@ namespace Aviso
             this.kPDDATEDataGridViewTextBoxColumn});
             this.dgvAvisoTele.DataSource = this.telegraphavisoBindingSource;
             this.dgvAvisoTele.Location = new System.Drawing.Point(7, 7);
+            this.dgvAvisoTele.MultiSelect = false;
             this.dgvAvisoTele.Name = "dgvAvisoTele";
+            this.dgvAvisoTele.ReadOnly = true;
             this.dgvAvisoTele.RowHeadersVisible = false;
-            this.dgvAvisoTele.Size = new System.Drawing.Size(1142, 502);
+            this.dgvAvisoTele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAvisoTele.Size = new System.Drawing.Size(1143, 492);
             this.dgvAvisoTele.TabIndex = 0;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nUMDataGridViewTextBoxColumn
-            // 
-            this.nUMDataGridViewTextBoxColumn.DataPropertyName = "NUM";
-            this.nUMDataGridViewTextBoxColumn.HeaderText = "Номер авизо";
-            this.nUMDataGridViewTextBoxColumn.Name = "nUMDataGridViewTextBoxColumn";
-            // 
-            // cREATEDATEDataGridViewTextBoxColumn
-            // 
-            this.cREATEDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATE_DATE";
-            this.cREATEDATEDataGridViewTextBoxColumn.HeaderText = "Дата авизо";
-            this.cREATEDATEDataGridViewTextBoxColumn.Name = "cREATEDATEDataGridViewTextBoxColumn";
-            // 
-            // pAYMENTTYPEDataGridViewTextBoxColumn
-            // 
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_TYPE";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.HeaderText = "Вид платежа";
-            this.pAYMENTTYPEDataGridViewTextBoxColumn.Name = "pAYMENTTYPEDataGridViewTextBoxColumn";
-            // 
-            // oPERATIONTYPEDataGridViewTextBoxColumn
-            // 
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.DataPropertyName = "OPERATION_TYPE";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.HeaderText = "Вид операции";
-            this.oPERATIONTYPEDataGridViewTextBoxColumn.Name = "oPERATIONTYPEDataGridViewTextBoxColumn";
-            // 
-            // rDNUMDataGridViewTextBoxColumn
-            // 
-            this.rDNUMDataGridViewTextBoxColumn.DataPropertyName = "RD_NUM";
-            this.rDNUMDataGridViewTextBoxColumn.HeaderText = "Номер РД";
-            this.rDNUMDataGridViewTextBoxColumn.Name = "rDNUMDataGridViewTextBoxColumn";
-            // 
-            // rDDATEDataGridViewTextBoxColumn
-            // 
-            this.rDDATEDataGridViewTextBoxColumn.DataPropertyName = "RD_DATE";
-            this.rDDATEDataGridViewTextBoxColumn.HeaderText = "Дата РД";
-            this.rDDATEDataGridViewTextBoxColumn.Name = "rDDATEDataGridViewTextBoxColumn";
-            // 
-            // oFFDATEDataGridViewTextBoxColumn
-            // 
-            this.oFFDATEDataGridViewTextBoxColumn.DataPropertyName = "OFF_DATE";
-            this.oFFDATEDataGridViewTextBoxColumn.HeaderText = "Списано со счета  плательщика";
-            this.oFFDATEDataGridViewTextBoxColumn.Name = "oFFDATEDataGridViewTextBoxColumn";
-            // 
-            // rDSUMDataGridViewTextBoxColumn
-            // 
-            this.rDSUMDataGridViewTextBoxColumn.DataPropertyName = "RD_SUM";
-            this.rDSUMDataGridViewTextBoxColumn.HeaderText = "Сумма РД";
-            this.rDSUMDataGridViewTextBoxColumn.Name = "rDSUMDataGridViewTextBoxColumn";
-            // 
-            // sENDERINNDataGridViewTextBoxColumn
-            // 
-            this.sENDERINNDataGridViewTextBoxColumn.DataPropertyName = "SENDER_INN";
-            this.sENDERINNDataGridViewTextBoxColumn.HeaderText = "ИНН плательщика";
-            this.sENDERINNDataGridViewTextBoxColumn.Name = "sENDERINNDataGridViewTextBoxColumn";
-            // 
-            // sENDERKPPDataGridViewTextBoxColumn
-            // 
-            this.sENDERKPPDataGridViewTextBoxColumn.DataPropertyName = "SENDER_KPP";
-            this.sENDERKPPDataGridViewTextBoxColumn.HeaderText = "КПП плательщика";
-            this.sENDERKPPDataGridViewTextBoxColumn.Name = "sENDERKPPDataGridViewTextBoxColumn";
-            // 
-            // sENDERNAMEDataGridViewTextBoxColumn
-            // 
-            this.sENDERNAMEDataGridViewTextBoxColumn.DataPropertyName = "SENDER_NAME";
-            this.sENDERNAMEDataGridViewTextBoxColumn.HeaderText = "Наименование плательщика";
-            this.sENDERNAMEDataGridViewTextBoxColumn.Name = "sENDERNAMEDataGridViewTextBoxColumn";
-            // 
-            // sENDERBIKDataGridViewTextBoxColumn
-            // 
-            this.sENDERBIKDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BIK";
-            this.sENDERBIKDataGridViewTextBoxColumn.HeaderText = "БИК банка плательщика";
-            this.sENDERBIKDataGridViewTextBoxColumn.Name = "sENDERBIKDataGridViewTextBoxColumn";
-            // 
-            // sENDERKODataGridViewTextBoxColumn
-            // 
-            this.sENDERKODataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO";
-            this.sENDERKODataGridViewTextBoxColumn.HeaderText = "Корсчет КО плательщика";
-            this.sENDERKODataGridViewTextBoxColumn.Name = "sENDERKODataGridViewTextBoxColumn";
-            // 
-            // sENDERKONAMEDataGridViewTextBoxColumn
-            // 
-            this.sENDERKONAMEDataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO_NAME";
-            this.sENDERKONAMEDataGridViewTextBoxColumn.HeaderText = "Наименование КО плательщика";
-            this.sENDERKONAMEDataGridViewTextBoxColumn.Name = "sENDERKONAMEDataGridViewTextBoxColumn";
-            // 
-            // sENDERBILLDataGridViewTextBoxColumn
-            // 
-            this.sENDERBILLDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BILL";
-            this.sENDERBILLDataGridViewTextBoxColumn.HeaderText = "Номер лицевого счета плательщика";
-            this.sENDERBILLDataGridViewTextBoxColumn.Name = "sENDERBILLDataGridViewTextBoxColumn";
-            // 
-            // rECEIVERINNDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERINNDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_INN";
-            this.rECEIVERINNDataGridViewTextBoxColumn.HeaderText = "ИНН получателя";
-            this.rECEIVERINNDataGridViewTextBoxColumn.Name = "rECEIVERINNDataGridViewTextBoxColumn";
-            // 
-            // rECEIVERKPPDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERKPPDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KPP";
-            this.rECEIVERKPPDataGridViewTextBoxColumn.HeaderText = "КПП получателя";
-            this.rECEIVERKPPDataGridViewTextBoxColumn.Name = "rECEIVERKPPDataGridViewTextBoxColumn";
-            // 
-            // rECEIVERNAMEDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERNAMEDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_NAME";
-            this.rECEIVERNAMEDataGridViewTextBoxColumn.HeaderText = "Наименование получателя";
-            this.rECEIVERNAMEDataGridViewTextBoxColumn.Name = "rECEIVERNAMEDataGridViewTextBoxColumn";
-            // 
-            // rECEIVERBIKDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERBIKDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BIK";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.HeaderText = "БИК банка получателя";
-            this.rECEIVERBIKDataGridViewTextBoxColumn.Name = "rECEIVERBIKDataGridViewTextBoxColumn";
-            // 
-            // rECEIVERKODataGridViewTextBoxColumn
-            // 
-            this.rECEIVERKODataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KO";
-            this.rECEIVERKODataGridViewTextBoxColumn.HeaderText = "Корсчет КО получателя";
-            this.rECEIVERKODataGridViewTextBoxColumn.Name = "rECEIVERKODataGridViewTextBoxColumn";
-            // 
-            // rECEIVERBILLDataGridViewTextBoxColumn
-            // 
-            this.rECEIVERBILLDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BILL";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.HeaderText = "RECEIVER_BILL";
-            this.rECEIVERBILLDataGridViewTextBoxColumn.Name = "rECEIVERBILLDataGridViewTextBoxColumn";
-            // 
-            // pAYMENTGOALDataGridViewTextBoxColumn
-            // 
-            this.pAYMENTGOALDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_GOAL";
-            this.pAYMENTGOALDataGridViewTextBoxColumn.HeaderText = "PAYMENT_GOAL";
-            this.pAYMENTGOALDataGridViewTextBoxColumn.Name = "pAYMENTGOALDataGridViewTextBoxColumn";
-            // 
-            // n101DataGridViewTextBoxColumn
-            // 
-            this.n101DataGridViewTextBoxColumn.DataPropertyName = "N101";
-            this.n101DataGridViewTextBoxColumn.HeaderText = "N101";
-            this.n101DataGridViewTextBoxColumn.Name = "n101DataGridViewTextBoxColumn";
-            // 
-            // n104DataGridViewTextBoxColumn
-            // 
-            this.n104DataGridViewTextBoxColumn.DataPropertyName = "N104";
-            this.n104DataGridViewTextBoxColumn.HeaderText = "N104";
-            this.n104DataGridViewTextBoxColumn.Name = "n104DataGridViewTextBoxColumn";
-            // 
-            // n105DataGridViewTextBoxColumn
-            // 
-            this.n105DataGridViewTextBoxColumn.DataPropertyName = "N105";
-            this.n105DataGridViewTextBoxColumn.HeaderText = "N105";
-            this.n105DataGridViewTextBoxColumn.Name = "n105DataGridViewTextBoxColumn";
-            // 
-            // n106DataGridViewTextBoxColumn
-            // 
-            this.n106DataGridViewTextBoxColumn.DataPropertyName = "N106";
-            this.n106DataGridViewTextBoxColumn.HeaderText = "N106";
-            this.n106DataGridViewTextBoxColumn.Name = "n106DataGridViewTextBoxColumn";
-            // 
-            // n107DataGridViewTextBoxColumn
-            // 
-            this.n107DataGridViewTextBoxColumn.DataPropertyName = "N107";
-            this.n107DataGridViewTextBoxColumn.HeaderText = "N107";
-            this.n107DataGridViewTextBoxColumn.Name = "n107DataGridViewTextBoxColumn";
-            // 
-            // n108DataGridViewTextBoxColumn
-            // 
-            this.n108DataGridViewTextBoxColumn.DataPropertyName = "N108";
-            this.n108DataGridViewTextBoxColumn.HeaderText = "N108";
-            this.n108DataGridViewTextBoxColumn.Name = "n108DataGridViewTextBoxColumn";
-            // 
-            // n109DataGridViewTextBoxColumn
-            // 
-            this.n109DataGridViewTextBoxColumn.DataPropertyName = "N109";
-            this.n109DataGridViewTextBoxColumn.HeaderText = "N109";
-            this.n109DataGridViewTextBoxColumn.Name = "n109DataGridViewTextBoxColumn";
-            // 
-            // n110DataGridViewTextBoxColumn
-            // 
-            this.n110DataGridViewTextBoxColumn.DataPropertyName = "N110";
-            this.n110DataGridViewTextBoxColumn.HeaderText = "N110";
-            this.n110DataGridViewTextBoxColumn.Name = "n110DataGridViewTextBoxColumn";
-            // 
-            // kPDDataGridViewTextBoxColumn
-            // 
-            this.kPDDataGridViewTextBoxColumn.DataPropertyName = "KPD";
-            this.kPDDataGridViewTextBoxColumn.HeaderText = "KPD";
-            this.kPDDataGridViewTextBoxColumn.Name = "kPDDataGridViewTextBoxColumn";
-            // 
-            // kPDDATEDataGridViewTextBoxColumn
-            // 
-            this.kPDDATEDataGridViewTextBoxColumn.DataPropertyName = "KPD_DATE";
-            this.kPDDATEDataGridViewTextBoxColumn.HeaderText = "KPD_DATE";
-            this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
             // 
             // telegraphavisoBindingSource
             // 
@@ -768,7 +575,7 @@ namespace Aviso
             this.mPrint});
             this.mmAdd.Location = new System.Drawing.Point(0, 0);
             this.mmAdd.Name = "mmAdd";
-            this.mmAdd.Size = new System.Drawing.Size(1192, 25);
+            this.mmAdd.Size = new System.Drawing.Size(1194, 25);
             this.mmAdd.TabIndex = 13;
             this.mmAdd.Text = "Добавить";
             // 
@@ -800,11 +607,243 @@ namespace Aviso
             this.mPrint.Text = "Печать";
             this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nUMDataGridViewTextBoxColumn
+            // 
+            this.nUMDataGridViewTextBoxColumn.DataPropertyName = "NUM";
+            this.nUMDataGridViewTextBoxColumn.HeaderText = "Номер авизо";
+            this.nUMDataGridViewTextBoxColumn.Name = "nUMDataGridViewTextBoxColumn";
+            this.nUMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cREATEDATEDataGridViewTextBoxColumn
+            // 
+            this.cREATEDATEDataGridViewTextBoxColumn.DataPropertyName = "CREATE_DATE";
+            this.cREATEDATEDataGridViewTextBoxColumn.HeaderText = "Дата авизо";
+            this.cREATEDATEDataGridViewTextBoxColumn.Name = "cREATEDATEDataGridViewTextBoxColumn";
+            this.cREATEDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pAYMENTTYPEDataGridViewTextBoxColumn
+            // 
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_TYPE";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.HeaderText = "Вид платежа";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.Name = "pAYMENTTYPEDataGridViewTextBoxColumn";
+            this.pAYMENTTYPEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // oPERATIONTYPEDataGridViewTextBoxColumn
+            // 
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.DataPropertyName = "OPERATION_TYPE";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.HeaderText = "Вид операции";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.Name = "oPERATIONTYPEDataGridViewTextBoxColumn";
+            this.oPERATIONTYPEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rDNUMDataGridViewTextBoxColumn
+            // 
+            this.rDNUMDataGridViewTextBoxColumn.DataPropertyName = "RD_NUM";
+            this.rDNUMDataGridViewTextBoxColumn.HeaderText = "Номер РД";
+            this.rDNUMDataGridViewTextBoxColumn.Name = "rDNUMDataGridViewTextBoxColumn";
+            this.rDNUMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rDDATEDataGridViewTextBoxColumn
+            // 
+            this.rDDATEDataGridViewTextBoxColumn.DataPropertyName = "RD_DATE";
+            this.rDDATEDataGridViewTextBoxColumn.HeaderText = "Дата РД";
+            this.rDDATEDataGridViewTextBoxColumn.Name = "rDDATEDataGridViewTextBoxColumn";
+            this.rDDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // oFFDATEDataGridViewTextBoxColumn
+            // 
+            this.oFFDATEDataGridViewTextBoxColumn.DataPropertyName = "OFF_DATE";
+            this.oFFDATEDataGridViewTextBoxColumn.HeaderText = "Списано со счета  плательщика";
+            this.oFFDATEDataGridViewTextBoxColumn.Name = "oFFDATEDataGridViewTextBoxColumn";
+            this.oFFDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rDSUMDataGridViewTextBoxColumn
+            // 
+            this.rDSUMDataGridViewTextBoxColumn.DataPropertyName = "RD_SUM";
+            this.rDSUMDataGridViewTextBoxColumn.HeaderText = "Сумма РД";
+            this.rDSUMDataGridViewTextBoxColumn.Name = "rDSUMDataGridViewTextBoxColumn";
+            this.rDSUMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERINNDataGridViewTextBoxColumn
+            // 
+            this.sENDERINNDataGridViewTextBoxColumn.DataPropertyName = "SENDER_INN";
+            this.sENDERINNDataGridViewTextBoxColumn.HeaderText = "ИНН плательщика";
+            this.sENDERINNDataGridViewTextBoxColumn.Name = "sENDERINNDataGridViewTextBoxColumn";
+            this.sENDERINNDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERKPPDataGridViewTextBoxColumn
+            // 
+            this.sENDERKPPDataGridViewTextBoxColumn.DataPropertyName = "SENDER_KPP";
+            this.sENDERKPPDataGridViewTextBoxColumn.HeaderText = "КПП плательщика";
+            this.sENDERKPPDataGridViewTextBoxColumn.Name = "sENDERKPPDataGridViewTextBoxColumn";
+            this.sENDERKPPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERNAMEDataGridViewTextBoxColumn
+            // 
+            this.sENDERNAMEDataGridViewTextBoxColumn.DataPropertyName = "SENDER_NAME";
+            this.sENDERNAMEDataGridViewTextBoxColumn.HeaderText = "Наименование плательщика";
+            this.sENDERNAMEDataGridViewTextBoxColumn.Name = "sENDERNAMEDataGridViewTextBoxColumn";
+            this.sENDERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERBIKDataGridViewTextBoxColumn
+            // 
+            this.sENDERBIKDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BIK";
+            this.sENDERBIKDataGridViewTextBoxColumn.HeaderText = "БИК банка плательщика";
+            this.sENDERBIKDataGridViewTextBoxColumn.Name = "sENDERBIKDataGridViewTextBoxColumn";
+            this.sENDERBIKDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERKODataGridViewTextBoxColumn
+            // 
+            this.sENDERKODataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO";
+            this.sENDERKODataGridViewTextBoxColumn.HeaderText = "Корсчет КО плательщика";
+            this.sENDERKODataGridViewTextBoxColumn.Name = "sENDERKODataGridViewTextBoxColumn";
+            this.sENDERKODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERKONAMEDataGridViewTextBoxColumn
+            // 
+            this.sENDERKONAMEDataGridViewTextBoxColumn.DataPropertyName = "SENDER_KO_NAME";
+            this.sENDERKONAMEDataGridViewTextBoxColumn.HeaderText = "Наименование КО плательщика";
+            this.sENDERKONAMEDataGridViewTextBoxColumn.Name = "sENDERKONAMEDataGridViewTextBoxColumn";
+            this.sENDERKONAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sENDERBILLDataGridViewTextBoxColumn
+            // 
+            this.sENDERBILLDataGridViewTextBoxColumn.DataPropertyName = "SENDER_BILL";
+            this.sENDERBILLDataGridViewTextBoxColumn.HeaderText = "Номер лицевого счета плательщика";
+            this.sENDERBILLDataGridViewTextBoxColumn.Name = "sENDERBILLDataGridViewTextBoxColumn";
+            this.sENDERBILLDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rECEIVERINNDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERINNDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_INN";
+            this.rECEIVERINNDataGridViewTextBoxColumn.HeaderText = "ИНН получателя";
+            this.rECEIVERINNDataGridViewTextBoxColumn.Name = "rECEIVERINNDataGridViewTextBoxColumn";
+            this.rECEIVERINNDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rECEIVERKPPDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERKPPDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KPP";
+            this.rECEIVERKPPDataGridViewTextBoxColumn.HeaderText = "КПП получателя";
+            this.rECEIVERKPPDataGridViewTextBoxColumn.Name = "rECEIVERKPPDataGridViewTextBoxColumn";
+            this.rECEIVERKPPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rECEIVERNAMEDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_NAME";
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.HeaderText = "Наименование получателя";
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.Name = "rECEIVERNAMEDataGridViewTextBoxColumn";
+            this.rECEIVERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rECEIVERBIKDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERBIKDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BIK";
+            this.rECEIVERBIKDataGridViewTextBoxColumn.HeaderText = "БИК банка получателя";
+            this.rECEIVERBIKDataGridViewTextBoxColumn.Name = "rECEIVERBIKDataGridViewTextBoxColumn";
+            this.rECEIVERBIKDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rECEIVERKODataGridViewTextBoxColumn
+            // 
+            this.rECEIVERKODataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_KO";
+            this.rECEIVERKODataGridViewTextBoxColumn.HeaderText = "Корсчет КО получателя";
+            this.rECEIVERKODataGridViewTextBoxColumn.Name = "rECEIVERKODataGridViewTextBoxColumn";
+            this.rECEIVERKODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rECEIVERBILLDataGridViewTextBoxColumn
+            // 
+            this.rECEIVERBILLDataGridViewTextBoxColumn.DataPropertyName = "RECEIVER_BILL";
+            this.rECEIVERBILLDataGridViewTextBoxColumn.HeaderText = "Номер лицевого счета получателя";
+            this.rECEIVERBILLDataGridViewTextBoxColumn.Name = "rECEIVERBILLDataGridViewTextBoxColumn";
+            this.rECEIVERBILLDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pAYMENTGOALDataGridViewTextBoxColumn
+            // 
+            this.pAYMENTGOALDataGridViewTextBoxColumn.DataPropertyName = "PAYMENT_GOAL";
+            this.pAYMENTGOALDataGridViewTextBoxColumn.HeaderText = "Назначение платежа";
+            this.pAYMENTGOALDataGridViewTextBoxColumn.Name = "pAYMENTGOALDataGridViewTextBoxColumn";
+            this.pAYMENTGOALDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n101DataGridViewTextBoxColumn
+            // 
+            this.n101DataGridViewTextBoxColumn.DataPropertyName = "N101";
+            this.n101DataGridViewTextBoxColumn.HeaderText = "101";
+            this.n101DataGridViewTextBoxColumn.Name = "n101DataGridViewTextBoxColumn";
+            this.n101DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n104DataGridViewTextBoxColumn
+            // 
+            this.n104DataGridViewTextBoxColumn.DataPropertyName = "N104";
+            this.n104DataGridViewTextBoxColumn.HeaderText = "104";
+            this.n104DataGridViewTextBoxColumn.Name = "n104DataGridViewTextBoxColumn";
+            this.n104DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n105DataGridViewTextBoxColumn
+            // 
+            this.n105DataGridViewTextBoxColumn.DataPropertyName = "N105";
+            this.n105DataGridViewTextBoxColumn.HeaderText = "105";
+            this.n105DataGridViewTextBoxColumn.Name = "n105DataGridViewTextBoxColumn";
+            this.n105DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n106DataGridViewTextBoxColumn
+            // 
+            this.n106DataGridViewTextBoxColumn.DataPropertyName = "N106";
+            this.n106DataGridViewTextBoxColumn.HeaderText = "106";
+            this.n106DataGridViewTextBoxColumn.Name = "n106DataGridViewTextBoxColumn";
+            this.n106DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n107DataGridViewTextBoxColumn
+            // 
+            this.n107DataGridViewTextBoxColumn.DataPropertyName = "N107";
+            this.n107DataGridViewTextBoxColumn.HeaderText = "107";
+            this.n107DataGridViewTextBoxColumn.Name = "n107DataGridViewTextBoxColumn";
+            this.n107DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n108DataGridViewTextBoxColumn
+            // 
+            this.n108DataGridViewTextBoxColumn.DataPropertyName = "N108";
+            this.n108DataGridViewTextBoxColumn.HeaderText = "108";
+            this.n108DataGridViewTextBoxColumn.Name = "n108DataGridViewTextBoxColumn";
+            this.n108DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n109DataGridViewTextBoxColumn
+            // 
+            this.n109DataGridViewTextBoxColumn.DataPropertyName = "N109";
+            this.n109DataGridViewTextBoxColumn.HeaderText = "109";
+            this.n109DataGridViewTextBoxColumn.Name = "n109DataGridViewTextBoxColumn";
+            this.n109DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // n110DataGridViewTextBoxColumn
+            // 
+            this.n110DataGridViewTextBoxColumn.DataPropertyName = "N110";
+            this.n110DataGridViewTextBoxColumn.HeaderText = "110";
+            this.n110DataGridViewTextBoxColumn.Name = "n110DataGridViewTextBoxColumn";
+            this.n110DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kPDDataGridViewTextBoxColumn
+            // 
+            this.kPDDataGridViewTextBoxColumn.DataPropertyName = "KPD";
+            this.kPDDataGridViewTextBoxColumn.HeaderText = "КПД";
+            this.kPDDataGridViewTextBoxColumn.Name = "kPDDataGridViewTextBoxColumn";
+            this.kPDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kPDDATEDataGridViewTextBoxColumn
+            // 
+            this.kPDDATEDataGridViewTextBoxColumn.DataPropertyName = "KPD_DATE";
+            this.kPDDATEDataGridViewTextBoxColumn.HeaderText = "Дата КПД";
+            this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
+            this.kPDDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 607);
+            this.ClientSize = new System.Drawing.Size(1194, 600);
             this.Controls.Add(this.tcMain);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -864,6 +903,27 @@ namespace Aviso
         private DataGridView dgvAvisoTele;
         private BindingSource telegraphavisoBindingSource;
         private AvisoDataSetTableAdapters.telegraph_avisoTableAdapter telegraph_avisoTableAdapter;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn pAYMENTTYPEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn oPERATIONTYPEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rDNUMDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rDDATEDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rDSUMDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sENDERBIKDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sENDERKODataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sENDERBILLDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rECEIVERBIKDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rECEIVERKODataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn1;
+        private MenuStrip mmAdd;
+        private ToolStripMenuItem mAdd;
+        private ToolStripMenuItem mEdit;
+        private ToolStripMenuItem mDel;
+        private ToolStripMenuItem mPrint;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn;
@@ -897,27 +957,6 @@ namespace Aviso
         private DataGridViewTextBoxColumn n110DataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn pAYMENTTYPEDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn oPERATIONTYPEDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn rDNUMDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn rDDATEDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn rDSUMDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn sENDERBIKDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn sENDERKODataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn sENDERBILLDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn rECEIVERBIKDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn rECEIVERKODataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn1;
-        private MenuStrip mmAdd;
-        private ToolStripMenuItem mAdd;
-        private ToolStripMenuItem mEdit;
-        private ToolStripMenuItem mDel;
-        private ToolStripMenuItem mPrint;
     }
 }
 

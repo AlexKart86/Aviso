@@ -85,14 +85,14 @@ namespace Aviso
 
             txtPaymentGoal.DataBindings.Add("Text", bs_main, "PAYMENT_GOAL");
 
-            txt101.DataBindings.Add("Text", bs_main, "N_101");
-            txt104.DataBindings.Add("Text", bs_main, "N_104");
-            txt105.DataBindings.Add("Text", bs_main, "N_105");
-            txt106.DataBindings.Add("Text", bs_main, "N_106");
-            txt107.DataBindings.Add("Text", bs_main, "N_107");
-            txt108.DataBindings.Add("Text", bs_main, "N_108");
-            txt109.DataBindings.Add("Text", bs_main, "N_109");
-            txt110.DataBindings.Add("Text", bs_main, "N_110");
+            txt101.DataBindings.Add("Text", bs_main, "N101");
+            txt104.DataBindings.Add("Text", bs_main, "N104");
+            txt105.DataBindings.Add("Text", bs_main, "N105");
+            txt106.DataBindings.Add("Text", bs_main, "N106");
+            txt107.DataBindings.Add("Text", bs_main, "N107");
+            txt108.DataBindings.Add("Text", bs_main, "N108");
+            txt109.DataBindings.Add("Text", bs_main, "N109");
+            txt110.DataBindings.Add("Text", bs_main, "N110");
         }
 
         public AvisoTeleEdit(BindingSource bs_main)
