@@ -25,8 +25,12 @@ namespace Aviso
                 }
                 else
                     val = Convert.ToString(row[idx]);
+                if (!string.IsNullOrEmpty(val))
+                {
+                    val = "<" + val + ">";
+                }
                 lst.Add(new Tuple<string, string>(row.Row.Table.Columns[idx].ColumnName,
-                        Convert.ToString(row[idx])));              
+                        val));              
             }                   
 
 
