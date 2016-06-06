@@ -17,6 +17,7 @@ namespace Aviso
             for (int idx=0; idx<row.Row.Table.Columns.Count - 1; ++idx)
             {
                 string val;
+
                 DataColumn col = row.Row.Table.Columns[idx];
                 if (col.DataType == typeof(System.DateTime))
                 {
@@ -31,8 +32,9 @@ namespace Aviso
                 }
                 lst.Add(new Tuple<string, string>(row.Row.Table.Columns[idx].ColumnName,
                         val));              
-            }                   
+            }
 
+            lst.Add(new Tuple<string, string>("RECEIVER_KO_NAME", Convert.ToString(row["RECEIVER_KO_NAME"])));
 
             //Формируем поле LONG_ADDRESS
             string rks = LookupList.LookupNewNum(Convert.ToString(row["RECEIVER_BIK"]), "RKC");
