@@ -13,7 +13,6 @@
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
 [Rr]eleases/
 [Xx]64/
 [Xx]86/
@@ -37,7 +36,6 @@ TestResult.xml
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
-[Rr]eleasePS/
 dlldata.c
 
 # DNX
