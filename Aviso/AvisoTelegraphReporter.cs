@@ -69,8 +69,21 @@ namespace Aviso
 
             string is_kpp_receiver = "";
             if (!string.IsNullOrEmpty(Convert.ToString(row["RECEIVER_KPP"])))
-                is_kpp_receiver = "KPP";
+                is_kpp_receiver = "КПП";
             lst.Add(new Tuple<string, string>("IS_KPP_RECEIVER", is_kpp_receiver));
+
+
+            string is_inn_sender = "";
+            if (!string.IsNullOrEmpty(Convert.ToString(row["SENDER_INN"])))
+                is_inn_sender = "ИНН";
+            lst.Add(new Tuple<string, string>("IS_INN_SENDER", is_inn_sender));
+
+
+            string is_kpp_sender = "";
+            if (!string.IsNullOrEmpty(Convert.ToString(row["SENDER_KPP"])))
+                is_kpp_sender = "KPP";
+            lst.Add(new Tuple<string, string>("IS_KPP_SENDER", is_kpp_sender));
+
 
 
             //Определяемся, какой из шаблонов нужен

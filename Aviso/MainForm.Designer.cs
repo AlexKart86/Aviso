@@ -79,15 +79,6 @@ namespace Aviso
             this.tpPostAviso = new System.Windows.Forms.TabPage();
             this.tpTeleAviso = new System.Windows.Forms.TabPage();
             this.dgvAvisoTele = new System.Windows.Forms.DataGridView();
-            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
-            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
-            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
-            this.mmAdd = new System.Windows.Forms.MenuStrip();
-            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
             this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pAYMENTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,6 +111,15 @@ namespace Aviso
             this.n110DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
+            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
+            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
+            this.mmAdd = new System.Windows.Forms.MenuStrip();
+            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
@@ -545,67 +545,8 @@ namespace Aviso
             this.dgvAvisoTele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAvisoTele.Size = new System.Drawing.Size(1158, 509);
             this.dgvAvisoTele.TabIndex = 0;
+            this.dgvAvisoTele.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvisoTele_CellContentClick);
             this.dgvAvisoTele.DoubleClick += new System.EventHandler(this.mEdit_Click);
-            // 
-            // telegraphavisoBindingSource
-            // 
-            this.telegraphavisoBindingSource.DataMember = "telegraph_aviso";
-            this.telegraphavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
-            // 
-            // dlgSelectReport
-            // 
-            this.dlgSelectReport.Filter = "MS Word Documents|*.docx";
-            this.dlgSelectReport.Title = "Выберите имя файла";
-            // 
-            // post_avisoTableAdapter
-            // 
-            this.post_avisoTableAdapter.ClearBeforeFill = true;
-            // 
-            // telegraph_avisoTableAdapter
-            // 
-            this.telegraph_avisoTableAdapter.ClearBeforeFill = true;
-            // 
-            // mmAdd
-            // 
-            this.mmAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mmAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mAdd,
-            this.mEdit,
-            this.mDel,
-            this.mPrint});
-            this.mmAdd.Location = new System.Drawing.Point(0, 0);
-            this.mmAdd.Name = "mmAdd";
-            this.mmAdd.Size = new System.Drawing.Size(1194, 25);
-            this.mmAdd.TabIndex = 13;
-            this.mmAdd.Text = "Добавить";
-            // 
-            // mAdd
-            // 
-            this.mAdd.Name = "mAdd";
-            this.mAdd.Size = new System.Drawing.Size(78, 21);
-            this.mAdd.Text = "Добавить";
-            this.mAdd.Click += new System.EventHandler(this.mAdd_Click);
-            // 
-            // mEdit
-            // 
-            this.mEdit.Name = "mEdit";
-            this.mEdit.Size = new System.Drawing.Size(108, 21);
-            this.mEdit.Text = "Редактировать";
-            this.mEdit.Click += new System.EventHandler(this.mEdit_Click);
-            // 
-            // mDel
-            // 
-            this.mDel.Name = "mDel";
-            this.mDel.Size = new System.Drawing.Size(67, 21);
-            this.mDel.Text = "Удалить";
-            this.mDel.Click += new System.EventHandler(this.mDel_Click);
-            // 
-            // mPrint
-            // 
-            this.mPrint.Name = "mPrint";
-            this.mPrint.Size = new System.Drawing.Size(62, 21);
-            this.mPrint.Text = "Печать";
-            this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
             // 
             // nUMDataGridViewTextBoxColumn
             // 
@@ -830,6 +771,66 @@ namespace Aviso
             this.kPDDATEDataGridViewTextBoxColumn.HeaderText = "Дата КПД";
             this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
             this.kPDDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telegraphavisoBindingSource
+            // 
+            this.telegraphavisoBindingSource.DataMember = "telegraph_aviso";
+            this.telegraphavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
+            // 
+            // dlgSelectReport
+            // 
+            this.dlgSelectReport.Filter = "MS Word Documents|*.docx";
+            this.dlgSelectReport.Title = "Выберите имя файла";
+            // 
+            // post_avisoTableAdapter
+            // 
+            this.post_avisoTableAdapter.ClearBeforeFill = true;
+            // 
+            // telegraph_avisoTableAdapter
+            // 
+            this.telegraph_avisoTableAdapter.ClearBeforeFill = true;
+            // 
+            // mmAdd
+            // 
+            this.mmAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mmAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mAdd,
+            this.mEdit,
+            this.mDel,
+            this.mPrint});
+            this.mmAdd.Location = new System.Drawing.Point(0, 0);
+            this.mmAdd.Name = "mmAdd";
+            this.mmAdd.Size = new System.Drawing.Size(1194, 25);
+            this.mmAdd.TabIndex = 13;
+            this.mmAdd.Text = "Добавить";
+            // 
+            // mAdd
+            // 
+            this.mAdd.Name = "mAdd";
+            this.mAdd.Size = new System.Drawing.Size(78, 21);
+            this.mAdd.Text = "Добавить";
+            this.mAdd.Click += new System.EventHandler(this.mAdd_Click);
+            // 
+            // mEdit
+            // 
+            this.mEdit.Name = "mEdit";
+            this.mEdit.Size = new System.Drawing.Size(108, 21);
+            this.mEdit.Text = "Редактировать";
+            this.mEdit.Click += new System.EventHandler(this.mEdit_Click);
+            // 
+            // mDel
+            // 
+            this.mDel.Name = "mDel";
+            this.mDel.Size = new System.Drawing.Size(67, 21);
+            this.mDel.Text = "Удалить";
+            this.mDel.Click += new System.EventHandler(this.mDel_Click);
+            // 
+            // mPrint
+            // 
+            this.mPrint.Name = "mPrint";
+            this.mPrint.Size = new System.Drawing.Size(62, 21);
+            this.mPrint.Text = "Печать";
+            this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
             // 
             // MainForm
             // 

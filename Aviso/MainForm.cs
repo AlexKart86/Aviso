@@ -184,5 +184,10 @@ namespace Aviso
 
             }
         }
+
+        private void dgvAvisoTele_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
