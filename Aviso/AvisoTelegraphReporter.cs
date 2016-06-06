@@ -85,7 +85,7 @@ namespace Aviso
 
             string is_kpp_sender = "";
             if (!string.IsNullOrEmpty(Convert.ToString(row["SENDER_KPP"])))
-                is_kpp_sender = "KPP";
+                is_kpp_sender = "КПП";
             lst.Add(new Tuple<string, string>("IS_KPP_SENDER", is_kpp_sender));
 
 
