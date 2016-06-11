@@ -160,10 +160,10 @@ namespace Aviso
 
         private void mPrint_Click(object sender, EventArgs e)
         {
-            dlgSelectReport.ShowDialog();
+            
             AvisoReporter rep;
             BindingSource bs;
-            if (dlgSelectReport.FileName != "")
+            if (dlgSelectReport.ShowDialog()== DialogResult.OK && dlgSelectReport.FileName != "")
             {
                 if (tcMain.SelectedTab == tpPostAviso)
                 {
