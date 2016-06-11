@@ -295,5 +295,10 @@ namespace Aviso
             else
                 errRDNum.SetError(txtRDNum, "");
         }
+
+        private void txtNum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
