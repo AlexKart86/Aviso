@@ -25,7 +25,10 @@ namespace Aviso
                     val = CommonUtils.FormatDate(dt);
                 }
                 else
-                    val = Convert.ToString(row[idx]);                
+                    val = Convert.ToString(row[idx]);
+
+                if (val == string.Format("{0:D20}", 0))
+                    val = "";     
                 lst.Add(new Tuple<string, string>(row.Row.Table.Columns[idx].ColumnName,
                         val));              
             }
