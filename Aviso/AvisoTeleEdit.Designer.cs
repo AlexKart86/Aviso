@@ -43,7 +43,6 @@ namespace Aviso
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtNum = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpCreatedDate = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
@@ -131,6 +130,7 @@ namespace Aviso
             this.errSenderName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errReceiverName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errPaymentGoal = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtNum = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
@@ -150,16 +150,6 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentGoal)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtNum
-            // 
-            this.txtNum.Location = new System.Drawing.Point(143, 15);
-            this.txtNum.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNum.MaxLength = 3;
-            this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(156, 23);
-            this.txtNum.TabIndex = 0;
-            this.txtNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtNum_Validating);
             // 
             // label1
             // 
@@ -963,6 +953,15 @@ namespace Aviso
             this.errPaymentGoal.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errPaymentGoal.ContainerControl = this;
             // 
+            // txtNum
+            // 
+            this.txtNum.Location = new System.Drawing.Point(143, 15);
+            this.txtNum.Mask = "000";
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(156, 23);
+            this.txtNum.TabIndex = 0;
+            this.txtNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtNum_Validating_1);
+            // 
             // AvisoTeleEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -985,6 +984,7 @@ namespace Aviso
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpRDDate);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtNum);
             this.Controls.Add(this.txtRDNum);
             this.Controls.Add(this.cbOperationType);
             this.Controls.Add(this.label4);
@@ -995,7 +995,6 @@ namespace Aviso
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtpCreatedDate);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNum);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1032,8 +1031,6 @@ namespace Aviso
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpCreatedDate;
         private System.Windows.Forms.Button btnSave;
@@ -1121,5 +1118,6 @@ namespace Aviso
         private ErrorProvider errSenderName;
         private ErrorProvider errReceiverName;
         private ErrorProvider errPaymentGoal;
+        private MaskedTextBox txtNum;
     }
 }
