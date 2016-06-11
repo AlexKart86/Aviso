@@ -539,7 +539,7 @@ namespace Aviso
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(156, 23);
             this.txtNum.TabIndex = 0;
-            this.txtNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtRDNum_Validating);
+            this.txtNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtNum_Validating_1);
             // 
             // AvisoPostEdit
             // 

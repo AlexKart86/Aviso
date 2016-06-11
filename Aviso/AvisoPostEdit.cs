@@ -300,5 +300,21 @@ namespace Aviso
         {
 
         }
+
+        private void txtNum_Validating_1(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNum.Text))
+            {
+                e.Cancel = true;
+                errAvisoNum.SetError(txtNum, "Данное поле должно быть заполненным");
+            }
+            else if (txtNum.Text.Length != 3)
+            {
+                e.Cancel = true;
+                errAvisoNum.SetError(txtNum, "Номер авизо должен состоять из трех цифр");
+            }
+            else
+                errAvisoNum.SetError(txtNum, "");
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Aviso
               
 
         //Вычислить следующий номер авизо
-        public int CalcPostAvisoNextNum(DataTable tbl)
+        public string CalcPostAvisoNextNum(DataTable tbl)
         {            
             int max = 0;
             foreach (DataRow row in tbl.Rows)
@@ -28,7 +28,8 @@ namespace Aviso
                 if (max < Convert.ToInt32(row["NUM"]))
                     max = Convert.ToInt32(row["NUM"]);
             }
-            return max + 1;
+            max++;
+            return max.ToString("000");
         }
 
         //Редактирование почтового авизо
