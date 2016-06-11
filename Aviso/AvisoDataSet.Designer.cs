@@ -1206,7 +1206,7 @@ namespace Aviso {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public telegraph_avisoRow Addtelegraph_avisoRow(
-                        int NUM, 
+                        string NUM, 
                         System.DateTime CREATE_DATE, 
                         string PAYMENT_TYPE, 
                         string OPERATION_TYPE, 
@@ -1345,7 +1345,7 @@ namespace Aviso {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnNUM = new global::System.Data.DataColumn("NUM", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnNUM = new global::System.Data.DataColumn("NUM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNUM);
                 this.columnCREATE_DATE = new global::System.Data.DataColumn("CREATE_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCREATE_DATE);
@@ -1417,6 +1417,7 @@ namespace Aviso {
                 this.columnID.AutoIncrementSeed = 1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
+                this.columnNUM.MaxLength = 3;
                 this.columnPAYMENT_TYPE.MaxLength = 10;
                 this.columnOPERATION_TYPE.MaxLength = 2;
                 this.columnRD_NUM.MaxLength = 6;
@@ -2043,10 +2044,10 @@ namespace Aviso {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int NUM {
+            public string NUM {
                 get {
                     try {
-                        return ((int)(this[this.tabletelegraph_aviso.NUMColumn]));
+                        return ((string)(this[this.tabletelegraph_aviso.NUMColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'NUM\' в таблице \'telegraph_aviso\' равно DBNull.", e);
@@ -3184,9 +3185,8 @@ namespace Aviso.AvisoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `post_aviso` (`ID`, `NUM`, `CREATE_DATE`, `PAYMENT_TYPE`, `OPERATION_TYPE`, `RD_NUM`, `RD_DATE`, `RD_SUM`, `SENDER_BIK`, `SENDER_KO`, `SENDER_BILL`, `RECEIVER_BIK`, `RECEIVER_KO`, `RECEIVER_BILL`, `KPD`, `KPD_DATE`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `post_aviso` (`NUM`, `CREATE_DATE`, `PAYMENT_TYPE`, `OPERATION_TYPE`, `RD_NUM`, `RD_DATE`, `RD_SUM`, `SENDER_BIK`, `SENDER_KO`, `SENDER_BILL`, `RECEIVER_BIK`, `RECEIVER_KO`, `RECEIVER_BILL`, `KPD`, `KPD_DATE`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CREATE_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CREATE_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_TYPE", global::System.Data.DataRowVersion.Current, false, null));
@@ -3206,7 +3206,7 @@ namespace Aviso.AvisoDataSetTableAdapters {
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE `post_aviso` SET `NUM` = ?, `CREATE_DATE` = ?, `PAYMENT_TYPE` = ?, `OPERATION_TYPE` = ?, `RD_NUM` = ?, `RD_DATE` = ?, `RD_SUM` = ?, `SENDER_BIK` = ?, `SENDER_KO` = ?, `SENDER_BILL` = ?, `RECEIVER_BIK` = ?, `RECEIVER_KO` = ?, `RECEIVER_BILL` = ?, `KPD` = ?, `KPD_DATE` = ? WHERE ((`ID` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CREATE_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CREATE_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_TYPE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
@@ -3458,10 +3458,9 @@ namespace Aviso.AvisoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `telegraph_aviso` (`ID`, `NUM`, `CREATE_DATE`, `PAYMENT_TYPE`, `OPERATION_TYPE`, `RD_NUM`, `RD_DATE`, `OFF_DATE`, `RD_SUM`, `SENDER_INN`, `SENDER_KPP`, `SENDER_NAME`, `SENDER_BIK`, `SENDER_KO`, `SENDER_KO_NAME`, `SENDER_BILL`, `RECEIVER_INN`, `RECEIVER_KPP`, `RECEIVER_NAME`, `RECEIVER_BIK`, `RECEIVER_KO`, `RECEIVER_KO_NAME`, `RECEIVER_BILL`, `PAYMENT_GOAL`, `N101`, `N104`, `N105`, `N106`, `N107`, `N108`, `N109`, `N110`, `KPD`, `KPD_DATE`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `telegraph_aviso` (`NUM`, `CREATE_DATE`, `PAYMENT_TYPE`, `OPERATION_TYPE`, `RD_NUM`, `RD_DATE`, `OFF_DATE`, `RD_SUM`, `SENDER_INN`, `SENDER_KPP`, `SENDER_NAME`, `SENDER_BIK`, `SENDER_KO`, `SENDER_KO_NAME`, `SENDER_BILL`, `RECEIVER_INN`, `RECEIVER_KPP`, `RECEIVER_NAME`, `RECEIVER_BIK`, `RECEIVER_KO`, `RECEIVER_KO_NAME`, `RECEIVER_BILL`, `PAYMENT_GOAL`, `N101`, `N104`, `N105`, `N106`, `N107`, `N108`, `N109`, `N110`, `KPD`, `KPD_DATE`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CREATE_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CREATE_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_TYPE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
@@ -3498,7 +3497,7 @@ namespace Aviso.AvisoDataSetTableAdapters {
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE `telegraph_aviso` SET `NUM` = ?, `CREATE_DATE` = ?, `PAYMENT_TYPE` = ?, `OPERATION_TYPE` = ?, `RD_NUM` = ?, `RD_DATE` = ?, `OFF_DATE` = ?, `RD_SUM` = ?, `SENDER_INN` = ?, `SENDER_KPP` = ?, `SENDER_NAME` = ?, `SENDER_BIK` = ?, `SENDER_KO` = ?, `SENDER_KO_NAME` = ?, `SENDER_BILL` = ?, `RECEIVER_INN` = ?, `RECEIVER_KPP` = ?, `RECEIVER_NAME` = ?, `RECEIVER_BIK` = ?, `RECEIVER_KO` = ?, `RECEIVER_KO_NAME` = ?, `RECEIVER_BILL` = ?, `PAYMENT_GOAL` = ?, `N101` = ?, `N104` = ?, `N105` = ?, `N106` = ?, `N107` = ?, `N108` = ?, `N109` = ?, `N110` = ?, `KPD` = ?, `KPD_DATE` = ? WHERE ((`ID` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CREATE_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CREATE_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PAYMENT_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PAYMENT_TYPE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
