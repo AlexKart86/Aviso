@@ -60,7 +60,11 @@ namespace Aviso
             b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
             dtpRDDate.DataBindings.Add(b_RDDate);
 
-            txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
+            Binding b_RDSum = new Binding("Text", bs_main, "RD_SUM", true);
+            b_RDSum.Format += new ConvertEventHandler(CommonUtils.rdSum_Format);
+            b_RDSum.Parse += new ConvertEventHandler(CommonUtils.rdSum_Parse);
+            txtRDSum.DataBindings.Add(b_RDSum);
+
             txtKPD.DataBindings.Add("Text", bs_main, "KPD");
 
             Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);

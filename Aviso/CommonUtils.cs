@@ -120,5 +120,22 @@ namespace Aviso
 
 
 
+        //Функция, позволяющая корректно отображать число с копейками из БД     
+        public static void rdSum_Format(object sender, ConvertEventArgs e)
+        {            
+            if (e.Value != System.DBNull.Value && e.Value != null && !string.IsNullOrEmpty(Convert.ToString(e.Value)))
+                 e.Value = Convert.ToDouble(e.Value).ToString("########0.00");
+        }
+
+        public static void rdSum_Parse(object sender, ConvertEventArgs e)
+        {
+            if (e.Value != System.DBNull.Value && e.Value != null && !string.IsNullOrEmpty(Convert.ToString(e.Value)))
+            {
+                double d = double.Parse(Convert.ToString(e.Value));
+                d = Math.Round(d, 2);
+                e.Value = d;
+            }
+        }
+
     }
 }

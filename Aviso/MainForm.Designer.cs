@@ -37,6 +37,8 @@ namespace Aviso
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAvisoPost = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,20 +56,6 @@ namespace Aviso
             this.RECEIVER_BILL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            this.tcMain = new System.Windows.Forms.TabControl();
-            this.tpPostAviso = new System.Windows.Forms.TabPage();
-            this.tpTeleAviso = new System.Windows.Forms.TabPage();
-            this.dgvAvisoTele = new System.Windows.Forms.DataGridView();
-            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
-            this.mmAdd = new System.Windows.Forms.MenuStrip();
-            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
-            this.RECEIVER_KO_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nUMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cREATEDATEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +72,23 @@ namespace Aviso
             this.rECEIVERBILLDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDATEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.avisoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.avisoDataSet = new Aviso.AvisoDataSet();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tcMain = new System.Windows.Forms.TabControl();
+            this.tpPostAviso = new System.Windows.Forms.TabPage();
+            this.tpTeleAviso = new System.Windows.Forms.TabPage();
+            this.dgvAvisoTele = new System.Windows.Forms.DataGridView();
+            this.telegraphavisoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dlgSelectReport = new System.Windows.Forms.SaveFileDialog();
+            this.mmAdd = new System.Windows.Forms.MenuStrip();
+            this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.mEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mPrint = new System.Windows.Forms.ToolStripMenuItem();
+            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
+            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
             this.nUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cREATEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pAYMENTTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,6 +106,7 @@ namespace Aviso
             this.sENDERBILLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rECEIVERINNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rECEIVERKPPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RECEIVER_KO_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rECEIVERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rECEIVERBIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rECEIVERKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,18 +122,16 @@ namespace Aviso
             this.n110DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.post_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.post_avisoTableAdapter();
-            this.telegraph_avisoTableAdapter = new Aviso.AvisoDataSetTableAdapters.telegraph_avisoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
             this.tcMain.SuspendLayout();
             this.tpPostAviso.SuspendLayout();
             this.tpTeleAviso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoTele)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telegraphavisoBindingSource)).BeginInit();
             this.mmAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAvisoPost
@@ -185,7 +187,7 @@ namespace Aviso
             this.dgvAvisoPost.ReadOnly = true;
             this.dgvAvisoPost.RowHeadersVisible = false;
             this.dgvAvisoPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoPost.Size = new System.Drawing.Size(1158, 509);
+            this.dgvAvisoPost.Size = new System.Drawing.Size(1158, 495);
             this.dgvAvisoPost.TabIndex = 0;
             this.dgvAvisoPost.DoubleClick += new System.EventHandler(this.mEdit_Click);
             // 
@@ -242,6 +244,8 @@ namespace Aviso
             // RD_SUM
             // 
             this.RD_SUM.DataPropertyName = "RD_SUM";
+            dataGridViewCellStyle2.Format = "########0.00";
+            this.RD_SUM.DefaultCellStyle = dataGridViewCellStyle2;
             this.RD_SUM.HeaderText = "Сумма РД";
             this.RD_SUM.Name = "RD_SUM";
             this.RD_SUM.ReadOnly = true;
@@ -301,179 +305,6 @@ namespace Aviso
             this.KPD_DATE.HeaderText = "Дата КПД";
             this.KPD_DATE.Name = "KPD_DATE";
             this.KPD_DATE.ReadOnly = true;
-            // 
-            // postavisoBindingSource
-            // 
-            this.postavisoBindingSource.DataMember = "post_aviso";
-            this.postavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(125, 315);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 26);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tcMain
-            // 
-            this.tcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tcMain.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tcMain.Controls.Add(this.tpPostAviso);
-            this.tcMain.Controls.Add(this.tpTeleAviso);
-            this.tcMain.Location = new System.Drawing.Point(15, 47);
-            this.tcMain.Margin = new System.Windows.Forms.Padding(4);
-            this.tcMain.Multiline = true;
-            this.tcMain.Name = "tcMain";
-            this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(1166, 540);
-            this.tcMain.TabIndex = 8;
-            this.tcMain.DoubleClick += new System.EventHandler(this.mEdit_Click);
-            // 
-            // tpPostAviso
-            // 
-            this.tpPostAviso.Controls.Add(this.dgvAvisoPost);
-            this.tpPostAviso.Location = new System.Drawing.Point(4, 27);
-            this.tpPostAviso.Margin = new System.Windows.Forms.Padding(4);
-            this.tpPostAviso.Name = "tpPostAviso";
-            this.tpPostAviso.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPostAviso.Size = new System.Drawing.Size(1158, 509);
-            this.tpPostAviso.TabIndex = 0;
-            this.tpPostAviso.Text = "Почтовое авизо";
-            this.tpPostAviso.UseVisualStyleBackColor = true;
-            // 
-            // tpTeleAviso
-            // 
-            this.tpTeleAviso.Controls.Add(this.dgvAvisoTele);
-            this.tpTeleAviso.Location = new System.Drawing.Point(4, 27);
-            this.tpTeleAviso.Margin = new System.Windows.Forms.Padding(4);
-            this.tpTeleAviso.Name = "tpTeleAviso";
-            this.tpTeleAviso.Padding = new System.Windows.Forms.Padding(4);
-            this.tpTeleAviso.Size = new System.Drawing.Size(1158, 509);
-            this.tpTeleAviso.TabIndex = 1;
-            this.tpTeleAviso.Text = "Телеграфное авизо";
-            this.tpTeleAviso.UseVisualStyleBackColor = true;
-            // 
-            // dgvAvisoTele
-            // 
-            this.dgvAvisoTele.AllowUserToAddRows = false;
-            this.dgvAvisoTele.AllowUserToDeleteRows = false;
-            this.dgvAvisoTele.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAvisoTele.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAvisoTele.AutoGenerateColumns = false;
-            this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nUMDataGridViewTextBoxColumn,
-            this.cREATEDATEDataGridViewTextBoxColumn,
-            this.pAYMENTTYPEDataGridViewTextBoxColumn,
-            this.oPERATIONTYPEDataGridViewTextBoxColumn,
-            this.rDNUMDataGridViewTextBoxColumn,
-            this.rDDATEDataGridViewTextBoxColumn,
-            this.oFFDATEDataGridViewTextBoxColumn,
-            this.rDSUMDataGridViewTextBoxColumn,
-            this.sENDERINNDataGridViewTextBoxColumn,
-            this.sENDERKPPDataGridViewTextBoxColumn,
-            this.sENDERNAMEDataGridViewTextBoxColumn,
-            this.sENDERBIKDataGridViewTextBoxColumn,
-            this.sENDERKODataGridViewTextBoxColumn,
-            this.sENDERKONAMEDataGridViewTextBoxColumn,
-            this.sENDERBILLDataGridViewTextBoxColumn,
-            this.rECEIVERINNDataGridViewTextBoxColumn,
-            this.rECEIVERKPPDataGridViewTextBoxColumn,
-            this.RECEIVER_KO_NAME,
-            this.rECEIVERNAMEDataGridViewTextBoxColumn,
-            this.rECEIVERBIKDataGridViewTextBoxColumn,
-            this.rECEIVERKODataGridViewTextBoxColumn,
-            this.rECEIVERBILLDataGridViewTextBoxColumn,
-            this.pAYMENTGOALDataGridViewTextBoxColumn,
-            this.n101DataGridViewTextBoxColumn,
-            this.n104DataGridViewTextBoxColumn,
-            this.n105DataGridViewTextBoxColumn,
-            this.n106DataGridViewTextBoxColumn,
-            this.n107DataGridViewTextBoxColumn,
-            this.n108DataGridViewTextBoxColumn,
-            this.n109DataGridViewTextBoxColumn,
-            this.n110DataGridViewTextBoxColumn,
-            this.kPDDataGridViewTextBoxColumn,
-            this.kPDDATEDataGridViewTextBoxColumn});
-            this.dgvAvisoTele.DataSource = this.telegraphavisoBindingSource;
-            this.dgvAvisoTele.Location = new System.Drawing.Point(0, 0);
-            this.dgvAvisoTele.MultiSelect = false;
-            this.dgvAvisoTele.Name = "dgvAvisoTele";
-            this.dgvAvisoTele.ReadOnly = true;
-            this.dgvAvisoTele.RowHeadersVisible = false;
-            this.dgvAvisoTele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAvisoTele.Size = new System.Drawing.Size(1158, 509);
-            this.dgvAvisoTele.TabIndex = 0;
-            this.dgvAvisoTele.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvisoTele_CellContentClick);
-            this.dgvAvisoTele.DoubleClick += new System.EventHandler(this.mEdit_Click);
-            // 
-            // telegraphavisoBindingSource
-            // 
-            this.telegraphavisoBindingSource.DataMember = "telegraph_aviso";
-            this.telegraphavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
-            // 
-            // dlgSelectReport
-            // 
-            this.dlgSelectReport.Filter = "MS Word Documents|*.docx";
-            this.dlgSelectReport.Title = "Выберите имя файла";
-            // 
-            // mmAdd
-            // 
-            this.mmAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mmAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mAdd,
-            this.mEdit,
-            this.mDel,
-            this.mPrint});
-            this.mmAdd.Location = new System.Drawing.Point(0, 0);
-            this.mmAdd.Name = "mmAdd";
-            this.mmAdd.Size = new System.Drawing.Size(1194, 25);
-            this.mmAdd.TabIndex = 13;
-            this.mmAdd.Text = "Добавить";
-            // 
-            // mAdd
-            // 
-            this.mAdd.Name = "mAdd";
-            this.mAdd.Size = new System.Drawing.Size(78, 21);
-            this.mAdd.Text = "Добавить";
-            this.mAdd.Click += new System.EventHandler(this.mAdd_Click);
-            // 
-            // mEdit
-            // 
-            this.mEdit.Name = "mEdit";
-            this.mEdit.Size = new System.Drawing.Size(108, 21);
-            this.mEdit.Text = "Редактировать";
-            this.mEdit.Click += new System.EventHandler(this.mEdit_Click);
-            // 
-            // mDel
-            // 
-            this.mDel.Name = "mDel";
-            this.mDel.Size = new System.Drawing.Size(67, 21);
-            this.mDel.Text = "Удалить";
-            this.mDel.Click += new System.EventHandler(this.mDel_Click);
-            // 
-            // mPrint
-            // 
-            this.mPrint.Name = "mPrint";
-            this.mPrint.Size = new System.Drawing.Size(62, 21);
-            this.mPrint.Text = "Печать";
-            this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
-            // 
-            // RECEIVER_KO_NAME
-            // 
-            this.RECEIVER_KO_NAME.DataPropertyName = "RECEIVER_KO_NAME";
-            this.RECEIVER_KO_NAME.HeaderText = "Наименование КО получателя";
-            this.RECEIVER_KO_NAME.Name = "RECEIVER_KO_NAME";
-            this.RECEIVER_KO_NAME.ReadOnly = true;
             // 
             // iDDataGridViewTextBoxColumn1
             // 
@@ -587,6 +418,11 @@ namespace Aviso
             this.kPDDATEDataGridViewTextBoxColumn1.Name = "kPDDATEDataGridViewTextBoxColumn1";
             this.kPDDATEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // postavisoBindingSource
+            // 
+            this.postavisoBindingSource.DataMember = "post_aviso";
+            this.postavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
+            // 
             // avisoDataSetBindingSource
             // 
             this.avisoDataSetBindingSource.DataSource = this.avisoDataSet;
@@ -596,6 +432,174 @@ namespace Aviso
             // 
             this.avisoDataSet.DataSetName = "AvisoDataSet";
             this.avisoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(125, 315);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(88, 26);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // tcMain
+            // 
+            this.tcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tcMain.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tcMain.Controls.Add(this.tpPostAviso);
+            this.tcMain.Controls.Add(this.tpTeleAviso);
+            this.tcMain.Location = new System.Drawing.Point(15, 47);
+            this.tcMain.Margin = new System.Windows.Forms.Padding(4);
+            this.tcMain.Multiline = true;
+            this.tcMain.Name = "tcMain";
+            this.tcMain.SelectedIndex = 0;
+            this.tcMain.Size = new System.Drawing.Size(1166, 540);
+            this.tcMain.TabIndex = 8;
+            this.tcMain.DoubleClick += new System.EventHandler(this.mEdit_Click);
+            // 
+            // tpPostAviso
+            // 
+            this.tpPostAviso.Controls.Add(this.dgvAvisoPost);
+            this.tpPostAviso.Location = new System.Drawing.Point(4, 27);
+            this.tpPostAviso.Margin = new System.Windows.Forms.Padding(4);
+            this.tpPostAviso.Name = "tpPostAviso";
+            this.tpPostAviso.Padding = new System.Windows.Forms.Padding(4);
+            this.tpPostAviso.Size = new System.Drawing.Size(1158, 509);
+            this.tpPostAviso.TabIndex = 0;
+            this.tpPostAviso.Text = "Почтовое авизо";
+            this.tpPostAviso.UseVisualStyleBackColor = true;
+            // 
+            // tpTeleAviso
+            // 
+            this.tpTeleAviso.Controls.Add(this.dgvAvisoTele);
+            this.tpTeleAviso.Location = new System.Drawing.Point(4, 27);
+            this.tpTeleAviso.Margin = new System.Windows.Forms.Padding(4);
+            this.tpTeleAviso.Name = "tpTeleAviso";
+            this.tpTeleAviso.Padding = new System.Windows.Forms.Padding(4);
+            this.tpTeleAviso.Size = new System.Drawing.Size(1158, 509);
+            this.tpTeleAviso.TabIndex = 1;
+            this.tpTeleAviso.Text = "Телеграфное авизо";
+            this.tpTeleAviso.UseVisualStyleBackColor = true;
+            // 
+            // dgvAvisoTele
+            // 
+            this.dgvAvisoTele.AllowUserToAddRows = false;
+            this.dgvAvisoTele.AllowUserToDeleteRows = false;
+            this.dgvAvisoTele.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAvisoTele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAvisoTele.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAvisoTele.AutoGenerateColumns = false;
+            this.dgvAvisoTele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvisoTele.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nUMDataGridViewTextBoxColumn,
+            this.cREATEDATEDataGridViewTextBoxColumn,
+            this.pAYMENTTYPEDataGridViewTextBoxColumn,
+            this.oPERATIONTYPEDataGridViewTextBoxColumn,
+            this.rDNUMDataGridViewTextBoxColumn,
+            this.rDDATEDataGridViewTextBoxColumn,
+            this.oFFDATEDataGridViewTextBoxColumn,
+            this.rDSUMDataGridViewTextBoxColumn,
+            this.sENDERINNDataGridViewTextBoxColumn,
+            this.sENDERKPPDataGridViewTextBoxColumn,
+            this.sENDERNAMEDataGridViewTextBoxColumn,
+            this.sENDERBIKDataGridViewTextBoxColumn,
+            this.sENDERKODataGridViewTextBoxColumn,
+            this.sENDERKONAMEDataGridViewTextBoxColumn,
+            this.sENDERBILLDataGridViewTextBoxColumn,
+            this.rECEIVERINNDataGridViewTextBoxColumn,
+            this.rECEIVERKPPDataGridViewTextBoxColumn,
+            this.RECEIVER_KO_NAME,
+            this.rECEIVERNAMEDataGridViewTextBoxColumn,
+            this.rECEIVERBIKDataGridViewTextBoxColumn,
+            this.rECEIVERKODataGridViewTextBoxColumn,
+            this.rECEIVERBILLDataGridViewTextBoxColumn,
+            this.pAYMENTGOALDataGridViewTextBoxColumn,
+            this.n101DataGridViewTextBoxColumn,
+            this.n104DataGridViewTextBoxColumn,
+            this.n105DataGridViewTextBoxColumn,
+            this.n106DataGridViewTextBoxColumn,
+            this.n107DataGridViewTextBoxColumn,
+            this.n108DataGridViewTextBoxColumn,
+            this.n109DataGridViewTextBoxColumn,
+            this.n110DataGridViewTextBoxColumn,
+            this.kPDDataGridViewTextBoxColumn,
+            this.kPDDATEDataGridViewTextBoxColumn});
+            this.dgvAvisoTele.DataSource = this.telegraphavisoBindingSource;
+            this.dgvAvisoTele.Location = new System.Drawing.Point(0, 0);
+            this.dgvAvisoTele.MultiSelect = false;
+            this.dgvAvisoTele.Name = "dgvAvisoTele";
+            this.dgvAvisoTele.ReadOnly = true;
+            this.dgvAvisoTele.RowHeadersVisible = false;
+            this.dgvAvisoTele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAvisoTele.Size = new System.Drawing.Size(1158, 509);
+            this.dgvAvisoTele.TabIndex = 0;
+            this.dgvAvisoTele.DoubleClick += new System.EventHandler(this.mEdit_Click);
+            // 
+            // telegraphavisoBindingSource
+            // 
+            this.telegraphavisoBindingSource.DataMember = "telegraph_aviso";
+            this.telegraphavisoBindingSource.DataSource = this.avisoDataSetBindingSource;
+            // 
+            // dlgSelectReport
+            // 
+            this.dlgSelectReport.Filter = "MS Word Documents|*.docx";
+            this.dlgSelectReport.Title = "Выберите имя файла";
+            // 
+            // mmAdd
+            // 
+            this.mmAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mmAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mAdd,
+            this.mEdit,
+            this.mDel,
+            this.mPrint});
+            this.mmAdd.Location = new System.Drawing.Point(0, 0);
+            this.mmAdd.Name = "mmAdd";
+            this.mmAdd.Size = new System.Drawing.Size(1194, 25);
+            this.mmAdd.TabIndex = 13;
+            this.mmAdd.Text = "Добавить";
+            // 
+            // mAdd
+            // 
+            this.mAdd.Name = "mAdd";
+            this.mAdd.Size = new System.Drawing.Size(78, 21);
+            this.mAdd.Text = "Добавить";
+            this.mAdd.Click += new System.EventHandler(this.mAdd_Click);
+            // 
+            // mEdit
+            // 
+            this.mEdit.Name = "mEdit";
+            this.mEdit.Size = new System.Drawing.Size(108, 21);
+            this.mEdit.Text = "Редактировать";
+            this.mEdit.Click += new System.EventHandler(this.mEdit_Click);
+            // 
+            // mDel
+            // 
+            this.mDel.Name = "mDel";
+            this.mDel.Size = new System.Drawing.Size(67, 21);
+            this.mDel.Text = "Удалить";
+            this.mDel.Click += new System.EventHandler(this.mDel_Click);
+            // 
+            // mPrint
+            // 
+            this.mPrint.Name = "mPrint";
+            this.mPrint.Size = new System.Drawing.Size(62, 21);
+            this.mPrint.Text = "Печать";
+            this.mPrint.Click += new System.EventHandler(this.mPrint_Click);
+            // 
+            // post_avisoTableAdapter
+            // 
+            this.post_avisoTableAdapter.ClearBeforeFill = true;
+            // 
+            // telegraph_avisoTableAdapter
+            // 
+            this.telegraph_avisoTableAdapter.ClearBeforeFill = true;
             // 
             // nUMDataGridViewTextBoxColumn
             // 
@@ -649,6 +653,8 @@ namespace Aviso
             // rDSUMDataGridViewTextBoxColumn
             // 
             this.rDSUMDataGridViewTextBoxColumn.DataPropertyName = "RD_SUM";
+            dataGridViewCellStyle4.Format = "##########0.00";
+            this.rDSUMDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.rDSUMDataGridViewTextBoxColumn.HeaderText = "Сумма РД";
             this.rDSUMDataGridViewTextBoxColumn.Name = "rDSUMDataGridViewTextBoxColumn";
             this.rDSUMDataGridViewTextBoxColumn.ReadOnly = true;
@@ -715,6 +721,13 @@ namespace Aviso
             this.rECEIVERKPPDataGridViewTextBoxColumn.HeaderText = "КПП получателя";
             this.rECEIVERKPPDataGridViewTextBoxColumn.Name = "rECEIVERKPPDataGridViewTextBoxColumn";
             this.rECEIVERKPPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // RECEIVER_KO_NAME
+            // 
+            this.RECEIVER_KO_NAME.DataPropertyName = "RECEIVER_KO_NAME";
+            this.RECEIVER_KO_NAME.HeaderText = "Наименование КО получателя";
+            this.RECEIVER_KO_NAME.Name = "RECEIVER_KO_NAME";
+            this.RECEIVER_KO_NAME.ReadOnly = true;
             // 
             // rECEIVERNAMEDataGridViewTextBoxColumn
             // 
@@ -821,14 +834,6 @@ namespace Aviso
             this.kPDDATEDataGridViewTextBoxColumn.Name = "kPDDATEDataGridViewTextBoxColumn";
             this.kPDDATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // post_avisoTableAdapter
-            // 
-            this.post_avisoTableAdapter.ClearBeforeFill = true;
-            // 
-            // telegraph_avisoTableAdapter
-            // 
-            this.telegraph_avisoTableAdapter.ClearBeforeFill = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -846,6 +851,8 @@ namespace Aviso
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvisoPost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavisoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             this.tcMain.ResumeLayout(false);
             this.tpPostAviso.ResumeLayout(false);
             this.tpTeleAviso.ResumeLayout(false);
@@ -853,8 +860,6 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.telegraphavisoBindingSource)).EndInit();
             this.mmAdd.ResumeLayout(false);
             this.mmAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avisoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -872,6 +877,14 @@ namespace Aviso
         private System.Windows.Forms.TabPage tpPostAviso;
         private System.Windows.Forms.TabPage tpTeleAviso;
         private SaveFileDialog dlgSelectReport;
+        private DataGridView dgvAvisoTele;
+        private BindingSource telegraphavisoBindingSource;
+        private AvisoDataSetTableAdapters.telegraph_avisoTableAdapter telegraph_avisoTableAdapter;
+        private MenuStrip mmAdd;
+        private ToolStripMenuItem mAdd;
+        private ToolStripMenuItem mEdit;
+        private ToolStripMenuItem mDel;
+        private ToolStripMenuItem mPrint;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn NUM;
         private DataGridViewTextBoxColumn CREATE_DATE;
@@ -888,9 +901,6 @@ namespace Aviso
         private DataGridViewTextBoxColumn RECEIVER_BILL;
         private DataGridViewTextBoxColumn KPD;
         private DataGridViewTextBoxColumn KPD_DATE;
-        private DataGridView dgvAvisoTele;
-        private BindingSource telegraphavisoBindingSource;
-        private AvisoDataSetTableAdapters.telegraph_avisoTableAdapter telegraph_avisoTableAdapter;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn1;
@@ -907,11 +917,6 @@ namespace Aviso
         private DataGridViewTextBoxColumn rECEIVERBILLDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn kPDDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn kPDDATEDataGridViewTextBoxColumn1;
-        private MenuStrip mmAdd;
-        private ToolStripMenuItem mAdd;
-        private ToolStripMenuItem mEdit;
-        private ToolStripMenuItem mDel;
-        private ToolStripMenuItem mPrint;
         private DataGridViewTextBoxColumn nUMDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cREATEDATEDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn pAYMENTTYPEDataGridViewTextBoxColumn;

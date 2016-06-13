@@ -52,15 +52,20 @@ namespace Aviso
             b_CreateDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
 
             cbItemType.DataBindings.Add("Text", bs_main, "PAYMENT_TYPE");
-            cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");
+            cbOperationType.DataBindings.Add("Text", bs_main, "OPERATION_TYPE");            
             txtRDNum.DataBindings.Add("Text", bs_main, "RD_NUM");
 
             Binding b_RDDate = new Binding("Value", bs_main, "RD_DATE", true);            
             b_RDDate.Format += new ConvertEventHandler(CommonUtils.dtpPicker_Format);
             b_RDDate.Parse += new ConvertEventHandler(CommonUtils.dtpPicker_Parse);
-            dtpRDDate.DataBindings.Add(b_RDDate);            
+            dtpRDDate.DataBindings.Add(b_RDDate);
 
-            txtRDSum.DataBindings.Add("Text", bs_main, "RD_SUM");
+            Binding b_RDSum = new Binding("Text", bs_main, "RD_SUM", true);
+            b_RDSum.Format += new ConvertEventHandler(CommonUtils.rdSum_Format);
+            b_RDSum.Parse += new ConvertEventHandler(CommonUtils.rdSum_Parse);
+            txtRDSum.DataBindings.Add(b_RDSum);
+
+
             txtKPD.DataBindings.Add("Text", bs_main, "KPD");
 
             Binding b_KPDDate = new Binding("Value", bs_main, "KPD_DATE", true);

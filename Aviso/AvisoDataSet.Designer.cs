@@ -639,7 +639,7 @@ namespace Aviso
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public post_avisoRow Addpost_avisoRow(string NUM, System.DateTime CREATE_DATE, string PAYMENT_TYPE, string OPERATION_TYPE, string RD_NUM, System.DateTime RD_DATE, float RD_SUM, string SENDER_BIK, string SENDER_KO, string SENDER_BILL, string RECEIVER_BIK, string RECEIVER_KO, string RECEIVER_BILL, string KPD, System.DateTime KPD_DATE)
+            public post_avisoRow Addpost_avisoRow(string NUM, System.DateTime CREATE_DATE, string PAYMENT_TYPE, string OPERATION_TYPE, string RD_NUM, System.DateTime RD_DATE, double RD_SUM, string SENDER_BIK, string SENDER_KO, string SENDER_BILL, string RECEIVER_BIK, string RECEIVER_KO, string RECEIVER_BILL, string KPD, System.DateTime KPD_DATE)
             {
                 post_avisoRow rowpost_avisoRow = ((post_avisoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -728,7 +728,7 @@ namespace Aviso
                 base.Columns.Add(this.columnRD_NUM);
                 this.columnRD_DATE = new global::System.Data.DataColumn("RD_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRD_DATE);
-                this.columnRD_SUM = new global::System.Data.DataColumn("RD_SUM", typeof(float), null, global::System.Data.MappingType.Element);
+                this.columnRD_SUM = new global::System.Data.DataColumn("RD_SUM", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRD_SUM);
                 this.columnSENDER_BIK = new global::System.Data.DataColumn("SENDER_BIK", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSENDER_BIK);
@@ -1416,7 +1416,7 @@ namespace Aviso
                         string RD_NUM,
                         System.DateTime RD_DATE,
                         System.DateTime OFF_DATE,
-                        float RD_SUM,
+                        double RD_SUM,
                         string SENDER_INN,
                         string SENDER_KPP,
                         string SENDER_NAME,
@@ -1568,7 +1568,7 @@ namespace Aviso
                 base.Columns.Add(this.columnRD_DATE);
                 this.columnOFF_DATE = new global::System.Data.DataColumn("OFF_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOFF_DATE);
-                this.columnRD_SUM = new global::System.Data.DataColumn("RD_SUM", typeof(float), null, global::System.Data.MappingType.Element);
+                this.columnRD_SUM = new global::System.Data.DataColumn("RD_SUM", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRD_SUM);
                 this.columnSENDER_INN = new global::System.Data.DataColumn("SENDER_INN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSENDER_INN);
@@ -1960,7 +1960,7 @@ namespace Aviso
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public float RD_SUM
+            public double RD_SUM
             {
                 get
                 {
@@ -2537,7 +2537,7 @@ namespace Aviso
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public float RD_SUM
+            public double RD_SUM
             {
                 get
                 {
@@ -3812,7 +3812,7 @@ namespace Aviso.AvisoDataSetTableAdapters
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_DATE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BIK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BIK", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BILL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BILL", global::System.Data.DataRowVersion.Current, false, null));
@@ -3831,7 +3831,7 @@ namespace Aviso.AvisoDataSetTableAdapters
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OPERATION_TYPE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OPERATION_TYPE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_DATE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BIK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BIK", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_BILL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_BILL", global::System.Data.DataRowVersion.Current, false, null));
@@ -4124,7 +4124,7 @@ namespace Aviso.AvisoDataSetTableAdapters
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OFF_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OFF_DATE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_INN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_INN", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KPP", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KPP", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_NAME", global::System.Data.DataRowVersion.Current, false, null));
@@ -4161,7 +4161,7 @@ namespace Aviso.AvisoDataSetTableAdapters
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_NUM", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_NUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_DATE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("OFF_DATE", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "OFF_DATE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RD_SUM", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RD_SUM", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_INN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_INN", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_KPP", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_KPP", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SENDER_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SENDER_NAME", global::System.Data.DataRowVersion.Current, false, null));
