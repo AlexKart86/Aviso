@@ -242,7 +242,13 @@ FROM            post_aviso</CommandText>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="NUM" msprop:Generator_ColumnVarNameInTable="columnNUM" msprop:Generator_ColumnPropNameInRow="NUM" msprop:Generator_ColumnPropNameInTable="NUMColumn" msprop:Generator_UserColumnName="NUM" type="xs:int" minOccurs="0" />
+              <xs:element name="NUM" msprop:Generator_ColumnVarNameInTable="columnNUM" msprop:Generator_ColumnPropNameInRow="NUM" msprop:Generator_ColumnPropNameInTable="NUMColumn" msprop:Generator_UserColumnName="NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="PAYMENT_TYPE" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="PAYMENT_TYPE" msprop:Generator_ColumnVarNameInTable="columnPAYMENT_TYPE" msprop:Generator_ColumnPropNameInTable="PAYMENT_TYPEColumn" msprop:Generator_UserColumnName="PAYMENT_TYPE" minOccurs="0">
                 <xs:simpleType>
@@ -324,7 +330,13 @@ FROM            post_aviso</CommandText>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="NUM" msprop:Generator_ColumnVarNameInTable="columnNUM" msprop:Generator_ColumnPropNameInRow="NUM" msprop:Generator_ColumnPropNameInTable="NUMColumn" msprop:Generator_UserColumnName="NUM" type="xs:int" minOccurs="0" />
+              <xs:element name="NUM" msprop:Generator_ColumnVarNameInTable="columnNUM" msprop:Generator_ColumnPropNameInRow="NUM" msprop:Generator_ColumnPropNameInTable="NUMColumn" msprop:Generator_UserColumnName="NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="PAYMENT_TYPE" msprop:Generator_ColumnVarNameInTable="columnPAYMENT_TYPE" msprop:Generator_ColumnPropNameInRow="PAYMENT_TYPE" msprop:Generator_ColumnPropNameInTable="PAYMENT_TYPEColumn" msprop:Generator_UserColumnName="PAYMENT_TYPE" minOccurs="0">
                 <xs:simpleType>
