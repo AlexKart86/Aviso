@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -56,18 +55,11 @@ namespace Aviso
             lst.Add(new Tuple<string, string>("RECEIVER_BIK", Convert.ToString(row["RECEIVER_BIK"])));
             lst.Add(new Tuple<string, string>("RECEIVER_BILL", Convert.ToString(row["RECEIVER_BILL"])));*/
 
-            string summ = Convert.ToString(row["RD_SUM"]);
-            lst.Add(new Tuple<string, string>("SUMM", summ));
+            string summ;
+            string summ_kop;
+            CommonUtils.PrepareSum(row["RD_SUM"], out summ, out summ_kop);
 
-            string summ_kop = "";
-            //Определяем, является ли сумма целочисленной
-            int i;
-            if (!Int32.TryParse(summ, out i))
-            {                
-                summ_kop = "КОПЕЕК";
-                //Оставляем только цифры в сумме                  
-                summ = new Regex(@"[^\d]+").Replace(summ, "");
-            }
+            lst.Add(new Tuple<string, string>("SUMM", summ));
             lst.Add(new Tuple<string, string>("SUMM_KOP", summ_kop));
             lst.Add(new Tuple<string, string>("RD_NUM", Convert.ToString(row["RD_NUM"])));
 

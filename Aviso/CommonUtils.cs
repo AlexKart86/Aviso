@@ -96,6 +96,28 @@ namespace Aviso
             return t.ToString("dd'/'MM'/'yyyy");
         }
 
+        //Проверяет, является ли флоат переменная целочисенной 
+        public static bool IsInteger(double number)
+        {
+            return number == Math.Truncate(number);
+        }
+
+        public static void PrepareSum(object RD_SUM, out string summ, out string summ_kop)
+        {
+            double summ_f = Convert.ToDouble(RD_SUM);
+            summ = Convert.ToString(RD_SUM);
+
+            summ_kop = "";
+            //Определяем, является ли сумма целочисленной
+            //Чтоб знать, дописывать копейки или нет             
+            if (!IsInteger(summ_f))
+            {
+                summ_kop = "КОПЕЕК";
+                //Оставляем только цифры в сумме, увеличивая ее в 100 раз                 
+                summ = Math.Truncate(summ_f * 100).ToString();
+            }
+        }
+
 
 
     }
