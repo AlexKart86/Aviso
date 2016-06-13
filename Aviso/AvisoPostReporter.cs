@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -41,9 +42,14 @@ namespace Aviso
 
             string summ_kop = "";
             //Определяем, является ли сумма целочисленной
-            int i;             
+            int i;
             if (!Int32.TryParse(summ, out i))
+            {
                 summ_kop = "КОПЕЕК";
+                //Оставляем только цифры в сумме                  
+                summ = new Regex(@"[^\d]+").Replace(summ, "");
+            }
+            
             lst.Add(new Tuple<string, string>("SUMM_KOP", summ_kop));
             lst.Add(new Tuple<string, string>("RD_NUM", Convert.ToString(row["RD_NUM"])));
 
