@@ -90,6 +90,7 @@ namespace Aviso
             this.errRDDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errRDNum = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtNum = new System.Windows.Forms.MaskedTextBox();
+            this.errRDSum = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errOperType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAvisoNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPaymentType)).BeginInit();
@@ -103,6 +104,7 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBIK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRDSum)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -272,6 +274,7 @@ namespace Aviso
             this.txtRDSum.PromptChar = ' ';
             this.txtRDSum.Size = new System.Drawing.Size(156, 23);
             this.txtRDSum.TabIndex = 6;
+            this.txtRDSum.Validating += new System.ComponentModel.CancelEventHandler(this.txtRDSum_Validating);
             // 
             // label7
             // 
@@ -541,6 +544,10 @@ namespace Aviso
             this.txtNum.TabIndex = 0;
             this.txtNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtNum_Validating_1);
             // 
+            // errRDSum
+            // 
+            this.errRDSum.ContainerControl = this;
+            // 
             // AvisoPostEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -593,6 +600,7 @@ namespace Aviso
             ((System.ComponentModel.ISupportInitialize)(this.errReceiverBIK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRDNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRDSum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,5 +654,6 @@ namespace Aviso
         private ErrorProvider errRDDate;
         private ErrorProvider errRDNum;
         private MaskedTextBox txtNum;
+        private ErrorProvider errRDSum;
     }
 }

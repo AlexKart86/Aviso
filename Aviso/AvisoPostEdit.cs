@@ -321,5 +321,17 @@ namespace Aviso
             else
                 errAvisoNum.SetError(txtNum, "");
         }
+
+        private void txtRDSum_Validating(object sender, CancelEventArgs e)
+        {
+            double val;
+            if (!string.IsNullOrEmpty(txtRDSum.Text) && !CommonUtils.SafeConvertToString(txtRDSum.Text, out val))
+            {
+                e.Cancel = true;
+                errRDSum.SetError(txtRDSum, "В данное поле внесено некорректная сумма");
+            }
+            else
+                errRDSum.SetError(txtRDSum, "");
+        }
     }
 }

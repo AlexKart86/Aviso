@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,6 +97,18 @@ namespace Aviso
             return t.ToString("dd'/'MM'/'yyyy");
         }
 
+
+        //Корректное преобразование строки в действительное число не зависимо от настроек
+        //разделителя целой и дробной части
+        public static bool SafeConvertToString(string str, out double value)
+        {
+            string tmp = str;
+            string separator = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator;
+            tmp =  tmp.Replace(".", separator);
+            tmp = tmp.Replace(",", separator);
+            return double.TryParse(tmp, out value);
+        }
+
         //Проверяет, является ли флоат переменная целочисенной 
         public static bool IsInteger(double number)
         {
@@ -131,9 +144,13 @@ namespace Aviso
         {
             if (e.Value != System.DBNull.Value && e.Value != null && !string.IsNullOrEmpty(Convert.ToString(e.Value)))
             {
-                double d = double.Parse(Convert.ToString(e.Value));
-                d = Math.Round(d, 2);
-                e.Value = d;
+                //Делаем так, чтобы дробные числа всегда корректно переводились 
+                double d;
+                if (SafeConvertToString(Convert.ToString(e.Value), out d))
+                {
+                    d = Math.Round(d, 2);
+                    e.Value = d;
+                }
             }
         }
 

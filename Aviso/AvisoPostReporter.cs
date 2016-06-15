@@ -31,14 +31,14 @@ namespace Aviso
             string receiver_ko = Convert.ToString(row["RECEIVER_KO"]);
             if (receiver_ko == string.Format("{0:D20}", 0))
                 receiver_ko = "";
-            else if (string.IsNullOrEmpty(receiver_ko))
-                receiver_ko = string.Format("{0:D20}", 0);
+            /*else if (string.IsNullOrEmpty(receiver_ko))
+                receiver_ko = string.Format("{0:D20}", 0);*/
             
             lst.Add(new Tuple<string, string>("RECEIVER_KO", receiver_ko));
 
             lst.Add(new Tuple<string, string>("RECEIVER_BIK", Convert.ToString(row["RECEIVER_BIK"])));
             string receiver_bill = Convert.ToString(row["RECEIVER_BILL"]);
-            if (receiver_bill == string.Format("{0:D20}", 0))
+             if (receiver_bill == string.Format("{0:D20}", 0))
                 receiver_bill = "";
             
             lst.Add(new Tuple<string, string>("RECEIVER_BILL", receiver_bill));
@@ -61,8 +61,8 @@ namespace Aviso
             string sender_ko = Convert.ToString(row["sender_KO"]);
             if (sender_ko == string.Format("{0:D20}", 0))
                 sender_ko = "";
-            else if (string.IsNullOrEmpty(sender_ko))
-                sender_ko = string.Format("{0:D20}", 0);
+            /*else if (string.IsNullOrEmpty(sender_ko))
+                sender_ko = string.Format("{0:D20}", 0);*/
             lst.Add(new Tuple<string, string>("SENDER_KO", sender_ko));
             lst.Add(new Tuple<string, string>("SENDER_BIK", Convert.ToString(row["SENDER_BIK"])));
             string sender_bill = Convert.ToString(row["SENDER_BILL"]);
