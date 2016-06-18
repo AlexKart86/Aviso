@@ -81,16 +81,6 @@ namespace Aviso
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //postavisoBindingSource.AddNew(); 
-            //DocX doc = DocX.Load(@"D:\1.docx");
-            CombineDocs r = new CombineDocs();
-            List<byte[]> lst = new List<byte[]>();
-            lst.Add(File.ReadAllBytes(@"k:\visual studio 2015\Projects\Aviso\Aviso\bin\Debug\test2.docx"));
-            lst.Add(File.ReadAllBytes(@"k:\visual studio 2015\Projects\Aviso\Aviso\bin\Debug\test3.docx"));
-            //lst.Add(File.ReadAllBytes(@"k:\Test\3.docx"));
-            byte[] str =  r.OpenAndCombine(lst);
-            File.WriteAllBytes(@"k:\visual studio 2015\Projects\Aviso\Aviso\bin\Debug\test4.docx", str);
-            lst.Clear();
         }
 
 

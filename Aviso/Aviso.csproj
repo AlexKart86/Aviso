@@ -116,7 +116,6 @@
       <DependentUpon>AvisoTeleEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="AvisoTelegraphReporter.cs" />
-    <Compile Include="CombineDocs.cs" />
     <Compile Include="CommonUtils.cs" />
     <Compile Include="LookupList.cs" />
     <Compile Include="MainForm.cs">
