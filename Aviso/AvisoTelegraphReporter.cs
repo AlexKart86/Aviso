@@ -36,7 +36,7 @@ namespace Aviso
             lst.Add(new Tuple<string, string>("RECEIVER_KO_NAME", Convert.ToString(row["RECEIVER_KO_NAME"])));
 
             //Формируем поле LONG_ADDRESS
-            string rks = LookupList.LookupNewNum(Convert.ToString(row["RECEIVER_BIK"]), "RKC");
+            string rks = LookupList.LookupNewNum(Convert.ToString(row["SENDER_BIK"]), "RKC");
             string ind = LookupList.LookupNewNum(rks, "IND");
             string nnp = LookupList.LookupNewNum(rks, "NNP");
             string namen = LookupList.LookupNewNum(rks, "NAMEN");
